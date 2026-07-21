@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const input=document.querySelector('[data-diary-search]');const items=[...document.querySelectorAll('[data-diary-item]')];input?.addEventListener('input',()=>{const q=input.value.trim().toLowerCase();items.forEach(item=>item.hidden=q&&!item.dataset.diaryItem.includes(q));});});

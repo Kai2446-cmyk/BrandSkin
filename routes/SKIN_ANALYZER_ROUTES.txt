@@ -1,0 +1,14 @@
+Tambahkan import ini di bagian atas routes/web.php jika belum ada:
+
+use App\Http\Controllers\SkinAnalyzerController;
+
+HAPUS route lama berikut jika masih ada:
+
+Route::view('/skin-analyzer', 'coming-soon', ['title' => 'Skin Analyzer']);
+
+Lalu tambahkan route berikut:
+
+Route::get('/skin-analyzer', [SkinAnalyzerController::class, 'index'])->name('skin-analyzer.index');
+Route::get('/skin-analyzer/start', [SkinAnalyzerController::class, 'start'])->name('skin-analyzer.start');
+Route::get('/skin-analyzer/report', [SkinAnalyzerController::class, 'report'])->name('skin-analyzer.report');
+Route::get('/skin-analyzer/recommendations', [SkinAnalyzerController::class, 'recommendations'])->name('skin-analyzer.recommendations');

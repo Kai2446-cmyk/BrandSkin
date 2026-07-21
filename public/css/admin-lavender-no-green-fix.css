@@ -1,0 +1,43 @@
+/* GlowSkin Admin — ganti aksen hijau menjadi lavender tanpa mengubah struktur/fungsi */
+:root{
+  --admin-lav:#B98EE6;
+  --admin-lav-strong:#9A62D0;
+  --admin-lav-deep:#6F3FA0;
+  --admin-lav-soft:rgba(185,142,230,.14);
+  --admin-line:rgba(185,142,230,.28);
+}
+.admin-body{--admin-accent:var(--admin-lav);--admin-accent-dark:var(--admin-lav-strong)}
+.admin-nav a.active,
+.admin-nav a:hover{background:var(--admin-lav-soft)!important;border-color:var(--admin-line)!important;color:#F5EAFE!important}
+.admin-nav a.active::before{background:var(--admin-lav)!important}
+.admin-alert,
+.admin-badge,
+.report-pill,
+.admin-status-active{background:var(--admin-lav-soft)!important;border-color:var(--admin-line)!important;color:#E9D5FF!important}
+.admin-body button[type="submit"],
+.admin-body .admin-primary-btn,
+.admin-body .admin-add-btn,
+.admin-body .admin-save-btn,
+.admin-body .btn-primary{background:linear-gradient(135deg,var(--admin-lav),var(--admin-lav-strong))!important;border-color:var(--admin-lav)!important;color:#fff!important}
+.admin-body button[type="submit"]:hover,
+.admin-body .admin-primary-btn:hover,
+.admin-body .admin-add-btn:hover,
+.admin-body .admin-save-btn:hover,
+.admin-body .btn-primary:hover{background:linear-gradient(135deg,var(--admin-lav-strong),var(--admin-lav-deep))!important}
+.admin-body input:focus,
+.admin-body select:focus,
+.admin-body textarea:focus{border-color:var(--admin-lav)!important;box-shadow:0 0 0 4px rgba(185,142,230,.12)!important}
+.admin-body input[type="checkbox"],
+.admin-body input[type="radio"]{accent-color:var(--admin-lav)!important}
+.admin-body a:not(.admin-brand):not(.admin-logout):hover{color:#DCC3F4}
+.admin-body .marketing-chart-bar,
+.admin-body .category-line i{background:linear-gradient(180deg,var(--admin-lav),var(--admin-lav-strong))!important;box-shadow:0 20px 50px rgba(154,98,208,.24)!important}
+.admin-body .chart-line{stroke:var(--admin-lav)!important;filter:drop-shadow(0 12px 24px rgba(185,142,230,.24))!important}
+.admin-body .chart-axis-line{stroke:rgba(185,142,230,.35)!important}
+.admin-body .chart-dot{stroke:#DCC3F4!important}
+.admin-body .website-update-list span{background:var(--admin-lav-deep)!important;color:#F4E9FF!important}
+.admin-body .payment-summary-grid>div,
+.admin-body .marketing-visual-chart{border-color:var(--admin-line)!important;background-color:rgba(185,142,230,.08)!important}
+.admin-body .admin-panel,
+.admin-body .admin-card,
+.admin-body .admin-report-stat{border-color:rgba(185,142,230,.20)!important}

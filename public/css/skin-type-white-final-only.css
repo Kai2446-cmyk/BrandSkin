@@ -1,0 +1,144 @@
+/* PERBAIKAN KHUSUS LANDING PAGE — SHOP BY SKIN TYPE
+   Hanya mengembalikan section ini menjadi putih dan memastikan tag/kategori
+   tidak menggunakan warna hijau. Tidak mengubah layout atau fungsi. */
+
+html body .skin-type-showcase {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #2f213c !important;
+}
+
+html body .skin-type-showcase::before,
+html body .skin-type-showcase::after {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+html body .skin-type-showcase .skin-type-showcase__heading p {
+    color: #8d65ad !important;
+    -webkit-text-fill-color: #8d65ad !important;
+}
+
+html body .skin-type-showcase .skin-type-showcase__heading h2 {
+    color: #2f213c !important;
+    -webkit-text-fill-color: #2f213c !important;
+}
+
+html body .skin-type-showcase .skin-type-showcase__layout,
+html body .skin-type-showcase .skin-type-showcase__panels,
+html body .skin-type-showcase .skin-type-panel,
+html body .skin-type-showcase .skin-type-panel__copy {
+    background: #ffffff !important;
+    background-image: none !important;
+}
+
+html body .skin-type-showcase .skin-type-showcase__layout,
+html body .skin-type-showcase .skin-type-panel {
+    border-color: rgba(185, 142, 230, .28) !important;
+    box-shadow: 0 20px 50px rgba(74, 43, 98, .08) !important;
+}
+
+html body .skin-type-showcase .skin-type-tab {
+    background: #ffffff !important;
+    background-image: none !important;
+    border-color: rgba(185, 142, 230, .48) !important;
+    color: #30223d !important;
+}
+
+html body .skin-type-showcase .skin-type-tab.active,
+html body .skin-type-showcase .skin-type-tab[aria-selected="true"] {
+    background: #eadcf8 !important;
+    background-image: none !important;
+    border-color: #b98ee6 !important;
+    color: #30223d !important;
+}
+
+html body .skin-type-showcase .skin-type-tab__icon {
+    background: #eadcf8 !important;
+    color: #7d4db2 !important;
+}
+
+html body .skin-type-showcase .skin-type-tab.active .skin-type-tab__icon,
+html body .skin-type-showcase .skin-type-tab[aria-selected="true"] .skin-type-tab__icon {
+    background: #f6effc !important;
+    color: #7d4db2 !important;
+}
+
+html body .skin-type-showcase .skin-type-tab strong,
+html body .skin-type-showcase .skin-type-tab span,
+html body .skin-type-showcase .skin-type-tab small {
+    color: inherit !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+/* Card produk dibuat terang, bukan ungu pekat. */
+html body .skin-type-showcase .skin-type-product-card,
+html body .skin-type-showcase .skin-type-product-card__body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #30223d !important;
+}
+
+html body .skin-type-showcase .skin-type-product-card {
+    border-color: rgba(185, 142, 230, .42) !important;
+    box-shadow: 0 14px 34px rgba(74, 43, 98, .09) !important;
+}
+
+html body .skin-type-showcase .skin-type-product-card__body small {
+    color: #8d5bc2 !important;
+    -webkit-text-fill-color: #8d5bc2 !important;
+}
+
+html body .skin-type-showcase .skin-type-product-card__body h4 {
+    color: #30223d !important;
+    -webkit-text-fill-color: #30223d !important;
+}
+
+html body .skin-type-showcase .skin-type-product-card__body strong {
+    color: #7d4db2 !important;
+    -webkit-text-fill-color: #7d4db2 !important;
+}
+
+html body .skin-type-showcase .skin-type-product-card__badge {
+    background: #b98ee6 !important;
+    color: #ffffff !important;
+}
+
+html body .skin-type-showcase .skin-type-panel__eyebrow {
+    color: #b98ee6 !important;
+    -webkit-text-fill-color: #b98ee6 !important;
+}
+
+html body .skin-type-showcase .skin-type-panel__copy h3 {
+    color: #30223d !important;
+    -webkit-text-fill-color: #30223d !important;
+}
+
+html body .skin-type-showcase .skin-type-panel__description {
+    color: #7f7189 !important;
+    -webkit-text-fill-color: #7f7189 !important;
+}
+
+/* Semua category/tag kanan dipastikan lavender, bukan hijau. */
+html body .skin-type-showcase .skin-type-panel__tags span,
+html body .skin-type-showcase .skin-type-panel__tag,
+html body .skin-type-showcase [class*="tag"] {
+    background: #f5edfc !important;
+    background-image: none !important;
+    border-color: rgba(185, 142, 230, .78) !important;
+    color: #7d4db2 !important;
+    -webkit-text-fill-color: #7d4db2 !important;
+    box-shadow: none !important;
+}
+
+html body .skin-type-showcase .skin-type-panel__button {
+    background: #b98ee6 !important;
+    background-image: none !important;
+    border-color: #b98ee6 !important;
+    color: #ffffff !important;
+}
+
+html body .skin-type-showcase .skin-type-panel__button:hover {
+    background: #9f6fd0 !important;
+    border-color: #9f6fd0 !important;
+}

@@ -1,0 +1,7 @@
+FILE: resources/views/layouts/admin.blade.php
+
+HAPUS hanya baris berikut jika sebelumnya ditambahkan:
+
+<link rel="stylesheet" href="{{ asset('css/admin-lavender-no-green-fix.css') }}?v=1">
+
+Jangan hapus atau ubah baris CSS admin lain.

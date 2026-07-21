@@ -1,0 +1,78 @@
+/* Logo-only identity support — intentionally scoped to branding elements only. */
+.site-logo,
+.admin-brand,
+.admin-logo-preview,
+.footer-brand{
+  min-width:0;
+}
+.site-logo__text,
+.admin-brand__text,
+.admin-logo-preview__text{
+  min-width:0;
+}
+.site-logo.is-logo-only{
+  width:clamp(150px,12vw,210px)!important;
+  min-width:clamp(150px,12vw,210px)!important;
+  justify-content:flex-start!important;
+  overflow:visible!important;
+}
+.site-logo.is-logo-only img{
+  width:clamp(118px,10vw,178px)!important;
+  height:62px!important;
+  max-width:100%!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+}
+.admin-brand.is-logo-only{
+  width:100%!important;
+  min-height:76px!important;
+  justify-content:flex-start!important;
+}
+.admin-brand.is-logo-only img{
+  width:min(100%,210px)!important;
+  height:72px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+}
+.admin-logo-preview.is-logo-only{
+  min-height:112px!important;
+  justify-content:flex-start!important;
+  padding-inline:20px!important;
+}
+.admin-logo-preview.is-logo-only img{
+  width:min(100%,280px)!important;
+  height:82px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+}
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:.65rem;
+  width:max-content;
+  max-width:100%;
+}
+.footer-brand img{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+}
+.footer-brand.is-logo-only{
+  width:min(100%,240px);
+}
+.footer-brand.is-logo-only img{
+  width:min(100%,210px)!important;
+  height:64px!important;
+  object-position:left center;
+}
+@media(max-width:768px){
+  .site-logo.is-logo-only{
+    width:132px!important;
+    min-width:132px!important;
+  }
+  .site-logo.is-logo-only img{
+    width:122px!important;
+    height:52px!important;
+  }
+  .admin-logo-preview.is-logo-only img{height:68px!important;}
+}

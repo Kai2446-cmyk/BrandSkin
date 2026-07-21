@@ -1,0 +1,111 @@
+/* Logo-only identity support — limited to brand/logo presentation */
+.site-logo,
+.admin-brand,
+.admin-logo-preview,
+.footer-brand {
+  min-width: 0;
+}
+
+.site-logo__text,
+.admin-brand__text,
+.admin-logo-preview__text {
+  min-width: 0;
+}
+
+.site-logo.is-logo-only {
+  width: clamp(150px, 15vw, 230px) !important;
+  max-width: 230px;
+  justify-content: flex-start !important;
+  overflow: hidden;
+}
+
+.site-logo.is-logo-only img {
+  width: 100% !important;
+  max-width: 220px !important;
+  height: 64px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  flex: 0 1 auto;
+}
+
+.admin-brand.is-logo-only {
+  width: 100%;
+  min-height: 76px;
+  margin-right: 0;
+  overflow: hidden;
+}
+
+.admin-brand.is-logo-only img {
+  width: min(100%, 220px) !important;
+  max-width: 220px !important;
+  height: 72px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+}
+
+.admin-logo-preview.is-logo-only {
+  justify-content: flex-start;
+  min-height: 112px;
+  padding-inline: 20px;
+  overflow: hidden;
+}
+
+.admin-logo-preview.is-logo-only img {
+  width: min(100%, 360px) !important;
+  max-width: 360px !important;
+  height: 88px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+}
+
+.admin-field > span small {
+  font: inherit;
+  font-size: .82em;
+  letter-spacing: .03em;
+  text-transform: none;
+  opacity: .68;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 1.25rem;
+  min-height: 42px;
+}
+
+.footer-brand img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.footer-brand span {
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+}
+
+.footer-brand.is-logo-only {
+  width: min(100%, 230px);
+}
+
+.footer-brand.is-logo-only img {
+  width: 100%;
+  max-width: 220px;
+  height: 58px;
+  object-position: left center;
+}
+
+@media (max-width: 768px) {
+  .site-logo.is-logo-only {
+    width: clamp(120px, 38vw, 175px) !important;
+  }
+  .site-logo.is-logo-only img {
+    max-width: 170px !important;
+    height: 52px !important;
+  }
+}

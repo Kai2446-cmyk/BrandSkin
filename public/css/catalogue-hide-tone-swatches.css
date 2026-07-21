@@ -1,0 +1,40 @@
+/* GlowSkin — hide shade/tone choices only on product listing cards.
+   Product detail shade selector is intentionally untouched. */
+
+/* Common catalogue/listing wrappers */
+.catalogue-page .product-card .product-colors,
+.catalogue-page .product-card .color-options,
+.catalogue-page .product-card .tone-options,
+.catalogue-page .product-card .shade-options,
+.catalogue-page .product-card .product-shades,
+.catalogue-page .product-card .color-swatches,
+.catalogue-page .product-card [data-product-colors],
+.catalogue-page .product-card [data-tone-options],
+.product-catalogue .product-card .product-colors,
+.product-catalogue .product-card .color-options,
+.product-catalogue .product-card .tone-options,
+.product-catalogue .product-card .shade-options,
+.product-catalogue .product-card .product-shades,
+.product-catalogue .product-card .color-swatches,
+.product-grid .product-card .product-colors,
+.product-grid .product-card .color-options,
+.product-grid .product-card .tone-options,
+.product-grid .product-card .shade-options,
+.product-grid .product-card .product-shades,
+.product-grid .product-card .color-swatches,
+.products-grid .product-card .product-colors,
+.products-grid .product-card .color-options,
+.products-grid .product-card .tone-options,
+.products-grid .product-card .shade-options,
+.products-grid .product-card .product-shades,
+.products-grid .product-card .color-swatches {
+    display: none !important;
+}
+
+/* Remove leftover spacing after swatches are hidden */
+.catalogue-page .product-card,
+.product-catalogue .product-card,
+.product-grid .product-card,
+.products-grid .product-card {
+    --tone-row-space: 0px;
+}

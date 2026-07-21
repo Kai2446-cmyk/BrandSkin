@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="home" viewBox="0 0 64 64"><path fill="currentColor" d="M9 30 32 10l23 20v24a4 4 0 0 1-4 4H38V41H26v17H13a4 4 0 0 1-4-4V30Z"/></symbol>
+  <symbol id="back" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" d="M38 15 21 32l17 17"/></symbol>
+  <symbol id="face" viewBox="0 0 64 64"><path fill="currentColor" d="M32 5a20 20 0 0 0-20 20v8c0 11 9 23 20 23s20-12 20-23v-8A20 20 0 0 0 32 5Zm-9 25a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm18 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8ZM21 39c7 5 15 5 22 0 1 9-23 9-22 0Z"/></symbol>
+  <symbol id="bottle" viewBox="0 0 64 64"><path fill="currentColor" d="M21 7h16v8l-5 6v34H14V21l7-6V7Zm23 18h9v30h-9V25ZM25 14h8v-3h-8v3Z"/></symbol>
+</svg>

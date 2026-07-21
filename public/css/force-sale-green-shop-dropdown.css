@@ -1,0 +1,218 @@
+/* FORCE INSTALL PATCH: SALE GREEN + SHOP DROPDOWN */
+/* Dipasang otomatis lewat _INSTALL_PATCH_SALE_SHOP.php */
+
+:root{
+    --glow-green-dark:#3D6328;
+    --glow-green-light:#65A240;
+}
+
+/* =========================
+   SALE SECTION - FORCE GREEN
+========================= */
+.glow-sale-green-forced,
+.glow-sale-green-forced *{
+    --force-green-dark:#3D6328 !important;
+    --force-green-light:#65A240 !important;
+    --force-green-text:#F4FFE8 !important;
+}
+
+.glow-sale-green-forced{
+    background:
+        radial-gradient(circle at 14% 8%, rgba(101,162,64,.34) 0%, transparent 30%),
+        radial-gradient(circle at 90% 18%, rgba(61,99,40,.45) 0%, transparent 34%),
+        linear-gradient(135deg, #14230D 0%, #243D17 38%, #3D6328 72%, #65A240 145%) !important;
+    color:#F4FFE8 !important;
+}
+
+.glow-sale-green-forced :is(.container,.wrapper,.swiper,.swiper-wrapper,.slick-list,[class*="container"],[class*="wrapper"]){
+    background:transparent !important;
+}
+
+/* semua warna gold/kecoklatan di section ini dipaksa ke hijau */
+.glow-sale-green-forced :is(article,div,section,span,a,button,strong,p,h1,h2,h3,h4,h5){
+    border-color:rgba(101,162,64,.42) !important;
+}
+
+/* kotak 50% OFF */
+.glow-sale-green-forced .glow-sale-heading-target,
+.glow-sale-green-forced [data-glow-sale-heading="1"]{
+    background:linear-gradient(135deg, rgba(61,99,40,.92), rgba(101,162,64,.72)) !important;
+    color:#F4FFE8 !important;
+    border:1px solid rgba(101,162,64,.62) !important;
+    box-shadow:0 18px 42px rgba(0,0,0,.20) !important;
+}
+
+/* badge -50% / -0% */
+.glow-sale-green-forced .glow-sale-percent-target,
+.glow-sale-green-forced :is(.badge,.product-badge,.discount-badge,.discount-label,.sale-percent,.percent-badge,[class*="badge"],[class*="percent"]){
+    background:linear-gradient(135deg, #65A240, #A4E077) !important;
+    color:#10220C !important;
+    border-color:rgba(255,255,255,.22) !important;
+}
+
+/* card produk */
+.glow-sale-green-forced :is(article,.product-card,.sale-product-card,.catalogue-product-card,[class*="product-card"],[class*="card"]){
+    background:linear-gradient(180deg, rgba(33,55,22,.98), rgba(18,33,12,.99)) !important;
+    border-color:rgba(101,162,64,.42) !important;
+    box-shadow:0 20px 48px rgba(0,0,0,.22) !important;
+}
+
+/* info bawah card */
+.glow-sale-green-forced :is(.product-info,.card-body,.sale-card-body,[class*="product-info"],[class*="card-body"]){
+    background:linear-gradient(180deg, rgba(33,55,22,.98), rgba(18,33,12,.99)) !important;
+}
+
+/* teks */
+.glow-sale-green-forced :is(.category,.product-category,[class*="category"]){
+    color:#9FE176 !important;
+}
+
+.glow-sale-green-forced :is(.product-name,.product-title,[class*="product-name"],[class*="product-title"],h4,h5){
+    color:#FFFFFF !important;
+}
+
+.glow-sale-green-forced :is(.price,.product-price,[class*="price"]){
+    color:#B9EC96 !important;
+}
+
+.glow-sale-green-forced :is(del,.old-price,[class*="old-price"]){
+    color:rgba(234,248,223,.45) !important;
+}
+
+/* tombol */
+.glow-sale-green-forced :is(button,.add-to-bag,.add-to-cart,[data-cart-add]){
+    background:rgba(61,99,40,.86) !important;
+    color:#DFF4D5 !important;
+    border-color:rgba(101,162,64,.62) !important;
+}
+
+.glow-sale-green-forced :is(button,.add-to-bag,.add-to-cart,[data-cart-add]):hover{
+    background:linear-gradient(135deg, #3D6328, #65A240) !important;
+    color:#FFFFFF !important;
+}
+
+/* arrows */
+.glow-sale-green-forced :is(.swiper-button-next,.swiper-button-prev,.slick-next,.slick-prev,.slider-arrow,[class*="arrow"]){
+    background:rgba(23,40,16,.86) !important;
+    color:#EAF8DF !important;
+    border-color:rgba(101,162,64,.55) !important;
+}
+
+/* link see all */
+.glow-sale-green-forced a{
+    color:#BDECA5 !important;
+}
+.glow-sale-green-forced a:hover{
+    color:#fff !important;
+}
+
+/* =========================
+   NAVBAR SHOP DROPDOWN
+========================= */
+.glow-shop-dropdown{
+    position:relative;
+    display:inline-flex !important;
+    align-items:center;
+    height:100%;
+    z-index:9999;
+}
+
+.glow-shop-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    border:0;
+    background:transparent;
+    color:#EDEBE6;
+    font-size:13px;
+    font-weight:950;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    cursor:pointer;
+    padding:12px 10px;
+    line-height:1;
+    font-family:inherit;
+}
+
+.glow-shop-toggle::after{
+    content:"";
+    width:6px;
+    height:6px;
+    border-right:2px solid currentColor;
+    border-bottom:2px solid currentColor;
+    transform:rotate(45deg) translateY(-2px);
+    opacity:.75;
+    transition:.18s ease;
+}
+
+.glow-shop-dropdown:hover .glow-shop-toggle,
+.glow-shop-dropdown.is-open .glow-shop-toggle{
+    color:#fff;
+}
+
+.glow-shop-dropdown:hover .glow-shop-toggle::after,
+.glow-shop-dropdown.is-open .glow-shop-toggle::after{
+    transform:rotate(225deg) translateY(-1px);
+}
+
+.glow-shop-menu{
+    position:absolute;
+    left:50%;
+    top:calc(100% + 16px);
+    transform:translateX(-50%) translateY(10px);
+    width:220px;
+    padding:12px;
+    background:rgba(13,13,12,.97);
+    border:1px solid rgba(101,162,64,.34);
+    border-radius:18px;
+    box-shadow:0 22px 60px rgba(0,0,0,.34);
+    opacity:0;
+    pointer-events:none;
+    transition:.2s ease;
+}
+
+.glow-shop-dropdown:hover .glow-shop-menu,
+.glow-shop-dropdown.is-open .glow-shop-menu{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateX(-50%) translateY(0);
+}
+
+.glow-shop-menu a{
+    display:flex !important;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    padding:14px !important;
+    color:#DAD8D2 !important;
+    text-decoration:none !important;
+    border-radius:12px;
+    font-size:12px !important;
+    font-weight:950 !important;
+    letter-spacing:.12em !important;
+    text-transform:uppercase;
+    white-space:nowrap;
+    transition:.18s ease;
+}
+
+.glow-shop-menu a:hover,
+.glow-shop-menu a.active{
+    background:linear-gradient(135deg, rgba(61,99,40,.80), rgba(101,162,64,.58));
+    color:#fff !important;
+}
+
+.glow-shop-menu a::after{
+    content:"→";
+    opacity:.58;
+}
+
+.glow-nav-hidden-by-shop,
+.glow-nav-hidden-by-shop-force{
+    display:none !important;
+    visibility:hidden !important;
+    width:0 !important;
+    height:0 !important;
+    overflow:hidden !important;
+    margin:0 !important;
+    padding:0 !important;
+}

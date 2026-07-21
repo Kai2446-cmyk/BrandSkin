@@ -1,0 +1,16 @@
+/* Live product preview, scoped to admin product form. */
+.admin-product-live-preview{margin:0 0 24px;padding:18px;border:1px solid #e7d6f3;border-radius:24px;background:linear-gradient(145deg,#fff,#fbf7ff);box-shadow:0 18px 45px rgba(90,61,112,.10)}
+.admin-product-live-preview__top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:14px}
+.admin-product-live-preview__top strong{color:#4b385d;font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.admin-product-live-preview__top span{color:#9c8aa9;font-size:12px;font-weight:700}
+.admin-product-preview-card{display:grid;grid-template-columns:minmax(220px,38%) 1fr;gap:26px;padding:22px;border:1px solid #eee3f5;border-radius:20px;background:#fff;min-height:300px}
+.admin-product-preview-media{position:relative;display:flex;align-items:center;justify-content:center;min-height:260px;border-radius:17px;background:linear-gradient(145deg,#faf7fc,#f3ecf8);overflow:hidden}
+.admin-product-preview-media img{width:100%;height:100%;max-height:320px;object-fit:contain;padding:18px}
+.admin-product-preview-badge{position:absolute;top:14px;left:14px;display:none;padding:8px 12px;border-radius:999px;background:#a969d4;color:#fff;font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.admin-product-preview-copy{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.admin-product-preview-category{margin:0 0 8px;color:#a36ccc;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.admin-product-preview-name{margin:0;color:#3e304a;font-size:clamp(25px,3vw,38px);line-height:1.08;font-weight:900;letter-spacing:-.04em}
+.admin-product-preview-subtitle{margin:10px 0 20px;color:#8d8295;font-size:14px;line-height:1.55;font-weight:600}
+.admin-product-preview-prices{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}.admin-product-preview-price{color:#513b63;font-size:25px;font-weight:900}.admin-product-preview-original{color:#aea4b4;font-size:14px;font-weight:700;text-decoration:line-through}
+.admin-product-preview-tones{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:20px}.admin-product-preview-tone{width:26px;height:26px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #d9c9e4}.admin-product-preview-empty{color:#a59aa9;font-size:12px;font-weight:700}
+@media(max-width:760px){.admin-product-preview-card{grid-template-columns:1fr}.admin-product-preview-media{min-height:220px}.admin-product-live-preview__top{align-items:flex-start;flex-direction:column}}

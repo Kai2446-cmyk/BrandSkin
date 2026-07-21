@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 780" fill="none">
+  <defs>
+    <radialGradient id="soft" cx="50%" cy="44%" r="72%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#f7d8e8" stop-opacity=".36"/>
+    </radialGradient>
+    <linearGradient id="pink" x1="120" y1="0" x2="960" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ff8fc8" stop-opacity=".56"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="780" fill="url(#soft)"/>
+  <circle cx="835" cy="190" r="85" fill="#ff5cae" opacity=".55"/>
+  <circle cx="930" cy="360" r="145" fill="#ff6fb9" opacity=".3"/>
+  <circle cx="220" cy="650" r="190" fill="#fff" opacity=".45"/>
+  <path d="M514 225c-62 10-106 64-102 126 4 73 59 119 129 114 70-5 122-58 117-130-4-67-72-121-144-110Z" fill="#f8c7ad" opacity=".74"/>
+  <path d="M420 324c16-108 116-157 205-112 73 37 92 140 28 205-15-44-38-86-77-113-50-35-97-29-156 20Z" fill="#1f1a17" opacity=".76"/>
+  <path d="M360 515c118 42 236 34 360-40 56-34 92-19 111 13 24 42 5 89-47 123-149 96-301 95-453 25-45-20-61-63-44-99 15-31 41-35 73-22Z" fill="#191919" opacity=".58"/>
+  <ellipse cx="516" cy="350" rx="14" ry="9" fill="#111" opacity=".8"/>
+  <ellipse cx="611" cy="343" rx="14" ry="9" fill="#111" opacity=".8"/>
+  <path d="M520 400c34 20 64 17 91-6" stroke="#973f3f" stroke-width="13" stroke-linecap="round" opacity=".75"/>
+  <path d="M160 185c48-42 122-38 165 10" stroke="url(#pink)" stroke-width="30" stroke-linecap="round" opacity=".64"/>
+  <path d="M165 265c72-44 154-34 218 28" stroke="#cde8bf" stroke-width="26" stroke-linecap="round" opacity=".72"/>
+</svg>

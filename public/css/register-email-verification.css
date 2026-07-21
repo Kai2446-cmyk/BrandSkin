@@ -1,0 +1,88 @@
+/* PATCH REGISTER EMAIL VERIFICATION ONLY */
+/* Fokus:
+   - Hilangkan section news/Whatsapp/Email.
+   - Tambah tombol VERIF EMAIL dan input kode verifikasi.
+   - Tidak mengubah desain lain di luar register.
+*/
+
+.auth-register-page .auth-news{
+    display:none !important;
+}
+
+.register-email-row{
+    display:grid;
+    grid-template-columns:1fr 145px;
+    gap:14px;
+    align-items:end;
+    border-bottom:1px solid #d4d4d4;
+}
+
+.register-email-row input{
+    border-bottom:0 !important;
+}
+
+.register-email-row button{
+    height:36px;
+    border:0;
+    background:#111;
+    color:#fff;
+    font-size:10px;
+    font-weight:950;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:.18s ease;
+    margin-bottom:0;
+}
+
+.register-email-row button:hover{
+    background:#ff3b97;
+    transform:translateY(-1px);
+}
+
+.register-email-row button.is-sending{
+    opacity:.62;
+    pointer-events:none;
+}
+
+.register-code-field input{
+    letter-spacing:.20em;
+    font-weight:900 !important;
+}
+
+.register-code-alert{
+    margin:0 0 18px;
+    padding:12px 14px;
+    font-size:13px;
+    line-height:1.45;
+    font-weight:850;
+    border:1px solid transparent;
+}
+
+.register-code-alert.success{
+    color:#315f25;
+    background:#edf8e9;
+    border-color:#d8edcf;
+}
+
+.register-code-alert.error{
+    color:#c3346d;
+    background:#fff1f7;
+    border-color:#ffd2e4;
+}
+
+@media(max-width:560px){
+    .register-email-row{
+        grid-template-columns:1fr;
+        gap:10px;
+        border-bottom:0;
+    }
+
+    .register-email-row input{
+        border-bottom:1px solid #d4d4d4 !important;
+    }
+
+    .register-email-row button{
+        width:100%;
+    }
+}

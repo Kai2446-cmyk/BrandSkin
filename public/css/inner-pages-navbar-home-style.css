@@ -1,0 +1,111 @@
+/* Menyamakan navbar seluruh halaman internal dengan gaya navbar landing/home.
+   Selector dibatasi ke .site-header--inner-page agar landing page tidak berubah. */
+.site-header.site-header--inner-page {
+  background: linear-gradient(90deg, rgba(250, 246, 253, .98) 0%, rgba(244, 235, 251, .98) 54%, rgba(232, 213, 247, .98) 100%) !important;
+  border-bottom: 1px solid rgba(185, 142, 230, .25) !important;
+  box-shadow: 0 10px 34px rgba(82, 54, 105, .10) !important;
+  backdrop-filter: blur(18px) saturate(1.08) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.08) !important;
+}
+
+.site-header.site-header--inner-page .site-logo,
+.site-header.site-header--inner-page .site-logo strong,
+.site-header.site-header--inner-page .site-nav a,
+.site-header.site-header--inner-page .site-nav-shop-trigger,
+.site-header.site-header--inner-page .profile-trigger strong,
+.site-header.site-header--inner-page .profile-trigger i,
+.site-header.site-header--inner-page .auth-actions a {
+  color: #2A2034 !important;
+}
+
+.site-header.site-header--inner-page .site-logo span {
+  color: rgba(42, 32, 52, .58) !important;
+}
+
+.site-header.site-header--inner-page .site-nav a:hover,
+.site-header.site-header--inner-page .site-nav a.active,
+.site-header.site-header--inner-page .site-nav-shop-trigger:hover,
+.site-header.site-header--inner-page .site-nav-shop.active .site-nav-shop-trigger {
+  color: #7D4DB2 !important;
+}
+
+.site-header.site-header--inner-page .site-nav a::after,
+.site-header.site-header--inner-page .site-nav-shop-trigger::after,
+.site-header.site-header--inner-page .site-nav a.active::after,
+.site-header.site-header--inner-page .site-nav-shop.active .site-nav-shop-trigger::after {
+  background: #B98EE6 !important;
+}
+
+.site-header.site-header--inner-page .circle-action {
+  width: 54px !important;
+  height: 54px !important;
+  min-width: 54px !important;
+  border-radius: 999px !important;
+  color: #2A2034 !important;
+  background: rgba(255, 255, 255, .78) !important;
+  border: 1px solid rgba(125, 77, 178, .16) !important;
+  box-shadow: 0 7px 20px rgba(86, 48, 120, .07) !important;
+}
+
+.site-header.site-header--inner-page .circle-action:hover {
+  color: #7D4DB2 !important;
+  background: #fff !important;
+  border-color: rgba(185, 142, 230, .55) !important;
+  transform: translateY(-1px) !important;
+}
+
+.site-header.site-header--inner-page .search-icon-svg {
+  stroke: #2A2034 !important;
+}
+
+.site-header.site-header--inner-page .circle-action:hover .search-icon-svg {
+  stroke: #7D4DB2 !important;
+}
+
+.site-header.site-header--inner-page .circle-action em {
+  background: #B98EE6 !important;
+  color: #fff !important;
+}
+
+.site-header.site-header--inner-page .auth-actions a,
+.site-header.site-header--inner-page .profile-trigger {
+  min-height: 52px !important;
+  color: #2A2034 !important;
+  background: rgba(255, 255, 255, .72) !important;
+  border-color: rgba(125, 77, 178, .14) !important;
+  box-shadow: 0 7px 20px rgba(86, 48, 120, .07) !important;
+}
+
+.site-header.site-header--inner-page .auth-actions a:hover,
+.site-header.site-header--inner-page .profile-trigger:hover {
+  color: #7D4DB2 !important;
+  background: #fff !important;
+  border-color: rgba(185, 142, 230, .55) !important;
+}
+
+.site-header.site-header--inner-page .profile-dropdown {
+  background: rgba(255, 255, 255, .98) !important;
+  border-color: rgba(185, 142, 230, .24) !important;
+  box-shadow: 0 18px 45px rgba(66, 39, 88, .16) !important;
+}
+
+.site-header.site-header--inner-page .profile-dropdown::before {
+  background: #B98EE6 !important;
+}
+
+.site-header.site-header--inner-page .profile-dropdown a,
+.site-header.site-header--inner-page .profile-dropdown button {
+  color: #2A2034 !important;
+}
+
+.site-header.site-header--inner-page .profile-dropdown a:hover,
+.site-header.site-header--inner-page .profile-dropdown button:hover {
+  color: #7D4DB2 !important;
+  background: #F6F0FC !important;
+}
+
+@media (max-width: 1023px) {
+  .site-header.site-header--inner-page {
+    background: rgba(250, 246, 253, .98) !important;
+  }
+}

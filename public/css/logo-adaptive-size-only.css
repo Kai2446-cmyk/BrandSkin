@@ -1,0 +1,79 @@
+/* Hanya mengatur ukuran identitas logo pada navbar publik. */
+.site-header .site-logo {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.site-header .site-logo img {
+  display: block;
+  object-fit: contain;
+  object-position: left center;
+  flex: 0 0 auto;
+  transition: width .2s ease, height .2s ease;
+}
+
+/* Logo + nama/tagline: proporsional dan tetap rapi. */
+.site-header .site-logo.has-brand-text img {
+  width: 64px !important;
+  height: 52px !important;
+  max-width: 64px !important;
+}
+
+.site-header .site-logo__text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+
+.site-header .site-logo__text strong,
+.site-header .site-logo__text span {
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Bila nama dan tagline kosong, logo otomatis lebih besar tanpa mengubah padding navbar. */
+.site-header .site-logo.is-logo-only {
+  width: 152px;
+  max-width: 152px;
+  justify-content: flex-start;
+  overflow: visible;
+}
+
+.site-header .site-logo.is-logo-only img {
+  width: 136px !important;
+  height: 72px !important;
+  max-width: 136px !important;
+}
+
+@media (max-width: 1100px) {
+  .site-header .site-logo.is-logo-only {
+    width: 128px;
+    max-width: 128px;
+  }
+  .site-header .site-logo.is-logo-only img {
+    width: 114px !important;
+    height: 62px !important;
+    max-width: 114px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header .site-logo.has-brand-text img {
+    width: 52px !important;
+    height: 44px !important;
+    max-width: 52px !important;
+  }
+  .site-header .site-logo.is-logo-only {
+    width: 104px;
+    max-width: 104px;
+  }
+  .site-header .site-logo.is-logo-only img {
+    width: 92px !important;
+    height: 52px !important;
+    max-width: 92px !important;
+  }
+}

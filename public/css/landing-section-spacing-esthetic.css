@@ -1,0 +1,45 @@
+/* Landing page spacing only. No component, data, color, or feature changes. */
+
+main > section:not(.hero-section) {
+    position: relative;
+    padding-top: clamp(4.5rem, 7vw, 7rem) !important;
+    padding-bottom: clamp(4.5rem, 7vw, 7rem) !important;
+}
+
+/* Keep the promotional sale area compact, but give it enough breathing room. */
+main > .sale-home-section {
+    padding-top: clamp(3.75rem, 5.5vw, 5.5rem) !important;
+    padding-bottom: clamp(3.75rem, 5.5vw, 5.5rem) !important;
+}
+
+/* Subtle separation between consecutive landing sections. */
+main > section:not(.hero-section) + section:not(.hero-section)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(86%, 80rem);
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent, rgba(72, 128, 60, .18), transparent);
+    pointer-events: none;
+}
+
+/* Preserve stronger visual sections without a visible divider over gradients/images. */
+main > .beauty-highlight-section::after,
+main > .skin-type-showcase::after,
+main > section:last-child::after {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    main > section:not(.hero-section) {
+        padding-top: 3.75rem !important;
+        padding-bottom: 3.75rem !important;
+    }
+
+    main > .sale-home-section {
+        padding-top: 3.25rem !important;
+        padding-bottom: 3.25rem !important;
+    }
+}

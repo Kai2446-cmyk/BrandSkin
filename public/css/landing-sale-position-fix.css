@@ -1,0 +1,155 @@
+/* PATCH: posisi sale agak ke kanan, tidak terlalu mentok */
+.sale-home-section{
+    background:linear-gradient(to top,#65A240 0%,#376D28 48%,#10240D 100%) !important;
+}
+.sale-home-shell{
+    width:min(1230px, calc(100% - 108px));
+    margin:0 auto;
+    padding-left:34px;
+    padding-right:12px;
+}
+.sale-home-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:22px;
+    margin-bottom:28px;
+}
+.sale-home-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    min-height:50px;
+    padding:0 24px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(166,216,139,.42);
+    color:#EAF8E5;
+}
+.sale-home-badge span{
+    font-size:29px;
+    line-height:1;
+    font-weight:950;
+    letter-spacing:-.04em;
+}
+.sale-home-badge em{ font-style:normal; font-size:20px; }
+.sale-home-see{
+    color:#CFECC3 !important;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+}
+.sale-home-slider{ position:relative; }
+.sale-home-track{
+    display:flex;
+    gap:22px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    padding:0 42px 4px 42px;
+    scroll-padding-left:42px;
+}
+.sale-home-card{
+    flex:0 0 205px;
+    width:205px;
+    scroll-snap-align:start;
+    text-decoration:none;
+    color:inherit;
+}
+.sale-home-card-box{
+    position:relative;
+    overflow:hidden;
+    background:#10280e;
+    border:1px solid rgba(166,216,139,.24);
+}
+.sale-home-discount{
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:2;
+    padding:7px 12px;
+    background:#8BD068;
+    color:#0C2409;
+    font-size:14px;
+    line-height:1;
+    font-weight:950;
+}
+.sale-home-image{
+    position:relative;
+    overflow:hidden;
+    aspect-ratio:1/1;
+    background:#f4f4f4;
+}
+.sale-home-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.sale-home-info{ padding:15px 14px 16px; }
+.sale-home-info p{
+    margin:0 0 8px;
+    color:#A6D88B;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+}
+.sale-home-info h3{
+    min-height:38px;
+    margin:0 0 10px;
+    color:#fff;
+    font-size:12px;
+    line-height:1.22;
+    font-weight:950;
+    text-transform:uppercase;
+}
+.sale-home-original{
+    display:block;
+    color:rgba(255,255,255,.42);
+    font-size:11px;
+    font-weight:800;
+    text-decoration:line-through;
+}
+.sale-home-info strong{
+    display:block;
+    margin-top:3px;
+    color:#A6D88B;
+    font-size:18px;
+    line-height:1;
+    font-weight:950;
+}
+.sale-home-info button{
+    width:100%;
+    height:38px;
+    margin-top:14px;
+    border:1px solid rgba(166,216,139,.38);
+    background:rgba(166,216,139,.13);
+    color:#EAF8E5;
+    font-size:10px;
+    font-weight:950;
+    letter-spacing:.11em;
+    text-transform:uppercase;
+    cursor:pointer;
+}
+.sale-home-arrow{
+    position:absolute;
+    top:50%;
+    z-index:5;
+    width:38px;
+    height:38px;
+    transform:translateY(-50%);
+    border:1px solid rgba(166,216,139,.28);
+    background:rgba(6,26,5,.74);
+    color:#fff;
+    font-size:25px;
+    font-weight:800;
+    cursor:pointer;
+}
+.sale-home-arrow-left{ left:0; }
+.sale-home-arrow-right{ right:0; }
+@media(max-width:900px){
+    .sale-home-shell{ width:min(100% - 28px, 1230px); padding-left:0; padding-right:0; }
+    .sale-home-track{ padding-left:34px; padding-right:34px; }
+    .sale-home-card{ flex-basis:190px; width:190px; }
+}

@@ -1,0 +1,307 @@
+:root{
+  --green-top:#E9D8FA;
+  --green-bottom:#F8F3FD;
+  --dark-green:#7443A5;
+  --button-green:#B586E3;
+  --button-green-dark:#9561C9;
+  --card:rgba(255,255,255,.82);
+  --text:#0b1018;
+  --radius:10px;
+  --phone-width:min(570px, 100vw);
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  margin:0;
+  font-family:'Space Grotesk',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color:var(--text);
+  background:linear-gradient(180deg,var(--green-top) 0%,var(--green-bottom) 100%);
+  background-attachment:fixed;
+}
+a{text-decoration:none;color:inherit}
+.page{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  overflow:hidden;
+  isolation:isolate;
+  background:linear-gradient(180deg,var(--green-top) 0%,var(--green-bottom) 100%);
+}
+.page::before{
+  content:"";
+  position:fixed;
+  inset:-22%;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(250,246,255,.92) 0 16%, transparent 42%),
+    radial-gradient(circle at 82% 16%, rgba(212,181,241,.64) 0 18%, transparent 44%),
+    radial-gradient(circle at 76% 78%, rgba(233,216,250,.76) 0 18%, transparent 46%),
+    radial-gradient(circle at 24% 76%, rgba(190,145,229,.38) 0 15%, transparent 42%),
+    linear-gradient(180deg, #E9D8FA 0%, #F8F3FD 100%);
+  filter:blur(10px);
+  opacity:.96;
+  pointer-events:none;
+  z-index:0;
+  will-change:transform;
+  transform:translate3d(0,0,0) scale(1.05);
+  animation:liquidBlobA 28s ease-in-out infinite alternate;
+}
+.page::after{
+  content:"";
+  position:fixed;
+  inset:-16%;
+  background:
+    radial-gradient(circle at 34% 28%, rgba(255,255,255,.62) 0 14%, transparent 38%),
+    radial-gradient(circle at 68% 68%, rgba(149,97,201,.20) 0 16%, transparent 42%);
+  filter:blur(20px);
+  opacity:.68;
+  pointer-events:none;
+  z-index:0;
+  will-change:transform;
+  transform:translate3d(0,0,0) scale(1.06);
+  animation:liquidBlobB 34s ease-in-out infinite alternate;
+}
+.sa-frame{
+  width:var(--phone-width);
+  min-height:calc(var(--phone-width) * 1.7777778);
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+  background:transparent;
+}
+.sa-frame::before{
+  content:"";
+  position:absolute;
+  inset:auto -12% 14% -12%;
+  height:34%;
+  background:radial-gradient(circle at 50% 50%, rgba(233,216,250,.34) 0%, transparent 62%);
+  filter:blur(16px);
+  pointer-events:none;
+  z-index:-1;
+}
+.home-frame{padding:56px 24px 120px}
+.home-title{
+  text-align:center;
+  margin:40px 0 84px;
+  line-height:.95;
+}
+.home-title span{display:block;font-size:26px;font-weight:800;letter-spacing:-.3px;color:#fff;text-shadow:0 0 14px rgba(255,255,255,.28), 0 2px 10px rgba(255,255,255,.18)}
+.home-title strong{display:block;font-size:52px;font-weight:800;letter-spacing:-2.8px;color:#fff;text-shadow:0 0 18px rgba(255,255,255,.30), 0 3px 14px rgba(255,255,255,.20)}
+.home-title p{margin:26px 0 0;font-size:22px;font-weight:800;letter-spacing:-.6px;color:#fff;text-shadow:0 0 14px rgba(255,255,255,.26), 0 2px 10px rgba(255,255,255,.16)}
+.card{
+  position:relative;
+  transform:translateZ(0);
+  border-radius:var(--radius);
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.48);
+  backdrop-filter:blur(2px);
+  box-shadow:none;
+}
+.card h1,.card h2{margin:0 0 16px;font-size:20px;line-height:1.15;font-weight:800;letter-spacing:-.6px}
+.card p{font-size:16px;line-height:1.45;margin:0;font-weight:500;color:#0d1523}
+.intro-card{padding:24px 22px 28px;margin-bottom:16px}
+.steps-card,.result-card{padding:24px 22px;margin-bottom:16px}
+.step-row{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:center;margin:18px 0}
+.icon-badge{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#EFE2FB;color:#7443A5}
+.icon-badge svg{width:34px;height:34px}
+.step-row h3{font-size:17px;margin:0 0 6px;font-weight:800;letter-spacing:-.2px}
+.step-row p{font-size:16px;line-height:1.25;margin:0;color:#111827;font-weight:500}
+.skin-carousel{
+  position:relative;
+  margin:16px -2px 20px;
+  padding:0;
+}
+.carousel-track{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding:2px 0 8px;
+}
+.carousel-track::-webkit-scrollbar{display:none}
+.skin-item{
+  flex:0 0 88px;
+  text-align:center;
+  scroll-snap-align:center;
+}
+.skin-item img{
+  width:78px;
+  height:78px;
+  display:block;
+  object-fit:cover;
+  border-radius:50%;
+  margin:0 auto 6px;
+  border:2px solid rgba(255,255,255,.72);
+}
+.skin-item p{
+  font-size:12px;
+  margin:0;
+  font-weight:700;
+  color:#545454;
+  line-height:1.12;
+}
+.carousel-btn{display:none}
+.result-copy{font-size:16px;line-height:1.44;margin:0;color:#0f172a;font-weight:500}
+.floating-cta{
+  position:fixed;
+  left:50%;
+  bottom:24px;
+  transform:translateX(-50%);
+  width:min(calc(var(--phone-width) - 40px), calc(100vw - 40px));
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 18px;
+  background:linear-gradient(180deg,var(--button-green),var(--button-green-dark));
+  color:#fff;
+  font-size:16px;
+  font-weight:800;
+  border-radius:0;
+  z-index:50;
+  text-align:center;
+}
+.start-frame{padding:96px 24px 64px}
+.top-actions{position:absolute;top:34px;left:22px;right:22px;display:flex;align-items:center;justify-content:space-between;z-index:5}
+.round-nav{width:52px;height:52px;border-radius:50%;border:0;background:var(--dark-green);color:#F0E4FB;display:grid;place-items:center;cursor:pointer}
+.round-nav svg{width:28px;height:28px}
+.selfie-card{padding:28px 24px 24px;overflow:hidden;margin-top:46px}
+.selfie-step{display:grid;grid-template-columns:72px 1fr;gap:14px;margin:22px 0;align-items:center}
+.avatar{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#F4ECFC;font-size:35px;position:relative}
+.avatar.warn:after{content:"×";position:absolute;right:-1px;bottom:2px;width:20px;height:20px;border-radius:50%;background:#ff315a;color:#fff;border:2px solid #fff;display:grid;place-items:center;font-weight:800;font-size:15px;line-height:1}
+.selfie-step h2{font-size:18px;line-height:1.1;margin:0 0 8px;font-weight:800;letter-spacing:-.2px}
+.selfie-step p{font-size:16px;line-height:1.4;margin:0;color:#101827;font-weight:500}
+.policy-box{text-align:center;margin-top:28px;padding:0 8px}
+.policy-box hr{border:0;border-top:1px solid rgba(0,0,0,.16);margin:0 28px 18px}
+.policy-box p{font-size:13px;line-height:1.35;margin:0 0 18px;font-weight:600}
+.disabled-cta{min-height:58px;display:flex;align-items:center;justify-content:center;width:100%;background:linear-gradient(180deg,var(--button-green),var(--button-green-dark));color:#fff;font-size:16px;font-weight:800;border:0;border-radius:0;cursor:default;text-align:center;opacity:.96}
+@keyframes liquidBlobA{
+  0%{transform:translate3d(-1.5%, -1%, 0) scale(1.05)}
+  50%{transform:translate3d(1.5%, 1%, 0) scale(1.08)}
+  100%{transform:translate3d(1%, -1.2%, 0) scale(1.06)}
+}
+@keyframes liquidBlobB{
+  0%{transform:translate3d(1%, 0, 0) scale(1.06);opacity:.62}
+  50%{transform:translate3d(-1.2%, 1%, 0) scale(1.08);opacity:.74}
+  100%{transform:translate3d(.8%, -1%, 0) scale(1.07);opacity:.66}
+}
+@keyframes liquidBlobC{
+  0%{transform:translate3d(0, 0, 0)}
+  100%{transform:translate3d(0, 0, 0)}
+}
+  50%{transform:translate3d(3%, -2%, 0) scale(1.06)}
+  100%{transform:translate3d(-1%, 2%, 0) scale(1.02)}
+}
+@media (max-width:600px){
+  :root{--phone-width:min(570px, 100vw);padding-right:20px}
+  .floating-cta{bottom:20px}
+}
+@media (max-width:390px){
+  .home-title{margin:38px 0 74px}
+  .home-title strong{font-size:52px;height:56px;font-size:31px}
+  .floating-cta,.disabled-cta{font-size:18px}
+}
+@media (prefers-reduced-motion: reduce){
+  .page::before,
+  .page::after,
+  .sa-frame::before,
+  .carousel-track{animation:none !important}
+}
+
+/* Navbar/layout compatibility: keeps the existing analyzer design while using the main GlowSkin layout. */
+.site-header + .page,
+.site-header ~ .page {
+  min-height: calc(100vh - 96px);
+}
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) {
+  background: #F8F3FD;
+}
+@media (max-width: 900px) {
+  .site-header + .page,
+  .site-header ~ .page {
+    min-height: calc(100vh - 76px);
+  }
+}
+
+/* Skin Analyzer spacing fix: prevent the fixed navbar and footer from covering content. */
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) {
+  overflow-x: hidden;
+}
+
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .page {
+  min-height: calc(100vh - 92px);
+  padding-top: 104px;
+  padding-bottom: 32px;
+  overflow: visible;
+}
+
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .sa-frame {
+  min-height: auto;
+}
+
+/* Keep the CTA inside the document flow so it never covers the footer. */
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .floating-cta {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  margin: -94px auto 34px;
+  width: min(calc(var(--phone-width) - 40px), calc(100vw - 40px));
+  z-index: 5;
+}
+
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) footer,
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .site-footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .page {
+    min-height: calc(100vh - 76px);
+    padding-top: 88px;
+    padding-bottom: 24px;
+  }
+
+  body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .floating-cta {
+    margin: -88px auto 26px;
+  }
+}
+
+
+/* GlowSkin lavender tone override — visual only, no layout/function changes. */
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]),
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .page {
+  background: linear-gradient(180deg, #E9D8FA 0%, #F8F3FD 100%) !important;
+}
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .page::before {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,.88) 0 16%, transparent 42%),
+    radial-gradient(circle at 82% 16%, rgba(205,167,238,.62) 0 18%, transparent 44%),
+    radial-gradient(circle at 76% 78%, rgba(235,219,250,.76) 0 18%, transparent 46%),
+    radial-gradient(circle at 24% 76%, rgba(181,134,225,.34) 0 15%, transparent 42%),
+    linear-gradient(180deg, #E9D8FA 0%, #F8F3FD 100%) !important;
+}
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .page::after {
+  background:
+    radial-gradient(circle at 34% 28%, rgba(255,255,255,.58) 0 14%, transparent 38%),
+    radial-gradient(circle at 68% 68%, rgba(149,97,201,.18) 0 16%, transparent 42%) !important;
+}
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .icon-badge,
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .avatar {
+  background:#EFE2FB !important;
+  color:#7443A5 !important;
+}
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .floating-cta,
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .disabled-cta {
+  background:linear-gradient(180deg,#B586E3,#9561C9) !important;
+}
+body:has(.page[aria-label="GlowSkin Skin Analyzer"]) .round-nav {
+  background:#7443A5 !important;
+  color:#F8F3FD !important;
+}

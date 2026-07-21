@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="home" viewBox="0 0 64 64"><path fill="currentColor" d="M9 30 32 10l23 20v24a4 4 0 0 1-4 4H38V41H26v17H13a4 4 0 0 1-4-4V30Z"/></symbol>
+  <symbol id="back" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" d="M38 15 21 32l17 17"/></symbol>
+  <symbol id="close" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" d="M18 18l28 28M46 18 18 46"/></symbol>
+  <symbol id="trash" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="M22 22h20m-16 0v25m12-25v25M18 22l3 34h22l3-34M26 16h12l2 6H24l2-6Z"/></symbol>
+  <symbol id="report" viewBox="0 0 64 64"><path fill="currentColor" d="M17 8h22l10 10v38H17V8Zm21 3v10h10L38 11ZM25 31h14v4H25v-4Zm0 9h18v4H25v-4Zm0-18h9v4h-9v-4Z"/></symbol>
+  <symbol id="search" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" d="m44 44 12 12"/><circle cx="28" cy="28" r="18" fill="none" stroke="currentColor" stroke-width="5"/></symbol>
+  <symbol id="bag" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" d="M18 24h28l-3 30H21l-3-30Z"/><path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" d="M25 24c0-6 3-10 7-10s7 4 7 10"/></symbol>
+  <symbol id="chevron" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="m25 16 16 16-16 16"/></symbol>
+  <symbol id="check" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" d="m16 34 10 10 22-24"/></symbol>
+  <symbol id="x" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" d="M20 20l24 24M44 20 20 44"/></symbol>
+</svg>

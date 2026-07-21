@@ -1,0 +1,36 @@
+/* PATCH ARTICLE TABS NO LOADING ONLY */
+/* Saat klik kategori Articles, jangan pakai full page loader.
+   Cukup animasi pindah card secara halus. */
+
+.articles-category-strip a{
+    cursor:pointer;
+}
+
+.articles-grid{
+    transition:opacity .18s ease, transform .18s ease;
+}
+
+.articles-grid.is-switching{
+    opacity:.34;
+    transform:translateY(8px);
+    pointer-events:none;
+}
+
+.article-card{
+    will-change:opacity, transform;
+}
+
+.article-card.article-tab-enter{
+    animation:articleTabEnter .34s ease both;
+}
+
+@keyframes articleTabEnter{
+    from{
+        opacity:0;
+        transform:translateY(14px) scale(.985);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}

@@ -1,0 +1,301 @@
+/* PATCH SALE GREEN + SHOP DROPDOWN ONLY */
+/* Fokus:
+   1) Paksa section sale/promo landing yang masih kuning/gold menjadi hijau gradient #3D6328 - #65A240.
+   2) Navbar: Makeup, Skincare, Sale digabung ke dropdown baru bernama SHOP.
+   Tidak mengubah database, controller, route, layout utama, produk, artikel, cart, admin, auth, atau fitur lain.
+*/
+
+/* =========================
+   FORCE SALE SECTION GREEN
+========================= */
+.glow-force-sale-section{
+    background:
+        radial-gradient(circle at 18% 8%, rgba(101,162,64,.32), transparent 30%),
+        radial-gradient(circle at 84% 18%, rgba(61,99,40,.45), transparent 34%),
+        linear-gradient(135deg, #16240F 0%, #243D17 38%, #3D6328 78%, #65A240 145%) !important;
+    color:#F4FFE8 !important;
+}
+
+.glow-force-sale-section,
+.glow-force-sale-section *,
+.glow-force-sale-section *::before,
+.glow-force-sale-section *::after{
+    border-color:rgba(101,162,64,.42) !important;
+}
+
+/* Elemen besar yang masih punya background gold/coklat */
+.glow-force-sale-section > *,
+.glow-force-sale-section .container,
+.glow-force-sale-section .wrapper,
+.glow-force-sale-section .swiper,
+.glow-force-sale-section .swiper-wrapper,
+.glow-force-sale-section .slick-list,
+.glow-force-sale-section .products,
+.glow-force-sale-section .product-slider,
+.glow-force-sale-section [class*="wrapper"],
+.glow-force-sale-section [class*="container"]{
+    background-color:transparent !important;
+}
+
+/* Box 50% OFF */
+.glow-force-sale-section .glow-sale-title,
+.glow-force-sale-section [data-glow-sale-title],
+.glow-force-sale-section .section-title,
+.glow-force-sale-section .sale-title,
+.glow-force-sale-section h2,
+.glow-force-sale-section h3{
+    color:#F4FFE8 !important;
+    background:rgba(61,99,40,.56) !important;
+    border:1px solid rgba(101,162,64,.62) !important;
+    box-shadow:0 18px 40px rgba(0,0,0,.18) !important;
+}
+
+/* Kalau judul 50% OFF berupa span/div biasa */
+.glow-force-sale-section [data-sale-heading],
+.glow-force-sale-section .sale-heading,
+.glow-force-sale-section .discount-heading,
+.glow-force-sale-section .promo-heading{
+    color:#F4FFE8 !important;
+    background:linear-gradient(135deg, rgba(61,99,40,.88), rgba(101,162,64,.68)) !important;
+    border-color:rgba(101,162,64,.62) !important;
+}
+
+/* Badge diskon kecil -50% / -0% */
+.glow-force-sale-section .glow-discount-badge,
+.glow-force-sale-section .discount-badge,
+.glow-force-sale-section .discount-label,
+.glow-force-sale-section .sale-percent,
+.glow-force-sale-section .percent-badge,
+.glow-force-sale-section .product-badge,
+.glow-force-sale-section .badge,
+.glow-force-sale-section [class*="discount"],
+.glow-force-sale-section [class*="percent"]{
+    background:linear-gradient(135deg, #65A240, #9DDA74) !important;
+    color:#0F250B !important;
+    border-color:rgba(255,255,255,.22) !important;
+}
+
+/* Link see all */
+.glow-force-sale-section a{
+    color:#BDECA5 !important;
+}
+.glow-force-sale-section a:hover{
+    color:#FFFFFF !important;
+}
+
+/* Card produk */
+.glow-force-sale-section article,
+.glow-force-sale-section .product-card,
+.glow-force-sale-section .sale-product-card,
+.glow-force-sale-section .catalogue-product-card,
+.glow-force-sale-section [class*="product-card"],
+.glow-force-sale-section [class*="card"]{
+    background:linear-gradient(180deg, rgba(34,56,23,.98), rgba(19,34,13,.99)) !important;
+    border-color:rgba(101,162,64,.40) !important;
+    box-shadow:0 20px 48px rgba(0,0,0,.22) !important;
+}
+
+/* Body/info produk */
+.glow-force-sale-section .product-info,
+.glow-force-sale-section .card-body,
+.glow-force-sale-section .sale-card-body,
+.glow-force-sale-section [class*="product-info"],
+.glow-force-sale-section [class*="card-body"]{
+    background:linear-gradient(180deg, rgba(34,56,23,.98), rgba(19,34,13,.99)) !important;
+}
+
+/* Text di card */
+.glow-force-sale-section .category,
+.glow-force-sale-section .product-category,
+.glow-force-sale-section [class*="category"]{
+    color:#9FE176 !important;
+}
+
+.glow-force-sale-section .product-name,
+.glow-force-sale-section .product-title,
+.glow-force-sale-section [class*="product-name"],
+.glow-force-sale-section [class*="product-title"],
+.glow-force-sale-section h4,
+.glow-force-sale-section h5{
+    color:#FFFFFF !important;
+}
+
+.glow-force-sale-section .price,
+.glow-force-sale-section .product-price,
+.glow-force-sale-section [class*="price"]{
+    color:#B9EC96 !important;
+}
+
+.glow-force-sale-section del,
+.glow-force-sale-section .old-price,
+.glow-force-sale-section [class*="old-price"]{
+    color:rgba(234,248,223,.45) !important;
+}
+
+/* Button ADD TO BAG */
+.glow-force-sale-section button,
+.glow-force-sale-section .add-to-bag,
+.glow-force-sale-section .add-to-cart,
+.glow-force-sale-section [data-cart-add]{
+    background:rgba(61,99,40,.82) !important;
+    color:#DFF4D5 !important;
+    border-color:rgba(101,162,64,.55) !important;
+}
+
+.glow-force-sale-section button:hover,
+.glow-force-sale-section .add-to-bag:hover,
+.glow-force-sale-section .add-to-cart:hover,
+.glow-force-sale-section [data-cart-add]:hover{
+    background:linear-gradient(135deg, #3D6328, #65A240) !important;
+    color:#FFFFFF !important;
+}
+
+/* Slider arrows */
+.glow-force-sale-section .swiper-button-next,
+.glow-force-sale-section .swiper-button-prev,
+.glow-force-sale-section .slick-next,
+.glow-force-sale-section .slick-prev,
+.glow-force-sale-section .slider-arrow,
+.glow-force-sale-section [class*="arrow"]{
+    background:rgba(23,40,16,.86) !important;
+    color:#EAF8DF !important;
+    border-color:rgba(101,162,64,.55) !important;
+}
+
+/* Force inline / class gold yang bandel */
+.glow-force-sale-section [style]{
+    border-color:rgba(101,162,64,.42) !important;
+}
+
+.glow-force-sale-section [style*="background"]{
+    --tmp-green: #3D6328;
+}
+
+/* Override warna gold umum di section */
+.glow-force-sale-section :is(span,div,a,button,strong,p){
+    border-color:rgba(101,162,64,.42) !important;
+}
+
+/* =========================
+   NAVBAR SHOP DROPDOWN
+========================= */
+.glow-shop-dropdown{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    height:100%;
+    z-index:20;
+}
+
+.glow-shop-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    border:0;
+    background:transparent;
+    color:#EDEBE6;
+    font-size:13px;
+    font-weight:950;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    cursor:pointer;
+    padding:12px 10px;
+    line-height:1;
+    font-family:inherit;
+}
+
+.glow-shop-toggle::after{
+    content:"";
+    width:6px;
+    height:6px;
+    border-right:2px solid currentColor;
+    border-bottom:2px solid currentColor;
+    transform:rotate(45deg) translateY(-2px);
+    opacity:.75;
+    transition:.18s ease;
+}
+
+.glow-shop-dropdown:hover .glow-shop-toggle,
+.glow-shop-dropdown.is-open .glow-shop-toggle{
+    color:#FFFFFF;
+}
+
+.glow-shop-dropdown:hover .glow-shop-toggle::after,
+.glow-shop-dropdown.is-open .glow-shop-toggle::after{
+    transform:rotate(225deg) translateY(-1px);
+}
+
+.glow-shop-menu{
+    position:absolute;
+    left:50%;
+    top:calc(100% + 18px);
+    transform:translateX(-50%) translateY(10px);
+    width:220px;
+    padding:12px;
+    background:rgba(13,13,12,.96);
+    border:1px solid rgba(101,162,64,.34);
+    border-radius:18px;
+    box-shadow:0 22px 60px rgba(0,0,0,.34);
+    opacity:0;
+    pointer-events:none;
+    transition:.2s ease;
+}
+
+.glow-shop-dropdown:hover .glow-shop-menu,
+.glow-shop-dropdown.is-open .glow-shop-menu{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateX(-50%) translateY(0);
+}
+
+.glow-shop-menu a{
+    display:flex !important;
+    align-items:center;
+    justify-content:space-between;
+    width:100%;
+    padding:14px 14px !important;
+    color:#DAD8D2 !important;
+    text-decoration:none !important;
+    border-radius:12px;
+    font-size:12px !important;
+    font-weight:950 !important;
+    letter-spacing:.12em !important;
+    text-transform:uppercase;
+    white-space:nowrap;
+    transition:.18s ease;
+}
+
+.glow-shop-menu a:hover,
+.glow-shop-menu a.active{
+    background:linear-gradient(135deg, rgba(61,99,40,.72), rgba(101,162,64,.55));
+    color:#FFFFFF !important;
+}
+
+.glow-shop-menu a::after{
+    content:"→";
+    opacity:.55;
+}
+
+/* Sembunyikan nav lama Makeup/Skincare/Sale setelah JS memindahkannya */
+.glow-nav-hidden-by-shop{
+    display:none !important;
+}
+
+@media(max-width:980px){
+    .glow-shop-toggle{
+        font-size:12px;
+        letter-spacing:.14em;
+        padding:10px 8px;
+    }
+
+    .glow-shop-menu{
+        left:auto;
+        right:0;
+        transform:translateY(10px);
+    }
+
+    .glow-shop-dropdown:hover .glow-shop-menu,
+    .glow-shop-dropdown.is-open .glow-shop-menu{
+        transform:translateY(0);
+    }
+}

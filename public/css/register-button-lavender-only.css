@@ -1,0 +1,14 @@
+/* PERBAIKAN KHUSUS TOMBOL REGISTER NAVBAR
+   Hanya mengganti warna hijau tombol Register menjadi lavender. */
+.auth-actions a:last-child {
+    background: #B98EE6 !important;
+    border-color: #B98EE6 !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 24px rgba(185, 142, 230, 0.28) !important;
+}
+
+.auth-actions a:last-child:hover {
+    background: #A876DB !important;
+    border-color: #A876DB !important;
+    color: #ffffff !important;
+}

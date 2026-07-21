@@ -1,0 +1,931 @@
+/* GlowSkin complete lavender cleanup
+   Accent utama: #B98EE6. Override visual public website only. */
+:root{
+  --primary:#B98EE6 !important;
+  --primary-dark:#7D4DB2 !important;
+  --primary-soft:#DCC5F2 !important;
+  --primary-pale:#F6F0FC !important;
+  --accent:#B98EE6 !important;
+  --accent-dark:#7D4DB2 !important;
+  --olive:#B98EE6 !important;
+  --olive-dark:#7D4DB2 !important;
+  --green:#B98EE6 !important;
+}
+
+/* Navbar active underline and hover */
+.site-nav a::after,
+.site-nav-shop-trigger::after,
+.site-nav a.active::after,
+.site-nav-shop.active .site-nav-shop-trigger::after,
+.nav-link-hover::after,
+.tab-underline-active::after{
+  background:#B98EE6 !important;
+}
+.site-nav a.active,
+.site-nav a:hover,
+.site-nav-shop-trigger:hover,
+.site-nav-shop.active .site-nav-shop-trigger{
+  color:#7D4DB2 !important;
+}
+
+/* Shop mega menu */
+.shop-mega-eyebrow,
+.shop-mega-link::after,
+.shop-mega-mini::after,
+.shop-mega-card span,
+.shop-mega-card em,
+.shop-mega-link:hover strong,
+.shop-mega-link.active strong,
+.shop-mega-mini:hover,
+.shop-mega-link:hover small{
+  color:#7D4DB2 !important;
+}
+.shop-mega-link::after,
+.shop-mega-mini::after{background:#B98EE6 !important;}
+.shop-mega-link:hover,
+.shop-mega-link.active,
+.shop-mega-mini:hover{
+  border-color:rgba(185,142,230,.36) !important;
+  background:linear-gradient(135deg,#fff,#F6F0FC) !important;
+}
+.shop-mega-panel::before{background:linear-gradient(90deg,#B98EE6,#E4D2F6) !important;}
+
+/* Skin type landing */
+.skin-type-showcase{
+  background:linear-gradient(135deg,#2D1B3D 0%,#6C4294 48%,#B98EE6 100%) !important;
+}
+.skin-type-showcase__eyebrow,
+.skin-type-showcase__heading small,
+.skin-type-showcase__heading p,
+.skin-type-tab small,
+.skin-type-product-card__body small,
+.skin-type-product-card__body strong,
+.skin-type-product-card__body .price,
+.skin-type-product-card__body [class*="price"]{
+  color:#E7D6F7 !important;
+}
+.skin-type-tab.active{
+  border-color:#DCC5F2 !important;
+  background:rgba(185,142,230,.22) !important;
+}
+.skin-type-tab__icon{background:#B98EE6 !important;color:#fff !important;}
+.skin-type-product-card__image span,
+.skin-type-product-card__badge{background:#B98EE6 !important;color:#fff !important;}
+.skin-type-showcase a,
+.skin-type-showcase button{
+  border-color:#B98EE6 !important;
+}
+.skin-type-showcase a[class*="btn"],
+.skin-type-showcase button[class*="btn"]{
+  background:linear-gradient(135deg,#A977DA,#B98EE6) !important;
+  color:#fff !important;
+}
+
+/* Sale / product cards / catalogue */
+.sale-gradient-bg,
+.sale-section,
+[class*="sale-section"]{
+  background:linear-gradient(135deg,#FFFFFF 0%,#F6F0FC 48%,#E9D8F8 100%) !important;
+}
+.product-card,
+.sale-product-card,
+[class*="product-card"]{
+  --card-accent:#B98EE6;
+}
+.product-card__body,
+.sale-product-card__body,
+[class*="product-card"] [class*="body"]{
+  background:#2B1B39 !important;
+}
+.product-card__body small,
+.product-card__body .category,
+.sale-product-card__body small,
+[class*="product-card"] [class*="category"]{
+  color:#DCC5F2 !important;
+}
+.product-card__body .price,
+.sale-product-card__body .price,
+[class*="product-card"] [class*="price"]{
+  color:#D7B7F1 !important;
+}
+.product-card button,
+.sale-product-card button,
+[class*="product-card"] button{
+  border-color:rgba(220,197,242,.5) !important;
+  background:rgba(185,142,230,.12) !important;
+  color:#fff !important;
+}
+.product-card button:hover,
+.sale-product-card button:hover,
+[class*="product-card"] button:hover{
+  background:#B98EE6 !important;
+}
+.sale-badge,
+.catalogue-sale-discount,
+[class*="discount"],
+[class*="sale-badge"]{
+  background:#B98EE6 !important;
+  color:#24172F !important;
+}
+.load-more-btn,
+button[class*="load-more"],
+a[class*="load-more"]{
+  background:linear-gradient(135deg,#9C69CE,#B98EE6) !important;
+  color:#fff !important;
+  border-color:#B98EE6 !important;
+}
+
+/* Common buttons and accents */
+.green-gradient-btn,
+.btn-primary,
+.primary-btn,
+button.bg-green-500,
+button.bg-green-600,
+button.bg-green-700,
+a.bg-green-500,
+a.bg-green-600,
+a.bg-green-700{
+  background:linear-gradient(135deg,#9C69CE 0%,#B98EE6 60%,#DCC5F2 100%) !important;
+  border-color:#B98EE6 !important;
+  color:#fff !important;
+}
+
+/* Broad legacy green utility cleanup on public pages */
+body:not(.admin-dashboard) .text-green-300,
+body:not(.admin-dashboard) .text-green-400,
+body:not(.admin-dashboard) .text-green-500,
+body:not(.admin-dashboard) .text-green-600,
+body:not(.admin-dashboard) .text-green-700,
+body:not(.admin-dashboard) .text-green-800,
+body:not(.admin-dashboard) .text-lime-500,
+body:not(.admin-dashboard) .text-emerald-500{
+  color:#8C5ABB !important;
+}
+body:not(.admin-dashboard) .bg-green-100,
+body:not(.admin-dashboard) .bg-green-200,
+body:not(.admin-dashboard) .bg-green-300,
+body:not(.admin-dashboard) .bg-green-400,
+body:not(.admin-dashboard) .bg-green-500,
+body:not(.admin-dashboard) .bg-green-600,
+body:not(.admin-dashboard) .bg-green-700,
+body:not(.admin-dashboard) .bg-green-800,
+body:not(.admin-dashboard) .bg-lime-500,
+body:not(.admin-dashboard) .bg-emerald-500{
+  background-color:#B98EE6 !important;
+}
+body:not(.admin-dashboard) .border-green-300,
+body:not(.admin-dashboard) .border-green-400,
+body:not(.admin-dashboard) .border-green-500,
+body:not(.admin-dashboard) .border-green-600,
+body:not(.admin-dashboard) .border-green-700,
+body:not(.admin-dashboard) .border-green-800{
+  border-color:#B98EE6 !important;
+}
+
+/* Inline legacy color values used by old Blade templates */
+body:not(.admin-dashboard) [style*="#4F8B3A" i],
+body:not(.admin-dashboard) [style*="#4f8b3a" i],
+body:not(.admin-dashboard) [style*="#65A240" i],
+body:not(.admin-dashboard) [style*="#65a240" i],
+body:not(.admin-dashboard) [style*="#3D6328" i],
+body:not(.admin-dashboard) [style*="#3d6328" i],
+body:not(.admin-dashboard) [style*="#77A45A" i],
+body:not(.admin-dashboard) [style*="#77a45a" i],
+body:not(.admin-dashboard) [style*="#4A7A3A" i],
+body:not(.admin-dashboard) [style*="#4a7a3a" i],
+body:not(.admin-dashboard) [style*="#5B8A4A" i],
+body:not(.admin-dashboard) [style*="#5b8a4a" i]{
+  color:#8C5ABB !important;
+  border-color:#B98EE6 !important;
+}
+
+/* Article detail legacy olive variables */
+.article-detail-page,
+.article-page,
+.articles-page{
+  --article-olive-50:#F6F0FC !important;
+  --article-olive-200:#DCC5F2 !important;
+  --article-olive-500:#B98EE6 !important;
+  --article-olive-700:#7D4DB2 !important;
+  --article-olive-900:#4B2B66 !important;
+  --article-accent:#B98EE6 !important;
+}
+
+/* Profile, wishlist, cart, orders */
+.profile-page,
+.profile-wrapper,
+.account-page,
+.my-profile,
+.my-orders,
+.wishlist-page,
+.cart-page{
+  --primary:#B98EE6 !important;
+  --accent:#B98EE6 !important;
+  --green:#B98EE6 !important;
+}
+.profile-page .active,
+.profile-wrapper .active,
+.account-page .active,
+.my-profile .active,
+.my-orders .active,
+.profile-sidebar a:hover,
+.profile-sidebar a.active{
+  color:#7D4DB2 !important;
+  border-color:#B98EE6 !important;
+  background:#F6F0FC !important;
+}
+.profile-page button:not(.danger),
+.profile-wrapper button:not(.danger),
+.account-page button:not(.danger),
+.my-profile button:not(.danger),
+.my-orders button:not(.danger){
+  border-color:#B98EE6 !important;
+}
+.profile-page button[type="submit"],
+.profile-wrapper button[type="submit"],
+.account-page button[type="submit"],
+.my-profile button[type="submit"]{
+  background:linear-gradient(135deg,#9C69CE,#B98EE6) !important;
+  color:#fff !important;
+}
+
+/* Focus and selection */
+::selection{background:#B98EE6;color:#fff;}
+a:focus-visible,button:focus-visible,input:focus,select:focus,textarea:focus{
+  outline-color:#B98EE6 !important;
+  border-color:#B98EE6 !important;
+  box-shadow:0 0 0 3px rgba(185,142,230,.17) !important;
+}
+
+/* =========================================================
+   RAPAPIH PADDING + ROUNDED CARDS (PUBLIC WEBSITE ONLY)
+   Tidak mengubah struktur HTML maupun fungsi.
+   ========================================================= */
+
+/* Shop by Skin Type: padding dan alignment lebih konsisten */
+.skin-type-showcase{
+  padding:clamp(72px,7vw,112px) 0 !important;
+  overflow:hidden;
+}
+.skin-type-showcase__shell{
+  width:min(1440px,calc(100% - 64px)) !important;
+  margin-inline:auto !important;
+}
+.skin-type-showcase__heading{
+  margin:0 auto clamp(42px,5vw,72px) !important;
+  text-align:center !important;
+}
+.skin-type-showcase__layout{
+  display:grid !important;
+  grid-template-columns:minmax(280px,360px) minmax(0,1fr) !important;
+  gap:clamp(32px,4vw,64px) !important;
+  align-items:stretch !important;
+}
+.skin-type-showcase__tabs{
+  display:grid !important;
+  gap:18px !important;
+  align-content:start !important;
+}
+.skin-type-tab{
+  width:100% !important;
+  min-height:118px !important;
+  padding:22px 24px !important;
+  border-radius:24px !important;
+  border:1px solid rgba(231,214,247,.46) !important;
+  box-shadow:0 14px 34px rgba(31,18,46,.14) !important;
+  overflow:hidden !important;
+}
+.skin-type-tab__icon{
+  flex:0 0 72px !important;
+  width:72px !important;
+  height:72px !important;
+  border-radius:22px !important;
+  box-shadow:0 10px 24px rgba(48,28,72,.18) !important;
+}
+.skin-type-panel{
+  height:100% !important;
+  padding:clamp(28px,3vw,48px) !important;
+  border-radius:30px !important;
+  border:1px solid rgba(231,214,247,.28) !important;
+  background:rgba(255,255,255,.055) !important;
+  box-shadow:0 24px 60px rgba(30,16,48,.18) !important;
+}
+.skin-type-products-grid{
+  gap:22px !important;
+  align-items:stretch !important;
+}
+.skin-type-product-card{
+  border-radius:26px !important;
+  box-shadow:0 18px 44px rgba(25,12,39,.22) !important;
+}
+.skin-type-product-card__image{
+  border-radius:25px 25px 0 0 !important;
+}
+.skin-type-product-card__image span,
+.skin-type-product-card__badge{
+  border-radius:999px !important;
+  padding:8px 13px !important;
+}
+.skin-type-product-card__body{
+  padding:20px 22px 24px !important;
+  border-radius:0 0 25px 25px !important;
+}
+.skin-type-panel__copy{
+  padding:clamp(12px,2vw,28px) !important;
+}
+.skin-type-panel__tags span{
+  border-radius:999px !important;
+}
+.skin-type-panel__copy a,
+.skin-type-panel__copy button{
+  border-radius:16px !important;
+}
+
+/* Rounded visual system untuk card landing dan katalog */
+.article-card,
+.article-card-img,
+.article-card-body,
+.product-card,
+.sale-product-card,
+[class*="product-card"],
+.shop-mega-link,
+.shop-mega-mini,
+.shop-mega-card,
+.landing-skin-preview-card,
+.landing-skin-score-card,
+.feature-card,
+.category-card,
+.best-seller-card,
+.new-arrival-card{
+  border-radius:24px !important;
+}
+
+.article-card,
+.product-card,
+.sale-product-card,
+[class*="product-card"]{
+  overflow:hidden !important;
+  box-shadow:0 16px 40px rgba(45,27,61,.12) !important;
+}
+.article-card-img{
+  overflow:hidden !important;
+  border-radius:24px 24px 0 0 !important;
+}
+.article-card-body{
+  border-radius:0 0 24px 24px !important;
+}
+
+/* Produk bestseller / sale: tombol dan badge tidak kaku */
+.product-card button,
+.sale-product-card button,
+[class*="product-card"] button,
+.load-more-btn,
+button[class*="load-more"],
+a[class*="load-more"]{
+  border-radius:14px !important;
+}
+.sale-badge,
+.catalogue-sale-discount,
+[class*="discount"],
+[class*="sale-badge"]{
+  border-radius:0 0 14px 0 !important;
+}
+
+/* Mega menu dan kartu shortcut */
+.shop-mega-panel{
+  border-radius:0 0 26px 26px !important;
+}
+.shop-mega-link,
+.shop-mega-mini,
+.shop-mega-card{
+  overflow:hidden !important;
+}
+
+/* Hover tetap halus dan estetik */
+.article-card,
+.product-card,
+.sale-product-card,
+.skin-type-tab,
+.skin-type-product-card,
+.shop-mega-link,
+.shop-mega-mini{
+  transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease !important;
+}
+.article-card:hover,
+.product-card:hover,
+.sale-product-card:hover,
+.skin-type-product-card:hover{
+  transform:translateY(-6px) !important;
+  box-shadow:0 24px 54px rgba(45,27,61,.2) !important;
+}
+
+@media(max-width:1100px){
+  .skin-type-showcase__layout{
+    grid-template-columns:1fr !important;
+  }
+  .skin-type-showcase__tabs{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:700px){
+  .skin-type-showcase{
+    padding:58px 0 !important;
+  }
+  .skin-type-showcase__shell{
+    width:min(100% - 28px,1440px) !important;
+  }
+  .skin-type-showcase__tabs{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+  .skin-type-tab{
+    min-height:96px !important;
+    padding:16px 18px !important;
+    border-radius:20px !important;
+  }
+  .skin-type-tab__icon{
+    width:60px !important;
+    height:60px !important;
+    flex-basis:60px !important;
+    border-radius:18px !important;
+  }
+  .skin-type-panel{
+    padding:18px !important;
+    border-radius:24px !important;
+  }
+  .skin-type-products-grid{
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+  .article-card,
+  .product-card,
+  .sale-product-card,
+  [class*="product-card"]{
+    border-radius:20px !important;
+  }
+}
+
+/* =========================================================
+   FINAL ALIGNMENT FIX — SHOP BY SKIN TYPE ONLY
+   Disamakan dengan lebar container navbar (1230px).
+   ========================================================= */
+.skin-type-showcase__shell{
+  width:min(1230px,calc(100% - 44px)) !important;
+  margin-inline:auto !important;
+}
+
+.skin-type-showcase__layout{
+  grid-template-columns:minmax(230px,280px) minmax(0,1fr) !important;
+  gap:32px !important;
+  width:100% !important;
+  align-items:start !important;
+}
+
+.skin-type-showcase__tabs{
+  width:100% !important;
+  gap:14px !important;
+}
+
+.skin-type-tab{
+  min-height:96px !important;
+  padding:16px 18px !important;
+  border-radius:20px !important;
+}
+
+.skin-type-tab__icon{
+  width:58px !important;
+  height:58px !important;
+  flex-basis:58px !important;
+  border-radius:17px !important;
+}
+
+.skin-type-panel{
+  width:100% !important;
+  min-width:0 !important;
+  padding:28px !important;
+  border-radius:26px !important;
+}
+
+.skin-type-products-grid{
+  min-width:0 !important;
+  gap:18px !important;
+}
+
+.skin-type-panel__copy{
+  min-width:0 !important;
+  padding:14px 8px 14px 20px !important;
+}
+
+@media(max-width:1280px){
+  .skin-type-showcase__shell{
+    width:min(1120px,calc(100% - 40px)) !important;
+  }
+  .skin-type-showcase__layout{
+    grid-template-columns:240px minmax(0,1fr) !important;
+    gap:26px !important;
+  }
+  .skin-type-panel{
+    padding:24px !important;
+  }
+}
+
+@media(max-width:1100px){
+  .skin-type-showcase__layout{
+    grid-template-columns:1fr !important;
+  }
+  .skin-type-showcase__tabs{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+
+@media(max-width:700px){
+  .skin-type-showcase__shell{
+    width:min(100% - 28px,1230px) !important;
+  }
+  .skin-type-showcase__tabs{
+    grid-template-columns:1fr !important;
+  }
+  .skin-type-panel{
+    padding:18px !important;
+  }
+}
+
+/* =========================================================
+   FINAL LAVENDER CONSISTENCY FIX — SALE + SKIN TYPE + PAGES
+   ========================================================= */
+:root{
+  --primary:#B98EE6 !important;
+  --primary-dark:#7D4DB2 !important;
+  --primary-soft:#EADCF8 !important;
+  --green:#B98EE6 !important;
+  --olive:#8C5ABB !important;
+}
+
+/* Sale landing: remove every remaining green surface/text */
+.sale-gradient-bg,
+.sale-home-section{
+  background:
+    radial-gradient(circle at 10% 10%,rgba(255,255,255,.78),transparent 27%),
+    linear-gradient(135deg,#FBF8FF 0%,#F1E6FC 48%,#E5D2F7 100%) !important;
+}
+.sale-home-see,
+.sale-home-info p,
+.sale-home-info strong,
+.sale-home-countdown strong,
+.sale-home-countdown small{
+  color:#7D4DB2 !important;
+}
+.sale-home-card-box{
+  background:#fff !important;
+  border:1px solid rgba(125,77,178,.18) !important;
+  border-radius:20px !important;
+  overflow:hidden !important;
+  box-shadow:0 14px 34px rgba(75,43,102,.09) !important;
+}
+.sale-home-info{
+  background:linear-gradient(155deg,#4B2B66 0%,#6D4294 55%,#8457AD 100%) !important;
+  color:#fff !important;
+}
+.sale-home-info p,
+.sale-home-info h3,
+.sale-home-info strong{color:#fff !important;}
+.sale-home-info .sale-home-original{color:rgba(255,255,255,.58) !important;}
+.sale-home-info button{
+  background:linear-gradient(135deg,#B98EE6,#D8BDF1) !important;
+  border-color:#D8BDF1 !important;
+  color:#3D2453 !important;
+  border-radius:10px !important;
+}
+.sale-home-discount{
+  background:linear-gradient(135deg,#A56FD6,#CFA7ED) !important;
+  color:#2E193F !important;
+  border-radius:0 0 14px 0 !important;
+}
+.sale-home-arrow{
+  background:rgba(75,43,102,.92) !important;
+  border-color:rgba(255,255,255,.35) !important;
+  color:#fff !important;
+  border-radius:12px !important;
+}
+
+/* Five products fit neatly on wide desktop; See All remains available */
+@media (min-width:1280px){
+  .sale-home-track{
+    display:grid !important;
+    grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+    gap:22px !important;
+    overflow:visible !important;
+  }
+  .sale-home-card{width:auto !important;min-width:0 !important;}
+  .sale-home-arrow{display:none !important;}
+}
+
+/* Shop by Skin Type: all former green accents become lavender */
+.skin-type-section,
+.shop-by-skin-type,
+.skin-type-showcase{
+  --skin-accent:#B98EE6 !important;
+  --skin-accent-dark:#7D4DB2 !important;
+  --skin-accent-soft:#EADCF8 !important;
+}
+.skin-type-eyebrow,
+.skin-type-panel__eyebrow,
+.skin-type-panel__category,
+.skin-type-panel__price,
+.skin-type-panel__tag,
+.skin-type-tab__count,
+.skin-type-panel__recommended,
+.skin-type-panel__meta,
+.skin-type-showcase [class*="eyebrow"],
+.skin-type-showcase [class*="recommended"]{
+  color:#E4CFF7 !important;
+}
+.skin-type-tab.is-active,
+.skin-type-tab:hover{
+  border-color:#C79CEB !important;
+  background:linear-gradient(135deg,rgba(185,142,230,.20),rgba(255,255,255,.08)) !important;
+}
+.skin-type-tab__icon,
+.skin-type-panel__badge,
+.skin-type-panel__product-badge{
+  background:linear-gradient(135deg,#A86FD8,#C79CEB) !important;
+  color:#fff !important;
+}
+.skin-type-panel__tag{
+  border-color:rgba(225,199,246,.48) !important;
+  background:rgba(185,142,230,.14) !important;
+}
+.skin-type-panel__button{
+  background:linear-gradient(135deg,#9C69CE 0%,#B98EE6 65%,#D6B8F0 100%) !important;
+  border-color:#C79CEB !important;
+  color:#fff !important;
+  border-radius:14px !important;
+  box-shadow:0 12px 25px rgba(75,43,102,.18) !important;
+}
+.skin-type-panel__button:hover{transform:translateY(-2px);filter:brightness(1.04);}
+
+/* Prevent old per-page styles from restoring green after navigation */
+body:not(.admin-dashboard) [class*="green-gradient"],
+body:not(.admin-dashboard) [class*="olive-gradient"]{
+  background:linear-gradient(135deg,#9C69CE,#B98EE6 62%,#D9C0F1) !important;
+  border-color:#B98EE6 !important;
+  color:#fff !important;
+}
+body:not(.admin-dashboard) [style*="color:green" i],
+body:not(.admin-dashboard) [style*="color: green" i],
+body:not(.admin-dashboard) [style*="#62A744" i],
+body:not(.admin-dashboard) [style*="#71B84B" i],
+body:not(.admin-dashboard) [style*="#8CCB69" i],
+body:not(.admin-dashboard) [style*="#A4D185" i],
+body:not(.admin-dashboard) [style*="#3D6328" i],
+body:not(.admin-dashboard) [style*="#4F8B3A" i]{
+  color:#8C5ABB !important;
+  border-color:#B98EE6 !important;
+}
+body:not(.admin-dashboard) .text-olive-300,
+body:not(.admin-dashboard) .text-olive-400,
+body:not(.admin-dashboard) .text-olive-500,
+body:not(.admin-dashboard) .text-olive-600,
+body:not(.admin-dashboard) .text-olive-700{
+  color:#8C5ABB !important;
+}
+
+/* Keep navigation active underline consistent on every public page */
+body:not(.admin-dashboard) nav a.active,
+body:not(.admin-dashboard) nav a[aria-current="page"],
+body:not(.admin-dashboard) .nav-link.active,
+body:not(.admin-dashboard) .tab-underline-active{
+  color:#7D4DB2 !important;
+  border-color:#B98EE6 !important;
+}
+
+/* =========================================================
+   LANDING PRODUCT FLOWER BACKDROP
+   Hanya: New Arrival / Best Seller dan Sale di landing page
+   ========================================================= */
+
+/* Area gambar kartu New Arrival dan Best Seller */
+#products [data-products-panel] .product-card-hover > div.relative.overflow-hidden,
+/* Area gambar kartu Sale */
+.sale-home-section .sale-home-image{
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,.96) 0 27%, transparent 28%),
+    radial-gradient(ellipse at 50% 8%, rgba(185,142,230,.20) 0 20%, transparent 21%),
+    radial-gradient(ellipse at 88% 28%, rgba(217,192,241,.52) 0 18%, transparent 19%),
+    radial-gradient(ellipse at 88% 72%, rgba(248,234,224,.88) 0 18%, transparent 19%),
+    radial-gradient(ellipse at 50% 92%, rgba(185,142,230,.20) 0 20%, transparent 21%),
+    radial-gradient(ellipse at 12% 72%, rgba(217,192,241,.52) 0 18%, transparent 19%),
+    radial-gradient(ellipse at 12% 28%, rgba(248,234,224,.88) 0 18%, transparent 19%),
+    linear-gradient(145deg,#fff 0%,#fbf7ff 48%,#f4eafa 100%) !important;
+}
+
+/* Ring tipis agar ornamen bunga tetap lembut dan rapi */
+#products [data-products-panel] .product-card-hover > div.relative.overflow-hidden::before,
+.sale-home-section .sale-home-image::before{
+  content:"";
+  position:absolute;
+  inset:9%;
+  z-index:0;
+  border-radius:50%;
+  border:1px solid rgba(185,142,230,.16);
+  box-shadow:
+    0 0 0 13px rgba(255,255,255,.25),
+    0 18px 45px rgba(103,67,138,.08);
+  pointer-events:none;
+}
+
+/* Pastikan gambar produk tetap berada di atas dekorasi */
+#products [data-products-panel] .product-card-hover > div.relative.overflow-hidden > img,
+.sale-home-section .sale-home-image > img{
+  position:absolute;
+  inset:0;
+  z-index:1;
+}
+
+/* Sale image sebelumnya tidak selalu position relative */
+.sale-home-section .sale-home-image{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+/* Radius mengikuti card yang sudah ada */
+#products [data-products-panel] .product-card-hover > div.relative.overflow-hidden{
+  border-radius:18px 18px 0 0;
+}
+.sale-home-section .sale-home-image{
+  border-radius:18px 18px 0 0;
+}
+
+/* Tampilan mobile tetap ringan dan tidak terlalu ramai */
+@media (max-width:767px){
+  #products [data-products-panel] .product-card-hover > div.relative.overflow-hidden,
+  .sale-home-section .sale-home-image{
+    background:
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,.97) 0 29%, transparent 30%),
+      radial-gradient(ellipse at 50% 9%, rgba(185,142,230,.18) 0 19%, transparent 20%),
+      radial-gradient(ellipse at 87% 31%, rgba(217,192,241,.42) 0 17%, transparent 18%),
+      radial-gradient(ellipse at 84% 73%, rgba(248,234,224,.72) 0 16%, transparent 17%),
+      radial-gradient(ellipse at 16% 73%, rgba(217,192,241,.42) 0 17%, transparent 18%),
+      radial-gradient(ellipse at 13% 31%, rgba(248,234,224,.72) 0 16%, transparent 17%),
+      linear-gradient(145deg,#fff,#f7effd) !important;
+  }
+}
+
+/* ============================================================
+   FIX 2026-07-09: konsistensi tone lavender di seluruh page publik
+   Fokus utama: catalogue Makeup / Skincare / Sale dan komponen
+   yang sebelumnya masih memakai beige, gold, hijau, atau pink.
+   Tidak mengubah struktur maupun fungsi halaman.
+   ============================================================ */
+
+/* Catalogue page surface */
+.catalogue-page{
+  --catalogue-accent:#B98EE6;
+  --catalogue-accent-dark:#7D4DB2;
+  --catalogue-soft:#F6F0FC;
+  --catalogue-soft-2:#EADCF8;
+  --catalogue-border:#DEC8F1;
+}
+
+.catalogue-page .catalogue-layout{
+  background:#fff !important;
+}
+
+.catalogue-page .catalogue-filter{
+  background:linear-gradient(145deg,#FFFFFF 0%,#FAF7FD 58%,#F1E7FA 100%) !important;
+  border-color:#DEC8F1 !important;
+  box-shadow:0 18px 44px rgba(87,52,117,.08) !important;
+}
+
+.catalogue-page .catalogue-filter label{
+  color:#6B577D !important;
+}
+
+.catalogue-page .catalogue-filter select,
+.catalogue-page .catalogue-search,
+.catalogue-page [data-catalogue-search]{
+  background:#fff !important;
+  border-color:#DEC8F1 !important;
+  color:#2D2136 !important;
+}
+
+.catalogue-page .catalogue-filter select:focus,
+.catalogue-page .catalogue-search:focus,
+.catalogue-page [data-catalogue-search]:focus{
+  border-color:#B98EE6 !important;
+  box-shadow:0 0 0 3px rgba(185,142,230,.16) !important;
+}
+
+.catalogue-page .catalogue-count{
+  background:linear-gradient(90deg,#FFFFFF,#F6F0FC,#FFFFFF) !important;
+  border:1px solid #DEC8F1 !important;
+  color:#665472 !important;
+}
+
+.catalogue-page .catalogue-count strong{
+  color:#7D4DB2 !important;
+}
+
+/* Catalogue badges and controls */
+.catalogue-page .catalogue-badge,
+.catalogue-page .badge-sale,
+.catalogue-page .badge-best,
+.catalogue-page .badge-new,
+.catalogue-page .badge-rating,
+.catalogue-page .catalogue-sale-discount{
+  background:linear-gradient(135deg,#A86FD8,#B98EE6) !important;
+  color:#fff !important;
+  border-color:transparent !important;
+}
+
+.catalogue-page .catalogue-wish:hover,
+.catalogue-page .catalogue-wish.is-active{
+  color:#8C5ABB !important;
+  border-color:#B98EE6 !important;
+}
+
+.catalogue-page .catalogue-name:hover,
+.catalogue-page .catalogue-price,
+.catalogue-page .catalogue-sale-price .new{
+  color:#7D4DB2 !important;
+}
+
+.catalogue-page .catalogue-actions a{
+  border-bottom-color:#B98EE6 !important;
+}
+
+.catalogue-page .catalogue-actions button,
+.catalogue-page .catalogue-load button{
+  background:linear-gradient(135deg,#8F5DBD 0%,#B98EE6 100%) !important;
+  border-color:#B98EE6 !important;
+  color:#fff !important;
+}
+
+.catalogue-page .catalogue-actions button:hover,
+.catalogue-page .catalogue-load button:hover{
+  background:linear-gradient(135deg,#7D4DB2,#A86FD8) !important;
+}
+
+.catalogue-page .catalogue-empty,
+.catalogue-page .catalogue-sale-empty{
+  background:linear-gradient(145deg,#fff,#F6F0FC) !important;
+  border-color:#DEC8F1 !important;
+}
+
+.catalogue-page .catalogue-sale-empty-icon,
+.catalogue-page .catalogue-sale-empty a{
+  background:#B98EE6 !important;
+  color:#fff !important;
+  border-color:#B98EE6 !important;
+}
+
+/* Active navigation on every public page */
+body:not(.admin-dashboard) .site-nav a.active::after,
+body:not(.admin-dashboard) .site-nav-shop.active .site-nav-shop-trigger::after,
+body:not(.admin-dashboard) .site-nav a:hover::after,
+body:not(.admin-dashboard) .site-nav-shop-trigger:hover::after{
+  background:#B98EE6 !important;
+}
+
+body:not(.admin-dashboard) .site-nav a.active,
+body:not(.admin-dashboard) .site-nav-shop.active .site-nav-shop-trigger,
+body:not(.admin-dashboard) .site-nav a:hover,
+body:not(.admin-dashboard) .site-nav-shop-trigger:hover{
+  color:#7D4DB2 !important;
+}
+
+/* Remove remaining known legacy accent colors on public pages */
+body:not(.admin-dashboard) .badge-sale,
+body:not(.admin-dashboard) .sale-label,
+body:not(.admin-dashboard) .discount-badge,
+body:not(.admin-dashboard) [class*="badge-sale"],
+body:not(.admin-dashboard) [class*="best-seller-badge"]{
+  background:#B98EE6 !important;
+  color:#fff !important;
+}
+
+body:not(.admin-dashboard) [class*="green"]:not(img):not(svg),
+body:not(.admin-dashboard) [class*="olive"]:not(img):not(svg){
+  --tw-text-opacity:1;
+  --tw-border-opacity:1;
+}
+
+/* Keep form, pagination, tabs, profile and shop states consistent */
+body:not(.admin-dashboard) .pagination .active,
+body:not(.admin-dashboard) .pagination [aria-current="page"],
+body:not(.admin-dashboard) [role="tab"].active,
+body:not(.admin-dashboard) .filter-chip.active,
+body:not(.admin-dashboard) .sort-chip.active,
+body:not(.admin-dashboard) .profile-tabs .active,
+body:not(.admin-dashboard) .account-nav .active{
+  background:#B98EE6 !important;
+  border-color:#B98EE6 !important;
+  color:#fff !important;
+}
+
+body:not(.admin-dashboard) input[type="checkbox"]:checked,
+body:not(.admin-dashboard) input[type="radio"]:checked{
+  accent-color:#B98EE6 !important;
+}

@@ -1,0 +1,420 @@
+/* PATCH AUTH FULL HEIGHT REFERENCE FIX ONLY */
+/* Fokus: form login/register dibuat turun/full ke bawah seperti referensi.
+   Tidak mengubah fitur lain, database, navbar, footer, produk, artikel, cart, wishlist, profile, admin, atau promo. */
+
+/* reset patch auth sebelumnya supaya tidak cuma setengah tinggi */
+.auth-ref-page{
+    min-height:auto !important;
+    background:#e7e7e7 !important;
+    padding-top:96px !important;
+    overflow-x:hidden !important;
+}
+
+.auth-ref-split{
+    width:100% !important;
+    display:grid !important;
+    grid-template-columns:50% 50% !important;
+    align-items:stretch !important;
+    background:#000 !important;
+    min-height:876px !important;
+}
+
+/* register memang lebih panjang sesuai referensi */
+.auth-register-page .auth-ref-split{
+    min-height:876px !important;
+}
+
+.auth-login-page .auth-ref-split{
+    min-height:695px !important;
+}
+
+/* kiri gambar full, tidak ada logo tambahan */
+.auth-ref-left{
+    position:relative !important;
+    min-height:inherit !important;
+    overflow:hidden !important;
+    background-color:#050505 !important;
+}
+
+.auth-login-left{
+    background:
+        linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.18) 50%,rgba(0,0,0,.86) 100%),
+        url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=90') center/cover no-repeat !important;
+}
+
+.auth-register-left{
+    background:
+        linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.15) 48%,rgba(0,0,0,.82) 100%),
+        url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=90') center/cover no-repeat !important;
+}
+
+/* text kiri seperti referensi */
+.auth-ref-left-copy{
+    position:absolute !important;
+    left:56px !important;
+    bottom:84px !important;
+    z-index:3 !important;
+    max-width:650px !important;
+    color:#fff !important;
+}
+
+.auth-ref-left-copy span{
+    display:block !important;
+    margin-bottom:18px !important;
+    color:#fff !important;
+    font-size:34px !important;
+    line-height:1 !important;
+    font-weight:950 !important;
+    letter-spacing:-.06em !important;
+    text-transform:uppercase !important;
+}
+
+.auth-ref-left-copy h1{
+    margin:0 !important;
+    color:#fff !important;
+    font-size:68px !important;
+    line-height:1.04 !important;
+    font-weight:950 !important;
+    letter-spacing:-.055em !important;
+    text-transform:uppercase !important;
+}
+
+/* kanan form full area putih, sesuai referensi */
+.auth-ref-right{
+    min-height:inherit !important;
+    background:#fff !important;
+    display:flex !important;
+    align-items:flex-start !important;
+    justify-content:center !important;
+    padding:58px 70px 82px !important;
+    position:relative !important;
+}
+
+.auth-card{
+    width:min(600px,100%) !important;
+    background:#fff !important;
+    padding:0 !important;
+    margin:0 auto !important;
+    box-shadow:none !important;
+    border:0 !important;
+    position:relative !important;
+}
+
+/* tab dibuat nempel atas, tidak ada ruang kosong aneh */
+.auth-tabs{
+    width:100% !important;
+    height:48px !important;
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    margin:0 0 50px !important;
+    background:#e5e5e5 !important;
+}
+
+.auth-tabs a{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:#e5e5e5 !important;
+    color:#9b9b9b !important;
+    text-decoration:none !important;
+    font-size:12px !important;
+    line-height:1 !important;
+    font-weight:950 !important;
+    letter-spacing:.16em !important;
+    text-transform:uppercase !important;
+}
+
+.auth-tabs a.active{
+    background:#ff3b97 !important;
+    color:#fff !important;
+    box-shadow:0 18px 34px rgba(255,59,151,.24) !important;
+}
+
+/* form spacing lebih rendah dan panjang */
+.auth-ref-form{
+    display:grid !important;
+    gap:24px !important;
+}
+
+.auth-register-card .auth-ref-form{
+    gap:22px !important;
+}
+
+.auth-ref-form label{
+    display:block !important;
+}
+
+.auth-ref-form label > span{
+    display:block !important;
+    color:#aaa !important;
+    font-size:14px !important;
+    font-weight:750 !important;
+    margin-bottom:8px !important;
+}
+
+.auth-ref-form input[type="email"],
+.auth-ref-form input[type="text"],
+.auth-ref-form input[type="password"]{
+    width:100% !important;
+    height:36px !important;
+    border:0 !important;
+    border-bottom:1px solid #d4d4d4 !important;
+    background:#fff !important;
+    color:#111 !important;
+    outline:none !important;
+    padding:0 !important;
+    font-size:14px !important;
+    font-weight:700 !important;
+}
+
+.auth-password-line{
+    display:grid !important;
+    grid-template-columns:1fr auto !important;
+    align-items:center !important;
+    gap:14px !important;
+    border-bottom:1px solid #d4d4d4 !important;
+}
+
+.auth-password-line input{
+    border-bottom:0 !important;
+}
+
+.auth-password-line button{
+    border:0 !important;
+    background:transparent !important;
+    color:#444 !important;
+    font-size:11px !important;
+    font-weight:950 !important;
+    letter-spacing:.12em !important;
+    cursor:pointer !important;
+    padding:0 0 8px !important;
+}
+
+.auth-ref-form small{
+    display:block !important;
+    margin-top:8px !important;
+    color:#aaa !important;
+    font-size:12px !important;
+    font-weight:700 !important;
+}
+
+.auth-ref-options{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:18px !important;
+}
+
+.auth-ref-options label{
+    display:flex !important;
+    align-items:center !important;
+    gap:12px !important;
+    color:#777 !important;
+    font-size:14px !important;
+    font-weight:700 !important;
+}
+
+.auth-ref-options input,
+.auth-agree input,
+.auth-news input{
+    width:18px !important;
+    height:18px !important;
+    accent-color:#ff3b97 !important;
+}
+
+.auth-ref-options a{
+    color:#777 !important;
+    text-decoration:none !important;
+    font-size:14px !important;
+    font-weight:850 !important;
+}
+
+.auth-main-btn{
+    width:100% !important;
+    height:48px !important;
+    border:0 !important;
+    background:#d1d1d1 !important;
+    color:#999 !important;
+    font-size:12px !important;
+    line-height:1 !important;
+    font-weight:950 !important;
+    letter-spacing:.16em !important;
+    text-transform:uppercase !important;
+    cursor:pointer !important;
+}
+
+.auth-main-btn:hover{
+    background:#ff3b97 !important;
+    color:#fff !important;
+}
+
+.auth-login-submit{
+    margin-top:18px !important;
+}
+
+.auth-small-note{
+    margin:24px 0 0 !important;
+    text-align:center !important;
+    color:#aaa !important;
+    font-size:12px !important;
+    font-weight:700 !important;
+    line-height:1.6 !important;
+}
+
+.auth-small-note a{
+    color:#111 !important;
+    text-decoration:none !important;
+    border-bottom:2px solid #ff3b97 !important;
+    font-weight:950 !important;
+}
+
+/* Register section */
+.auth-agree{
+    display:grid !important;
+    grid-template-columns:20px 1fr !important;
+    gap:14px !important;
+    align-items:start !important;
+    color:#555 !important;
+    font-size:13px !important;
+    line-height:1.55 !important;
+    font-weight:700 !important;
+}
+
+.auth-agree span{
+    margin:0 !important;
+    color:#555 !important;
+    font-size:13px !important;
+    line-height:1.55 !important;
+    font-weight:700 !important;
+}
+
+.auth-agree b{
+    color:#111 !important;
+    font-weight:950 !important;
+}
+
+.auth-news{
+    color:#555 !important;
+    font-size:13px !important;
+    line-height:1.55 !important;
+    font-weight:700 !important;
+}
+
+.auth-news p{
+    margin:0 0 12px !important;
+}
+
+.auth-news label{
+    display:inline-flex !important;
+    align-items:center !important;
+    gap:8px !important;
+    margin-right:16px !important;
+    color:#777 !important;
+}
+
+.auth-alert{
+    padding:12px 14px !important;
+    margin:0 0 18px !important;
+    font-size:13px !important;
+    font-weight:800 !important;
+}
+
+.auth-alert.error{
+    background:#fff1f7 !important;
+    color:#c3346d !important;
+    border:1px solid #ffd2e4 !important;
+}
+
+.auth-alert.success{
+    background:#edf8e9 !important;
+    color:#315f25 !important;
+    border:1px solid #d8edcf !important;
+}
+
+/* logo tambahan/card brand lama dipaksa hilang */
+.login-brand,
+.auth-ref-page .login-brand,
+.auth-ref-page .site-logo-clone,
+.auth-ref-page .auth-brand,
+.auth-ref-page .login-visual-content .login-brand{
+    display:none !important;
+}
+
+/* dummy admin tetap hilang */
+.login-admin-dummy,
+.admin-dummy,
+.dummy-admin,
+[data-admin-dummy],
+[data-login-dummy],
+.login-demo-account,
+.demo-account-box,
+.login-page .dummy-box,
+.auth-ref-page .dummy-box{
+    display:none !important;
+}
+
+/* Pastikan footer langsung di bawah auth, bukan auth setengah layar */
+.auth-ref-page + footer,
+.auth-ref-page ~ footer{
+    margin-top:0 !important;
+}
+
+@media(max-width:1100px){
+    .auth-ref-split,
+    .auth-register-page .auth-ref-split,
+    .auth-login-page .auth-ref-split{
+        grid-template-columns:1fr !important;
+        min-height:auto !important;
+    }
+
+    .auth-ref-left{
+        min-height:560px !important;
+    }
+
+    .auth-ref-right{
+        min-height:auto !important;
+        padding:44px 24px 82px !important;
+    }
+
+    .auth-ref-left-copy{
+        left:32px !important;
+        bottom:60px !important;
+        max-width:calc(100% - 64px) !important;
+    }
+
+    .auth-ref-left-copy h1{
+        font-size:50px !important;
+    }
+
+    .auth-ref-left-copy span{
+        font-size:26px !important;
+    }
+}
+
+@media(max-width:560px){
+    .auth-ref-page{
+        padding-top:98px !important;
+    }
+
+    .auth-ref-left{
+        min-height:430px !important;
+    }
+
+    .auth-ref-left-copy h1{
+        font-size:38px !important;
+    }
+
+    .auth-ref-left-copy span{
+        font-size:22px !important;
+    }
+
+    .auth-tabs{
+        margin-bottom:34px !important;
+    }
+
+    .auth-ref-options{
+        align-items:flex-start !important;
+        flex-direction:column !important;
+        gap:12px !important;
+    }
+}

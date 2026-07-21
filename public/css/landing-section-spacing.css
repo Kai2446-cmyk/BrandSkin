@@ -1,0 +1,13 @@
+/* Landing page section spacing only.
+   Scoped to .gs-landing-page so other pages and components remain unchanged. */
+.gs-landing-page > section:not(.hero-section) {
+    padding-top: clamp(4.5rem, 7vw, 7rem) !important;
+    padding-bottom: clamp(4.5rem, 7vw, 7rem) !important;
+}
+
+@media (max-width: 767px) {
+    .gs-landing-page > section:not(.hero-section) {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+}

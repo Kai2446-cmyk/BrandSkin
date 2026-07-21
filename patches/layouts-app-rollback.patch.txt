@@ -1,0 +1,7 @@
+FILE: resources/views/layouts/app.blade.php
+
+HAPUS hanya baris berikut jika sebelumnya ditambahkan:
+
+<link rel="stylesheet" href="{{ asset('css/public-article-skin-lavender-fix.css') }}?v=1">
+
+Jangan hapus atau ubah baris CSS lain.

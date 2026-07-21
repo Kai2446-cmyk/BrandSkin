@@ -1,0 +1,302 @@
+/* GlowSkin Admin — White & Lavender theme only
+   Scope: seluruh area admin-body. Tidak mengubah struktur atau fungsi. */
+.admin-body{
+  --al-primary:#B98EE6;
+  --al-primary-strong:#9F6FD5;
+  --al-primary-deep:#7D4DB5;
+  --al-soft:#F3EAFB;
+  --al-soft-2:#FAF7FD;
+  --al-line:#E4D3F4;
+  --al-text:#2F213D;
+  --al-muted:#7F718D;
+  --al-white:#FFFFFF;
+  background:#F8F4FC!important;
+  color:var(--al-text)!important;
+}
+.admin-body::before{content:none!important}
+
+/* Sidebar */
+.admin-body .admin-sidebar{
+  background:linear-gradient(180deg,#FFFFFF 0%,#FBF8FE 100%)!important;
+  border-right:1px solid var(--al-line)!important;
+  box-shadow:18px 0 55px rgba(105,70,140,.09)!important;
+}
+.admin-body .admin-brand strong{color:var(--al-text)!important}
+.admin-body .admin-brand span{color:var(--al-muted)!important}
+.admin-body .admin-nav a{
+  color:#665A72!important;
+  background:transparent!important;
+  border-color:transparent!important;
+}
+.admin-body .admin-nav a:hover,
+.admin-body .admin-nav a.active{
+  color:var(--al-primary-deep)!important;
+  background:linear-gradient(135deg,#F4EAFB,#EEE0F9)!important;
+  border-color:#D8BDED!important;
+  box-shadow:0 10px 24px rgba(159,111,213,.11)!important;
+}
+.admin-body .admin-nav a.active::before{background:var(--al-primary)!important}
+.admin-body .admin-sidebar-user{
+  background:#FFFFFF!important;
+  border-color:var(--al-line)!important;
+  box-shadow:0 12px 30px rgba(109,76,142,.08)!important;
+}
+.admin-body .admin-sidebar-user p{color:var(--al-text)!important}
+.admin-body .admin-sidebar-user small{color:var(--al-muted)!important}
+.admin-body .profile-avatar,
+.admin-body .admin-review-avatar{
+  background:linear-gradient(135deg,var(--al-primary),var(--al-primary-deep))!important;
+  color:#fff!important;
+}
+.admin-body .admin-logout{
+  background:#F7F1FC!important;
+  border-color:#DDC8F1!important;
+  color:var(--al-primary-deep)!important;
+}
+.admin-body .admin-logout:hover{
+  background:#EFDFF9!important;
+  border-color:var(--al-primary)!important;
+  color:#6F3EA8!important;
+}
+
+/* Main background */
+.admin-body .admin-main{
+  background:
+    radial-gradient(circle at 90% 0%,rgba(185,142,230,.16),transparent 30%),
+    linear-gradient(180deg,#FCFAFE 0%,#F7F2FB 100%)!important;
+}
+.admin-body .admin-page-head p,
+.admin-body .report-head>div>p:first-child,
+.admin-body [class*="eyebrow"],
+.admin-body [class*="kicker"]{color:var(--al-primary-deep)!important}
+.admin-body .admin-page-head h1,
+.admin-body .report-head h1,
+.admin-body .admin-list-title,
+.admin-body .admin-panel-head h2{color:var(--al-text)!important}
+.admin-body .admin-page-head span,
+.admin-body .admin-panel-head p{color:var(--al-muted)!important}
+
+/* Cards/panels */
+.admin-body .admin-card,
+.admin-body .admin-panel,
+.admin-body .admin-stat,
+.admin-body .admin-report-stat,
+.admin-body .admin-report-panel,
+.admin-body .marketing-visual-chart,
+.admin-body .promo-card,
+.admin-body .admin-form-card,
+.admin-body .admin-review-card,
+.admin-body .admin-voucher-card{
+  background:#FFFFFF!important;
+  border-color:var(--al-line)!important;
+  box-shadow:0 18px 48px rgba(96,63,129,.09)!important;
+  color:var(--al-text)!important;
+}
+.admin-body .admin-report-stat{
+  background:linear-gradient(145deg,#FFFFFF,#F9F3FD)!important;
+}
+.admin-body .admin-report-stat strong,
+.admin-body .admin-stat h2,
+.admin-body .marketing-visual-top strong,
+.admin-body .payment-summary-grid strong,
+.admin-body .website-update-list strong,
+.admin-body .category-performance-item strong,
+.admin-body .admin-mini-row strong,
+.admin-body .admin-table strong,
+.admin-body .admin-logo-preview strong{color:var(--al-text)!important}
+.admin-body .admin-report-stat span,
+.admin-body .admin-report-stat small,
+.admin-body .marketing-visual-top span,
+.admin-body .admin-stat p,
+.admin-body .admin-mini-row span,
+.admin-body .admin-table small,
+.admin-body .admin-logo-preview span,
+.admin-body .website-update-list small,
+.admin-body .payment-summary-grid span,
+.admin-body .category-performance-item span{color:var(--al-muted)!important}
+
+/* Buttons */
+.admin-body .green-gradient-btn,
+.admin-body .admin-head-btn,
+.admin-body .admin-save-btn,
+.admin-body .admin-primary-btn,
+.admin-body .admin-add-btn,
+.admin-body .btn-primary,
+.admin-body button[type="submit"]:not(.admin-logout),
+.admin-body a.green-gradient-btn{
+  background:linear-gradient(135deg,var(--al-primary),var(--al-primary-strong))!important;
+  border-color:var(--al-primary)!important;
+  color:#fff!important;
+  box-shadow:0 12px 28px rgba(159,111,213,.24)!important;
+}
+.admin-body .green-gradient-btn:hover,
+.admin-body .admin-head-btn:hover,
+.admin-body .admin-save-btn:hover,
+.admin-body .admin-primary-btn:hover,
+.admin-body .admin-add-btn:hover,
+.admin-body .btn-primary:hover,
+.admin-body button[type="submit"]:not(.admin-logout):hover,
+.admin-body a.green-gradient-btn:hover{
+  background:linear-gradient(135deg,var(--al-primary-strong),var(--al-primary-deep))!important;
+}
+
+/* Forms */
+.admin-body .admin-field span{color:#6E607A!important}
+.admin-body .admin-field input,
+.admin-body .admin-field textarea,
+.admin-body .admin-field select,
+.admin-body input,
+.admin-body textarea,
+.admin-body select,
+.admin-body [contenteditable="true"]{
+  background:#FFFFFF!important;
+  border-color:#DDC9EF!important;
+  color:var(--al-text)!important;
+}
+.admin-body input::placeholder,
+.admin-body textarea::placeholder{color:#A99CB5!important}
+.admin-body input:focus,
+.admin-body textarea:focus,
+.admin-body select:focus,
+.admin-body [contenteditable="true"]:focus{
+  border-color:var(--al-primary)!important;
+  box-shadow:0 0 0 4px rgba(185,142,230,.14)!important;
+}
+.admin-body input[type="checkbox"],
+.admin-body input[type="radio"]{accent-color:var(--al-primary)!important}
+
+/* Tables/list rows */
+.admin-body .admin-table th{
+  color:#71647E!important;
+  border-bottom-color:#E8DCF2!important;
+  background:#FBF7FE!important;
+}
+.admin-body .admin-table td{
+  color:#5E5269!important;
+  border-bottom-color:#EEE5F5!important;
+}
+.admin-body .admin-mini-row,
+.admin-body .payment-status-list>div{border-bottom-color:#EEE5F5!important}
+.admin-body .admin-quick-list a,
+.admin-body .website-update-list>div,
+.admin-body .report-mini-row{
+  background:#FBF8FE!important;
+  border-color:#E6D7F2!important;
+}
+.admin-body .admin-quick-list a:hover{
+  background:#F2E7FA!important;
+  border-color:#D5B8EC!important;
+}
+.admin-body .admin-quick-list strong{color:var(--al-text)!important}
+.admin-body .admin-quick-list span{color:var(--al-muted)!important}
+
+/* Badges/status */
+.admin-body .admin-badge,
+.admin-body .report-pill,
+.admin-body .admin-status-active,
+.admin-body .marketing-visual-top small,
+.admin-body .admin-skin-type-count{
+  background:#F0E3FA!important;
+  border-color:#D9BEEF!important;
+  color:var(--al-primary-deep)!important;
+}
+.admin-body .website-update-list span{
+  background:linear-gradient(135deg,var(--al-primary),var(--al-primary-deep))!important;
+  color:#fff!important;
+}
+.admin-body .payment-summary-grid>div{
+  background:#F8F1FC!important;
+  border-color:#E2CEF2!important;
+}
+.admin-body .admin-alert{
+  background:#F0E4FA!important;
+  border-color:#D8BDEB!important;
+  color:#6F429A!important;
+}
+
+/* Charts */
+.admin-body .marketing-visual-chart{
+  background:linear-gradient(145deg,#FFFFFF,#F8F1FC)!important;
+}
+.admin-body .marketing-chart-bar-wrap{
+  background:linear-gradient(180deg,#FBF8FE,#F1E5FA)!important;
+  border-color:#E5D5F1!important;
+}
+.admin-body .marketing-chart-bar,
+.admin-body .category-line i{
+  background:linear-gradient(180deg,var(--al-primary),var(--al-primary-deep))!important;
+  box-shadow:0 16px 38px rgba(125,77,181,.20)!important;
+}
+.admin-body .marketing-chart-bar span,
+.admin-body .chart-value{color:var(--al-primary-deep)!important;fill:var(--al-primary-deep)!important}
+.admin-body .marketing-chart-item strong{color:var(--al-text)!important}
+.admin-body .marketing-chart-item small{color:var(--al-muted)!important}
+.admin-body .chart-line{stroke:var(--al-primary)!important}
+.admin-body .chart-axis-line{stroke:#CBADE6!important}
+.admin-body .chart-grid-line{stroke:#E9DFF1!important}
+.admin-body .chart-dot{fill:#fff!important;stroke:var(--al-primary-deep)!important}
+.admin-body .chart-label{fill:#81728E!important}
+.admin-body svg stop:first-child,
+.admin-body svg stop:last-child{stop-color:var(--al-primary)!important}
+.admin-body .category-line{background:#EEE4F5!important}
+
+/* Editor, upload, product, voucher, review */
+.admin-body .article-editor-toolbar,
+.admin-body .article-block-canvas,
+.admin-body .article-add-menu,
+.admin-body .admin-skin-upload-box,
+.admin-body .admin-skin-product-option,
+.admin-body .admin-logo-preview{
+  background:#FFFFFF!important;
+  border-color:#E1CFF0!important;
+  color:var(--al-text)!important;
+}
+.admin-body .article-editor-toolbar button,
+.admin-body .article-add-menu button{color:var(--al-text)!important}
+.admin-body .article-editor-toolbar button:hover,
+.admin-body .article-editor-toolbar button.is-active,
+.admin-body .article-add-menu button:hover,
+.admin-body .admin-skin-product-option:hover{
+  background:#F0E4FA!important;
+  border-color:#D2AFE9!important;
+  color:var(--al-primary-deep)!important;
+}
+.admin-body .article-add-button{
+  background:linear-gradient(135deg,var(--al-primary),var(--al-primary-deep))!important;
+}
+.admin-body .article-block-canvas .article-read-also{
+  background:#F7EFFC!important;
+  border-left-color:var(--al-primary)!important;
+}
+.admin-body .admin-review-edited{
+  background:#F0E3FA!important;
+  border-color:#D8BDEB!important;
+  color:var(--al-primary-deep)!important;
+}
+
+/* Eliminate leftover dark/green inline styles in admin only */
+.admin-body [style*="#080808"],
+.admin-body [style*="#0A0A0A"],
+.admin-body [style*="#0a0a0a"],
+.admin-body [style*="#151515"],
+.admin-body [style*="#161616"],
+.admin-body [style*="#17131C"],
+.admin-body [style*="#100D14"]{
+  background:#FFFFFF!important;
+  color:var(--al-text)!important;
+}
+.admin-body [style*="#4A7A3A"],
+.admin-body [style*="#4a7a3a"],
+.admin-body [style*="#65A240"],
+.admin-body [style*="#65a240"],
+.admin-body [style*="#3D6328"],
+.admin-body [style*="#3d6328"],
+.admin-body [style*="#4F8B3A"],
+.admin-body [style*="#4f8b3a"]{
+  color:var(--al-primary-deep)!important;
+  border-color:#D4B9EB!important;
+}
+
+@media(max-width:1024px){
+  .admin-body .admin-sidebar{box-shadow:0 12px 30px rgba(105,70,140,.08)!important}
+}

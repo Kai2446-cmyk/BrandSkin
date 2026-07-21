@@ -1,0 +1,10 @@
+/* Perbaikan khusus: sembunyikan loader saat halaman dibuka atau di-refresh. */
+.glow-page-loader,
+.glow-page-loader[aria-hidden="true"],
+.glow-page-loader.is-visible,
+body.is-loading .glow-page-loader {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

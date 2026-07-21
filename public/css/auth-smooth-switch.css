@@ -1,0 +1,74 @@
+/* PATCH AUTH SMOOTH SWITCH ONLY */
+/* Fokus: login/register pindah dengan animasi geser, bukan page loader full screen. */
+
+.auth-ref-page{
+    --auth-slide-distance: 32px;
+}
+
+.auth-card{
+    animation:authCardEnter .34s ease both;
+}
+
+.auth-ref-left{
+    animation:authImageEnter .44s ease both;
+}
+
+.auth-ref-page.is-auth-switching .auth-card{
+    animation:authCardLeave .28s ease both;
+}
+
+.auth-ref-page.is-auth-switching .auth-ref-left{
+    animation:authImageLeave .28s ease both;
+}
+
+.auth-ref-page.is-auth-switching .auth-tabs a{
+    pointer-events:none;
+}
+
+@keyframes authCardEnter{
+    from{
+        opacity:0;
+        transform:translateX(var(--auth-slide-distance));
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes authImageEnter{
+    from{
+        opacity:.78;
+        transform:scale(1.025);
+        filter:blur(2px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+        filter:blur(0);
+    }
+}
+
+@keyframes authCardLeave{
+    from{
+        opacity:1;
+        transform:translateX(0);
+    }
+    to{
+        opacity:0;
+        transform:translateX(calc(var(--auth-slide-distance) * -1));
+    }
+}
+
+@keyframes authImageLeave{
+    from{
+        opacity:1;
+        transform:scale(1);
+        filter:blur(0);
+    }
+    to{
+        opacity:.80;
+        transform:scale(1.025);
+        filter:blur(2px);
+    }
+}

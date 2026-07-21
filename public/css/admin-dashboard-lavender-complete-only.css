@@ -1,0 +1,206 @@
+/*
+ * GlowSkin — Admin lavender theme override
+ * Scope: hanya area dengan body.admin-body.
+ * Tidak mengubah struktur, ukuran, data, route, atau fungsi admin.
+ */
+.admin-body{
+  --admin-lavender:#B98EE6;
+  --admin-lavender-strong:#9B68D0;
+  --admin-lavender-deep:#7446A6;
+  --admin-lavender-soft:#EADDF7;
+  --admin-lavender-text:#DCC4F3;
+  --admin-lavender-line:rgba(185,142,230,.34);
+  --admin-panel-a:#17131C;
+  --admin-panel-b:#100D14;
+}
+
+/* Tombol dan class lama bernama green tetap berfungsi, hanya warnanya diganti. */
+.admin-body .green-gradient-btn,
+.admin-body .admin-head-btn,
+.admin-body .admin-save-btn,
+.admin-body .admin-primary-btn,
+.admin-body .admin-add-btn,
+.admin-body .btn-primary,
+.admin-body button[type="submit"]:not(.admin-logout),
+.admin-body a.green-gradient-btn{
+  background:linear-gradient(135deg,var(--admin-lavender),var(--admin-lavender-strong))!important;
+  border-color:var(--admin-lavender)!important;
+  color:#fff!important;
+  box-shadow:0 12px 30px rgba(155,104,208,.22)!important;
+}
+.admin-body .green-gradient-btn:hover,
+.admin-body .admin-head-btn:hover,
+.admin-body .admin-save-btn:hover,
+.admin-body .admin-primary-btn:hover,
+.admin-body .admin-add-btn:hover,
+.admin-body .btn-primary:hover,
+.admin-body button[type="submit"]:not(.admin-logout):hover,
+.admin-body a.green-gradient-btn:hover{
+  background:linear-gradient(135deg,var(--admin-lavender-strong),var(--admin-lavender-deep))!important;
+  color:#fff!important;
+}
+
+/* Navigasi, identitas admin, dan aksen umum. */
+.admin-body .admin-nav a.active,
+.admin-body .admin-nav a:hover{
+  background:rgba(185,142,230,.14)!important;
+  border-color:var(--admin-lavender-line)!important;
+  color:#F5EAFE!important;
+}
+.admin-body .admin-nav a.active::before{background:var(--admin-lavender)!important}
+.admin-body .profile-avatar,
+.admin-body .admin-review-avatar{
+  background:linear-gradient(135deg,var(--admin-lavender),var(--admin-lavender-deep))!important;
+  color:#fff!important;
+  box-shadow:0 8px 22px rgba(155,104,208,.25)!important;
+}
+
+/* Judul kecil, statistik, angka pendukung, dan status yang sebelumnya hijau. */
+.admin-body .report-head>div>p:first-child,
+.admin-body .admin-report-stat small,
+.admin-body .admin-report-stat:first-child small,
+.admin-body .admin-report-panel p,
+.admin-body .promo-card small,
+.admin-body .admin-skin-type-footer-note strong,
+.admin-body .article-read-also strong,
+.admin-body .admin-preview-eyebrow,
+.admin-body [class*="eyebrow"],
+.admin-body [class*="kicker"]{
+  color:var(--admin-lavender-text)!important;
+}
+
+.admin-body .admin-report-stat{
+  border-color:rgba(185,142,230,.28)!important;
+  background:linear-gradient(145deg,rgba(34,24,44,.94),rgba(16,13,20,.97))!important;
+}
+.admin-body .admin-report-panel,
+.admin-body .admin-panel,
+.admin-body .admin-card,
+.admin-body .marketing-visual-chart{
+  border-color:rgba(185,142,230,.22)!important;
+}
+.admin-body .marketing-visual-chart{
+  background:radial-gradient(circle at top left,rgba(185,142,230,.15),rgba(255,255,255,.025) 42%,rgba(255,255,255,.015))!important;
+}
+
+/* Badge, pill, status, dan ringkasan. */
+.admin-body .report-pill,
+.admin-body .admin-badge,
+.admin-body .admin-status-active,
+.admin-body .marketing-visual-top small,
+.admin-body .admin-skin-type-count{
+  border-color:var(--admin-lavender-line)!important;
+  background:rgba(185,142,230,.13)!important;
+  color:#E7D3F8!important;
+}
+.admin-body .payment-summary-grid>div{
+  border-color:rgba(185,142,230,.24)!important;
+  background:rgba(185,142,230,.09)!important;
+}
+.admin-body .website-update-list span{
+  background:var(--admin-lavender-deep)!important;
+  color:#F5EAFE!important;
+}
+
+/* Grafik dashboard. */
+.admin-body .marketing-chart-bar,
+.admin-body .category-line i{
+  background:linear-gradient(180deg,var(--admin-lavender),var(--admin-lavender-deep))!important;
+  box-shadow:0 20px 50px rgba(116,70,166,.28)!important;
+}
+.admin-body .marketing-chart-bar-wrap{
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(185,142,230,.08))!important;
+}
+.admin-body .marketing-chart-bar span,
+.admin-body .chart-value{color:#EEDFFF!important;fill:#EEDFFF!important}
+.admin-body .chart-line{stroke:var(--admin-lavender)!important;filter:drop-shadow(0 12px 24px rgba(185,142,230,.28))!important}
+.admin-body .chart-axis-line{stroke:rgba(185,142,230,.38)!important}
+.admin-body .chart-dot{fill:#17131C!important;stroke:#E2C8F7!important}
+.admin-body svg stop:first-child{stop-color:var(--admin-lavender)!important}
+.admin-body svg stop:last-child{stop-color:var(--admin-lavender)!important}
+
+/* Form controls. */
+.admin-body input:focus,
+.admin-body select:focus,
+.admin-body textarea:focus,
+.admin-body [contenteditable="true"]:focus{
+  border-color:var(--admin-lavender)!important;
+  box-shadow:0 0 0 4px rgba(185,142,230,.12)!important;
+  outline:none!important;
+}
+.admin-body input[type="checkbox"],
+.admin-body input[type="radio"]{accent-color:var(--admin-lavender)!important}
+.admin-body option:checked{background:var(--admin-lavender-deep)!important;color:#fff!important}
+
+/* Pengaturan skin type, produk, artikel, voucher, dan review. */
+.admin-body .admin-skin-product-option:hover,
+.admin-body .article-add-menu button:hover{
+  border-color:var(--admin-lavender-line)!important;
+  background:rgba(185,142,230,.10)!important;
+}
+.admin-body .admin-skin-product-option input:checked+.admin-skin-product-option__check{
+  border-color:var(--admin-lavender)!important;
+  background:var(--admin-lavender-strong)!important;
+  box-shadow:inset 0 0 0 4px var(--admin-lavender-strong)!important;
+}
+.admin-body .admin-skin-upload-box:hover{
+  border-color:var(--admin-lavender)!important;
+  background:rgba(185,142,230,.08)!important;
+}
+.admin-body .admin-skin-upload-box__icon,
+.admin-body .article-add-menu button>span{
+  background:rgba(185,142,230,.18)!important;
+  color:#E3C9F8!important;
+}
+.admin-body .admin-skin-add-type{
+  border-color:var(--admin-lavender)!important;
+  background:rgba(185,142,230,.10)!important;
+  color:#E4CEF6!important;
+}
+.admin-body .admin-skin-add-type:hover{
+  background:var(--admin-lavender-strong)!important;
+  color:#fff!important;
+}
+.admin-body .article-editor-toolbar button:hover,
+.admin-body .article-editor-toolbar button.is-active{
+  border-color:var(--admin-lavender)!important;
+  background:rgba(185,142,230,.18)!important;
+  color:#E8D5F8!important;
+}
+.admin-body .article-block-canvas p:hover,
+.admin-body .article-block-canvas h2:hover,
+.admin-body .article-block-canvas .article-read-also:hover{
+  outline-color:rgba(185,142,230,.52)!important;
+}
+.admin-body .article-block-canvas .article-read-also{
+  border-left-color:var(--admin-lavender)!important;
+  background:linear-gradient(90deg,rgba(185,142,230,.16),rgba(185,142,230,.03))!important;
+}
+.admin-body .article-block-canvas .article-read-also strong{color:#DCC3F4!important}
+.admin-body .article-add-button{
+  background:linear-gradient(135deg,var(--admin-lavender),var(--admin-lavender-deep))!important;
+  box-shadow:0 12px 30px rgba(116,70,166,.38)!important;
+}
+.admin-body .article-add-button[aria-expanded="true"]{
+  background:linear-gradient(135deg,#D4B4EF,var(--admin-lavender-strong))!important;
+}
+.admin-body .admin-voucher-confirm-panel [data-voucher-ok]{
+  background:var(--admin-lavender-strong)!important;
+  border-color:var(--admin-lavender)!important;
+}
+.admin-body .admin-review-edited{
+  border-color:rgba(185,142,230,.40)!important;
+  background:rgba(185,142,230,.12)!important;
+  color:#DCC3F4!important;
+}
+
+/* Warna inline/lama yang umum dipakai pada elemen admin. */
+.admin-body [style*="#4A7A3A"],
+.admin-body [style*="#4a7a3a"],
+.admin-body [style*="#65A240"],
+.admin-body [style*="#65a240"],
+.admin-body [style*="#4F8B3A"],
+.admin-body [style*="#4f8b3a"]{
+  color:var(--admin-lavender-text)!important;
+  border-color:var(--admin-lavender-line)!important;
+}

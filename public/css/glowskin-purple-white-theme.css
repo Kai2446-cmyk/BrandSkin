@@ -1,0 +1,150 @@
+/* GlowSkin lavender + white visual theme
+   Main accent: #B98EE6
+   Scope: public website only. No database, route, controller, or feature changes. */
+
+:root{
+  --primary:#B98EE6;
+  --primary-dark:#7D4DB2;
+  --primary-soft:#D8BDF3;
+  --primary-pale:#F5EEFC;
+  --background:#FCFAFF;
+  --foreground:#241B2E;
+}
+
+body{
+  background:#FCFAFF;
+  color:#241B2E;
+}
+
+.green-gradient-btn{
+  background:linear-gradient(135deg,#A977DA 0%,#B98EE6 52%,#D8BDF3 100%) !important;
+  box-shadow:0 14px 34px rgba(185,142,230,.26);
+}
+.green-gradient-btn:hover{
+  filter:brightness(1.035);
+  box-shadow:0 18px 42px rgba(125,77,178,.28);
+}
+
+.tab-underline-active:after,
+.nav-link-hover:after,
+.profile-dropdown:before{
+  background:var(--primary) !important;
+}
+
+/* Landing navbar remains transparent over the hero, then becomes lavender-white on scroll. */
+body.has-landing-hero .site-header{
+  background:transparent !important;
+  border-bottom-color:transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+  transition:background .32s ease,border-color .32s ease,box-shadow .32s ease,backdrop-filter .32s ease !important;
+}
+body.has-landing-hero .hero-section{
+  margin-top:0 !important;
+  height:100vh !important;
+  max-height:none !important;
+  min-height:650px !important;
+}
+body.has-landing-hero .site-header.is-scrolled{
+  background:linear-gradient(90deg,rgba(255,255,255,.97),rgba(245,238,252,.96),rgba(224,203,244,.95)) !important;
+  border-bottom:1px solid rgba(125,77,178,.16) !important;
+  box-shadow:0 14px 38px rgba(86,48,120,.14) !important;
+  backdrop-filter:blur(18px) saturate(1.12) !important;
+}
+body.has-landing-hero .site-header.is-scrolled .site-logo,
+body.has-landing-hero .site-header.is-scrolled .site-logo strong,
+body.has-landing-hero .site-header.is-scrolled .site-nav a,
+body.has-landing-hero .site-header.is-scrolled .site-nav-shop-trigger,
+body.has-landing-hero .site-header.is-scrolled .profile-trigger strong,
+body.has-landing-hero .site-header.is-scrolled .profile-trigger i{
+  color:#2A2034 !important;
+}
+body.has-landing-hero .site-header.is-scrolled .site-logo span{
+  color:rgba(42,32,52,.58) !important;
+}
+body.has-landing-hero .site-header.is-scrolled .circle-action,
+body.has-landing-hero .site-header.is-scrolled .profile-trigger,
+body.has-landing-hero .site-header.is-scrolled .auth-actions a{
+  color:#2A2034 !important;
+  border-color:rgba(125,77,178,.20) !important;
+  background:rgba(255,255,255,.62) !important;
+}
+body.has-landing-hero .site-header.is-scrolled .search-icon-svg{
+  stroke:#2A2034 !important;
+}
+body.has-landing-hero .site-header.is-scrolled .site-nav a.active,
+body.has-landing-hero .site-header.is-scrolled .site-nav a:hover,
+body.has-landing-hero .site-header.is-scrolled .site-nav-shop.active .site-nav-shop-trigger,
+body.has-landing-hero .site-header.is-scrolled .site-nav-shop-trigger:hover{
+  color:#7D4DB2 !important;
+}
+
+main.bg-\[var\(--background\)\]{background:#FCFAFF !important;}
+.sale-gradient-bg{
+  background:linear-gradient(135deg,#FFFFFF 0%,#F5EEFC 42%,#E4CFF7 100%) !important;
+}
+.footer-luxury{
+  background:linear-gradient(135deg,#2D1B3D 0%,#573776 48%,#24162F 100%) !important;
+  border-top-color:var(--primary) !important;
+}
+.footer-title{color:#D8BDF3 !important;}
+.footer-link:hover{color:#E8D7F8 !important;}
+.social-btn:hover{
+  background:rgba(185,142,230,.18) !important;
+  border-color:#CDA9EE !important;
+}
+
+.bg-\[var\(--primary\)\]{background-color:var(--primary) !important;}
+.text-\[var\(--primary\)\]{color:var(--primary) !important;}
+.border-\[var\(--primary\)\]{border-color:var(--primary) !important;}
+.hover\:border-\[var\(--primary\)\]:hover{border-color:var(--primary) !important;}
+
+/* Beauty Highlight: lavender gradient, no black/green visual dominance. */
+body.has-landing-hero section.bg-black{
+  background:
+    radial-gradient(circle at 10% 20%,rgba(255,255,255,.42),transparent 28%),
+    linear-gradient(135deg,#6F469D 0%,#B98EE6 50%,#EFE4FA 100%) !important;
+}
+body.has-landing-hero section.bg-black .text-white{color:#FFFFFF !important;}
+
+/* Skin type showcase: richer violet gradient while preserving readability. */
+.skin-type-showcase{
+  background:
+    radial-gradient(circle at 78% 16%,rgba(255,255,255,.18),transparent 30%),
+    linear-gradient(135deg,#2B183D 0%,#5D367D 46%,#9A6CC8 100%) !important;
+}
+.skin-type-tab.active{
+  border-color:rgba(216,189,243,.78) !important;
+  background:rgba(185,142,230,.18) !important;
+}
+.skin-type-tab small,
+.skin-type-showcase__heading p,
+.skin-type-product-card__body small,
+.skin-type-product-card__body strong{
+  color:#D8BDF3 !important;
+}
+.skin-type-product-card__image span{background:#B98EE6 !important;}
+
+/* Common interactive states. */
+input:focus,select:focus,textarea:focus{
+  border-color:rgba(185,142,230,.78) !important;
+  box-shadow:0 0 0 3px rgba(185,142,230,.15) !important;
+}
+
+/* Defensive overrides for recurring legacy green utility accents on public pages. */
+body:not(.admin-dashboard) .text-green-500,
+body:not(.admin-dashboard) .text-green-600,
+body:not(.admin-dashboard) .text-green-700,
+body:not(.admin-dashboard) .text-green-800{color:#7D4DB2 !important;}
+body:not(.admin-dashboard) .bg-green-500,
+body:not(.admin-dashboard) .bg-green-600,
+body:not(.admin-dashboard) .bg-green-700,
+body:not(.admin-dashboard) .bg-green-800{background-color:#B98EE6 !important;}
+body:not(.admin-dashboard) .border-green-500,
+body:not(.admin-dashboard) .border-green-600,
+body:not(.admin-dashboard) .border-green-700,
+body:not(.admin-dashboard) .border-green-800{border-color:#B98EE6 !important;}
+
+@media(max-width:1023px){
+  body.has-landing-hero .hero-section{min-height:610px !important;}
+}

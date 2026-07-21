@@ -1,0 +1,50 @@
+/* Only fixes brand-logo sizing when Website Name and Tagline are empty. */
+.site-header .site-logo.site-logo--image-only {
+  width: 210px !important;
+  min-width: 210px !important;
+  max-width: 210px !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow: visible !important;
+}
+
+.site-header .site-logo.site-logo--image-only img {
+  width: 190px !important;
+  min-width: 190px !important;
+  max-width: 190px !important;
+  height: 78px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+}
+
+@media (max-width: 1024px) {
+  .site-header .site-logo.site-logo--image-only {
+    width: 170px !important;
+    min-width: 170px !important;
+    max-width: 170px !important;
+  }
+  .site-header .site-logo.site-logo--image-only img {
+    width: 155px !important;
+    min-width: 155px !important;
+    max-width: 155px !important;
+    height: 66px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header .site-logo.site-logo--image-only {
+    width: 132px !important;
+    min-width: 132px !important;
+    max-width: 132px !important;
+  }
+  .site-header .site-logo.site-logo--image-only img {
+    width: 122px !important;
+    min-width: 122px !important;
+    max-width: 122px !important;
+    height: 54px !important;
+  }
+}

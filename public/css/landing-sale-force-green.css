@@ -1,0 +1,177 @@
+/* PATCH LANDING SALE FORCE GREEN FIX ONLY */
+/* Fokus hanya ubah tone kuning/gold/coklat di section sale landing pages
+   menjadi hijau gradient #3D6328 - #65A240.
+   Tidak mengubah layout, ukuran, database, controller, route, atau fitur lain. */
+
+/* ===== TARGET SECTION SALE LANDING ===== */
+.glowskin-force-sale-green,
+.glowskin-force-sale-green *{
+    --sale-green-dark:#3D6328 !important;
+    --sale-green-light:#65A240 !important;
+    --sale-green-deep:#172810 !important;
+    --sale-green-card:#223817 !important;
+    --sale-green-card-2:#1B2D13 !important;
+    --sale-green-border:rgba(101,162,64,.42) !important;
+    --sale-green-text:#EAF8DF !important;
+    --sale-green-muted:#A7D98A !important;
+}
+
+/* Background section yang tadinya coklat/gold */
+.glowskin-force-sale-green{
+    background:
+        radial-gradient(circle at 16% 8%, rgba(101,162,64,.28) 0%, transparent 30%),
+        radial-gradient(circle at 88% 18%, rgba(61,99,40,.34) 0%, transparent 34%),
+        linear-gradient(135deg, #172810 0%, #243D17 38%, #3D6328 72%, #65A240 145%) !important;
+}
+
+/* Strip/area wrapper yang mungkin punya bg coklat inline/class */
+.glowskin-force-sale-green > *,
+.glowskin-force-sale-green .container,
+.glowskin-force-sale-green .wrapper,
+.glowskin-force-sale-green .content,
+.glowskin-force-sale-green .swiper,
+.glowskin-force-sale-green .swiper-wrapper,
+.glowskin-force-sale-green .slick-list,
+.glowskin-force-sale-green .products-row{
+    background-color:transparent !important;
+}
+
+/* Judul 50% OFF box */
+.glowskin-force-sale-green :is(.section-title,.sale-title,.discount-title,.promo-title,h2,h3):has(+ *),
+.glowskin-force-sale-green [class*="title"],
+.glowskin-force-sale-green [class*="heading"]{
+    color:#EAF8DF !important;
+    border-color:rgba(101,162,64,.55) !important;
+}
+
+/* Paksa box 50% OFF agar hijau */
+.glowskin-force-sale-green [class*="off"],
+.glowskin-force-sale-green [class*="discount"],
+.glowskin-force-sale-green [class*="promo"],
+.glowskin-force-sale-green [class*="sale-badge"],
+.glowskin-force-sale-green [class*="badge"]{
+    border-color:rgba(101,162,64,.55) !important;
+}
+
+/* Badge diskon kecil -50%, -0% yang tadinya gold */
+.glowskin-force-sale-green .discount-badge,
+.glowskin-force-sale-green .discount-label,
+.glowskin-force-sale-green .sale-percent,
+.glowskin-force-sale-green .percent-badge,
+.glowskin-force-sale-green .badge-sale,
+.glowskin-force-sale-green .product-badge,
+.glowskin-force-sale-green [class*="percent"],
+.glowskin-force-sale-green [class*="label"]{
+    background:linear-gradient(135deg, #65A240, #9AD773) !important;
+    color:#10220C !important;
+    border-color:rgba(255,255,255,.20) !important;
+    box-shadow:none !important;
+}
+
+/* Tombol See All */
+.glowskin-force-sale-green a{
+    color:#BFE9A7 !important;
+}
+
+.glowskin-force-sale-green a:hover{
+    color:#ffffff !important;
+}
+
+/* Card produk area bawah yang tadinya coklat */
+.glowskin-force-sale-green .product-card,
+.glowskin-force-sale-green .sale-product-card,
+.glowskin-force-sale-green .catalogue-product-card,
+.glowskin-force-sale-green [class*="product-card"],
+.glowskin-force-sale-green [class*="card"]{
+    background:linear-gradient(180deg, rgba(34,56,23,.98), rgba(23,40,16,.98)) !important;
+    border-color:rgba(101,162,64,.38) !important;
+    box-shadow:0 20px 48px rgba(0,0,0,.22) !important;
+}
+
+/* Jika card punya body/info bawah sendiri */
+.glowskin-force-sale-green .product-info,
+.glowskin-force-sale-green .card-body,
+.glowskin-force-sale-green .sale-card-body,
+.glowskin-force-sale-green [class*="product-info"],
+.glowskin-force-sale-green [class*="card-body"]{
+    background:linear-gradient(180deg, rgba(34,56,23,.98), rgba(23,40,16,.98)) !important;
+}
+
+/* Category */
+.glowskin-force-sale-green .category,
+.glowskin-force-sale-green .product-category,
+.glowskin-force-sale-green [class*="category"]{
+    color:#95D86E !important;
+}
+
+/* Product title */
+.glowskin-force-sale-green .product-name,
+.glowskin-force-sale-green .product-title,
+.glowskin-force-sale-green [class*="product-name"],
+.glowskin-force-sale-green [class*="product-title"],
+.glowskin-force-sale-green h4,
+.glowskin-force-sale-green h5{
+    color:#ffffff !important;
+}
+
+/* Harga baru */
+.glowskin-force-sale-green .price,
+.glowskin-force-sale-green .product-price,
+.glowskin-force-sale-green [class*="price"]{
+    color:#B9EC96 !important;
+}
+
+/* Harga coret */
+.glowskin-force-sale-green del,
+.glowskin-force-sale-green .old-price,
+.glowskin-force-sale-green [class*="old-price"]{
+    color:rgba(234,248,223,.46) !important;
+}
+
+/* Button add to bag yang tadinya gold */
+.glowskin-force-sale-green button,
+.glowskin-force-sale-green .add-to-bag,
+.glowskin-force-sale-green .add-to-cart,
+.glowskin-force-sale-green [data-cart-add],
+.glowskin-force-sale-green [class*="add"]{
+    background:rgba(61,99,40,.82) !important;
+    color:#DFF4D5 !important;
+    border-color:rgba(101,162,64,.55) !important;
+}
+
+.glowskin-force-sale-green button:hover,
+.glowskin-force-sale-green .add-to-bag:hover,
+.glowskin-force-sale-green .add-to-cart:hover,
+.glowskin-force-sale-green [data-cart-add]:hover{
+    background:linear-gradient(135deg, #3D6328, #65A240) !important;
+    color:#ffffff !important;
+}
+
+/* Slider arrows */
+.glowskin-force-sale-green .swiper-button-next,
+.glowskin-force-sale-green .swiper-button-prev,
+.glowskin-force-sale-green .slick-next,
+.glowskin-force-sale-green .slick-prev,
+.glowskin-force-sale-green .slider-arrow,
+.glowskin-force-sale-green [class*="arrow"]{
+    background:rgba(23,40,16,.82) !important;
+    color:#EAF8DF !important;
+    border-color:rgba(101,162,64,.55) !important;
+}
+
+/* Override khusus warna inline gold yang sering muncul */
+.glowskin-force-sale-green [style*="#C8951A"],
+.glowskin-force-sale-green [style*="#c8951a"],
+.glowskin-force-sale-green [style*="#D4A017"],
+.glowskin-force-sale-green [style*="#d4a017"],
+.glowskin-force-sale-green [style*="#B8860B"],
+.glowskin-force-sale-green [style*="#b8860b"]{
+    color:#B9EC96 !important;
+    background-color:#3D6328 !important;
+    border-color:#65A240 !important;
+}
+
+/* Paksa border gold jadi hijau */
+.glowskin-force-sale-green :is(div,article,button,a,span){
+    border-color:rgba(101,162,64,.36) !important;
+}

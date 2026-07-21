@@ -1,0 +1,129 @@
+/* Focused fix: clear ADD TO BAG buttons + consistent rounded sale cards. */
+.product-add-to-bag,
+#products .landing-product-add-to-bag,
+.sale-home-section .product-add-to-bag,
+.catalogue-page .catalogue-actions--cart-only [data-cart-add] {
+  appearance: none;
+  border: 1px solid #8f58cf !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #7d43c5 0%, #a968df 52%, #bf84eb 100%) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  min-height: 40px;
+  padding: 10px 20px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: .11em !important;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  text-shadow: 0 1px 2px rgba(48, 20, 76, .28);
+  box-shadow: 0 10px 24px rgba(126, 67, 197, .32) !important;
+  cursor: pointer;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  position: relative;
+  overflow: hidden;
+}
+.product-add-to-bag:hover,
+#products .landing-product-add-to-bag:hover,
+.sale-home-section .product-add-to-bag:hover,
+.catalogue-page .catalogue-actions--cart-only [data-cart-add]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(126, 67, 197, .42) !important;
+  filter: brightness(1.06) !important;
+}
+.product-add-to-bag:active,
+#products .landing-product-add-to-bag:active,
+.sale-home-section .product-add-to-bag:active,
+.catalogue-page .catalogue-actions--cart-only [data-cart-add]:active { transform: scale(.96); }
+
+.catalogue-page .catalogue-actions--cart-only {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  margin-top: 14px;
+}
+.catalogue-page .catalogue-actions--cart-only .product-add-to-bag {
+  min-width: 150px;
+  min-height: 42px;
+}
+#products .landing-product-add-to-bag {
+  margin-top: 12px !important;
+  min-width: 150px;
+}
+
+/* Keep feedback states clearly purple, never white. */
+.product-add-to-bag.is-adding,
+.catalogue-page .catalogue-actions--cart-only [data-cart-add].is-adding {
+  pointer-events: none;
+  transform: scale(.97);
+  background: linear-gradient(135deg, #7041b7 0%, #995fd2 100%) !important;
+}
+.product-add-to-bag.is-adding::after,
+.catalogue-page .catalogue-actions--cart-only [data-cart-add].is-adding::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,.45);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: glowBagSpin .65s linear infinite;
+}
+.product-add-to-bag.is-added,
+.catalogue-page .catalogue-actions--cart-only [data-cart-add].is-added {
+  background: linear-gradient(135deg, #6032a7 0%, #8d56cb 100%) !important;
+  animation: glowBagPop .38s ease;
+}
+@keyframes glowBagSpin { to { transform: rotate(360deg); } }
+@keyframes glowBagPop {
+  0% { transform: scale(.94); }
+  55% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* Sale section: same clean rounded language as the other product cards. */
+.sale-home-section .sale-home-badge,
+.sale-home-section .sale-home-card,
+.sale-home-section .sale-home-card-box,
+.sale-home-section .sale-home-image,
+.sale-home-section .sale-home-info {
+  border-radius: 24px !important;
+}
+.sale-home-section .sale-home-card,
+.sale-home-section .sale-home-card-box {
+  overflow: hidden !important;
+}
+.sale-home-section .sale-home-image {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  overflow: hidden !important;
+}
+.sale-home-section .sale-home-info {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.sale-home-section .sale-home-discount {
+  border-radius: 999px !important;
+}
+.sale-home-section .sale-home-badge {
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .product-add-to-bag,
+  #products .landing-product-add-to-bag,
+  .sale-home-section .product-add-to-bag,
+  .catalogue-page .catalogue-actions--cart-only [data-cart-add] {
+    min-height: 38px;
+    padding: 9px 15px !important;
+    font-size: 11px !important;
+  }
+}

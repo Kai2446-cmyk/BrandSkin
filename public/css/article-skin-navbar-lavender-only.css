@@ -1,0 +1,139 @@
+/* Khusus navbar halaman Artikel dan Skin Analyzer.
+   Tidak memengaruhi landing page, katalog, produk, profile, cart, atau halaman lain. */
+body:has(.articles-page) .site-header,
+body:has(.article-detail-page) .site-header,
+body:has(.sa-frame) .site-header,
+body:has(.skin-analyzer-page-data) .site-header {
+  background: linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(250,247,253,.98) 50%, rgba(241,230,251,.98) 100%) !important;
+  border-bottom: 1px solid rgba(185,142,230,.25) !important;
+  box-shadow: 0 10px 34px rgba(77,49,98,.10) !important;
+  backdrop-filter: blur(18px) saturate(1.08) !important;
+}
+
+body:has(.articles-page) .site-header-inner,
+body:has(.article-detail-page) .site-header-inner,
+body:has(.sa-frame) .site-header-inner,
+body:has(.skin-analyzer-page-data) .site-header-inner {
+  color: #2A2034 !important;
+}
+
+body:has(.articles-page) .site-logo,
+body:has(.articles-page) .site-logo strong,
+body:has(.articles-page) .site-nav a,
+body:has(.articles-page) .site-nav-shop-trigger,
+body:has(.articles-page) .profile-trigger strong,
+body:has(.articles-page) .profile-trigger i,
+body:has(.article-detail-page) .site-logo,
+body:has(.article-detail-page) .site-logo strong,
+body:has(.article-detail-page) .site-nav a,
+body:has(.article-detail-page) .site-nav-shop-trigger,
+body:has(.article-detail-page) .profile-trigger strong,
+body:has(.article-detail-page) .profile-trigger i,
+body:has(.sa-frame) .site-logo,
+body:has(.sa-frame) .site-logo strong,
+body:has(.sa-frame) .site-nav a,
+body:has(.sa-frame) .site-nav-shop-trigger,
+body:has(.sa-frame) .profile-trigger strong,
+body:has(.sa-frame) .profile-trigger i,
+body:has(.skin-analyzer-page-data) .site-logo,
+body:has(.skin-analyzer-page-data) .site-logo strong,
+body:has(.skin-analyzer-page-data) .site-nav a,
+body:has(.skin-analyzer-page-data) .site-nav-shop-trigger,
+body:has(.skin-analyzer-page-data) .profile-trigger strong,
+body:has(.skin-analyzer-page-data) .profile-trigger i {
+  color: #2A2034 !important;
+}
+
+body:has(.articles-page) .site-logo span,
+body:has(.article-detail-page) .site-logo span,
+body:has(.sa-frame) .site-logo span,
+body:has(.skin-analyzer-page-data) .site-logo span {
+  color: rgba(42,32,52,.58) !important;
+}
+
+body:has(.articles-page) .site-nav a:hover,
+body:has(.articles-page) .site-nav a.active,
+body:has(.articles-page) .site-nav-shop-trigger:hover,
+body:has(.article-detail-page) .site-nav a:hover,
+body:has(.article-detail-page) .site-nav a.active,
+body:has(.article-detail-page) .site-nav-shop-trigger:hover,
+body:has(.sa-frame) .site-nav a:hover,
+body:has(.sa-frame) .site-nav a.active,
+body:has(.sa-frame) .site-nav-shop-trigger:hover,
+body:has(.skin-analyzer-page-data) .site-nav a:hover,
+body:has(.skin-analyzer-page-data) .site-nav a.active,
+body:has(.skin-analyzer-page-data) .site-nav-shop-trigger:hover {
+  color: #7D4DB2 !important;
+}
+
+body:has(.articles-page) .site-nav a::after,
+body:has(.articles-page) .site-nav-shop-trigger::after,
+body:has(.article-detail-page) .site-nav a::after,
+body:has(.article-detail-page) .site-nav-shop-trigger::after,
+body:has(.sa-frame) .site-nav a::after,
+body:has(.sa-frame) .site-nav-shop-trigger::after,
+body:has(.skin-analyzer-page-data) .site-nav a::after,
+body:has(.skin-analyzer-page-data) .site-nav-shop-trigger::after {
+  background: #B98EE6 !important;
+}
+
+body:has(.articles-page) .circle-action,
+body:has(.articles-page) .profile-trigger,
+body:has(.article-detail-page) .circle-action,
+body:has(.article-detail-page) .profile-trigger,
+body:has(.sa-frame) .circle-action,
+body:has(.sa-frame) .profile-trigger,
+body:has(.skin-analyzer-page-data) .circle-action,
+body:has(.skin-analyzer-page-data) .profile-trigger {
+  color: #2A2034 !important;
+  background: rgba(255,255,255,.78) !important;
+  border-color: rgba(125,77,178,.20) !important;
+  box-shadow: 0 6px 18px rgba(86,48,120,.06) !important;
+}
+
+body:has(.articles-page) .circle-action:hover,
+body:has(.articles-page) .profile-trigger:hover,
+body:has(.article-detail-page) .circle-action:hover,
+body:has(.article-detail-page) .profile-trigger:hover,
+body:has(.sa-frame) .circle-action:hover,
+body:has(.sa-frame) .profile-trigger:hover,
+body:has(.skin-analyzer-page-data) .circle-action:hover,
+body:has(.skin-analyzer-page-data) .profile-trigger:hover {
+  background: #fff !important;
+  border-color: rgba(185,142,230,.60) !important;
+  color: #7D4DB2 !important;
+}
+
+body:has(.articles-page) .search-icon-svg,
+body:has(.article-detail-page) .search-icon-svg,
+body:has(.sa-frame) .search-icon-svg,
+body:has(.skin-analyzer-page-data) .search-icon-svg { stroke: #2A2034 !important; }
+
+body:has(.articles-page) .circle-action em,
+body:has(.article-detail-page) .circle-action em,
+body:has(.sa-frame) .circle-action em,
+body:has(.skin-analyzer-page-data) .circle-action em {
+  background: #B98EE6 !important;
+  color: #fff !important;
+}
+
+body:has(.articles-page) .profile-dropdown,
+body:has(.article-detail-page) .profile-dropdown,
+body:has(.sa-frame) .profile-dropdown,
+body:has(.skin-analyzer-page-data) .profile-dropdown {
+  background: rgba(255,255,255,.98) !important;
+  border-color: rgba(185,142,230,.24) !important;
+  box-shadow: 0 18px 45px rgba(66,39,88,.16) !important;
+}
+
+body:has(.articles-page) .profile-dropdown a:hover,
+body:has(.articles-page) .profile-dropdown button:hover,
+body:has(.article-detail-page) .profile-dropdown a:hover,
+body:has(.article-detail-page) .profile-dropdown button:hover,
+body:has(.sa-frame) .profile-dropdown a:hover,
+body:has(.sa-frame) .profile-dropdown button:hover,
+body:has(.skin-analyzer-page-data) .profile-dropdown a:hover,
+body:has(.skin-analyzer-page-data) .profile-dropdown button:hover {
+  color: #7D4DB2 !important;
+  background: #F6F0FC !important;
+}

@@ -1,0 +1,7 @@
+FILE: resources/views/layouts/app.blade.php
+
+Tambahkan SATU baris berikut setelah seluruh CSS utama dan sebelum @stack('styles'):
+
+<link rel="stylesheet" href="{{ asset('css/public-article-skin-lavender-fix.css') }}?v=1">
+
+Jangan hapus pemanggilan CSS lain yang sudah ada.

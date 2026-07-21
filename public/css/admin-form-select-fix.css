@@ -1,0 +1,51 @@
+/* PATCH ADMIN FORM SELECT COLOR + DROPDOWN ONLY */
+.admin-field select{
+    width:100% !important;
+    min-height:64px !important;
+    padding:0 46px 0 18px !important;
+    border-radius:18px !important;
+    border:1px solid rgba(255,255,255,.13) !important;
+    background-color:#242424 !important;
+    color:#ffffff !important;
+    font-size:20px !important;
+    font-weight:700 !important;
+    line-height:1.2 !important;
+    outline:none !important;
+    box-shadow:none !important;
+    appearance:auto !important;
+    -webkit-appearance:auto !important;
+}
+.admin-field select:focus{
+    border-color:#4A7A3A !important;
+    box-shadow:0 0 0 3px rgba(74,122,58,.28) !important;
+}
+.admin-field select option{
+    background:#1b1b1b !important;
+    color:#ffffff !important;
+    font-size:16px !important;
+    font-weight:700 !important;
+}
+.admin-field select option:checked{
+    background:#4A7A3A !important;
+    color:#ffffff !important;
+}
+.admin-field input[type="file"]{
+    color:#ffffff !important;
+}
+.admin-field input[type="file"]::file-selector-button{
+    background:#ffffff !important;
+    color:#111111 !important;
+    border:0 !important;
+    border-radius:4px !important;
+    padding:10px 14px !important;
+    margin-right:10px !important;
+    font-weight:700 !important;
+}
+.admin-field input,
+.admin-field textarea{
+    color:#ffffff !important;
+}
+.admin-field input::placeholder,
+.admin-field textarea::placeholder{
+    color:rgba(255,255,255,.42) !important;
+}

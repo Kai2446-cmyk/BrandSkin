@@ -1,0 +1,43 @@
+/* PATCH ARTICLES SHOW ALL FIX ONLY */
+/* Fokus: artikel yang sudah ada di database muncul semua lagi. */
+
+.articles-grid{
+    align-items:start;
+}
+
+.article-card{
+    display:block;
+}
+
+/* Jangan ada card yang tersembunyi karena sisa class/filter patch lama saat All Articles aktif. */
+.articles-grid[data-current-filter="all"] .article-card{
+    display:block !important;
+}
+
+.articles-grid[data-current-filter="all"] .article-card.is-hidden-filter{
+    display:block !important;
+}
+
+/* Tampilkan grid tetap rapih walau jumlah artikel banyak. */
+.articles-grid-section{
+    min-height:520px;
+}
+
+.article-card-img{
+    background:#f5f5f5;
+}
+
+.article-card-body a{
+    min-height:42px;
+}
+
+/* Kalau user klik kategori dan hasil kosong, tampilkan pesan kecil dari JS. */
+.article-filter-empty{
+    grid-column:1 / -1;
+    padding:42px 24px;
+    text-align:center;
+    background:#fff7ef;
+    border:1px solid #ead3bf;
+    color:#7b5c45;
+    font-weight:800;
+}

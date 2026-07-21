@@ -1,0 +1,78 @@
+/* Product card rounded consistency — visual-only patch */
+:root{--gs-product-card-radius:18px}
+
+/* Landing: New Arrival & Best Seller */
+#products .product-card-hover{
+  border-radius:var(--gs-product-card-radius) !important;
+  overflow:hidden !important;
+}
+#products .product-card-hover > div.relative.overflow-hidden{
+  border-radius:var(--gs-product-card-radius) var(--gs-product-card-radius) 0 0 !important;
+}
+
+/* Catalogue product cards */
+.catalogue-page .product-card,
+.product-catalogue .product-card,
+.product-grid .product-card,
+.products-grid .product-card,
+.catalogue-card{
+  border-radius:var(--gs-product-card-radius) !important;
+  overflow:hidden !important;
+}
+.catalogue-page .product-card img,
+.product-catalogue .product-card img,
+.product-grid .product-card img,
+.products-grid .product-card img,
+.catalogue-card img{
+  border-radius:var(--gs-product-card-radius) var(--gs-product-card-radius) 0 0 !important;
+}
+
+/* Landing sale cards */
+.sale-home-card,
+.sale-home-card-box{
+  border-radius:var(--gs-product-card-radius) !important;
+}
+.sale-home-card-box{
+  overflow:hidden !important;
+}
+.sale-home-image,
+.sale-home-image img{
+  border-radius:var(--gs-product-card-radius) var(--gs-product-card-radius) 0 0 !important;
+}
+
+/* Wishlist product cards */
+.wishlist-product-card,
+.wishlist-card,
+.wishlist-item-card{
+  border-radius:var(--gs-product-card-radius) !important;
+  overflow:hidden !important;
+}
+
+/* Keep functional circular controls unchanged */
+.wishlist-love,
+.catalogue-wish,
+.ranking-badge,
+.cart-wish-love{
+  border-radius:999px !important;
+}
+
+/* Featured visual card pada section New Arrival / Best Seller */
+#products .max-w-7xl > div:has([data-featured-label]),
+#products .max-w-7xl > .w-full.lg\:w-\[42\%\].relative.overflow-hidden{
+  border-radius:var(--gs-product-card-radius) !important;
+  overflow:hidden !important;
+  isolation:isolate;
+}
+
+#products .max-w-7xl > div:has([data-featured-label]) > img,
+#products .max-w-7xl > .w-full.lg\:w-\[42\%\].relative.overflow-hidden > img{
+  border-radius:inherit !important;
+}
+
+/* Media/banner sejenis di area produk tetap memakai radius visual yang sama */
+#products .featured-product-visual,
+#products .new-arrival-featured,
+#products .best-seller-featured{
+  border-radius:var(--gs-product-card-radius) !important;
+  overflow:hidden !important;
+}

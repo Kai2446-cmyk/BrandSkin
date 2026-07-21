@@ -1,0 +1,109 @@
+/* Khusus navbar halaman Login dan Register.
+   Tidak memengaruhi isi form autentikasi maupun halaman lain. */
+body:has(.auth-ref-page) .site-header {
+  background: linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(250,247,253,.98) 52%, rgba(241,230,251,.98) 100%) !important;
+  border-bottom: 1px solid rgba(185,142,230,.24) !important;
+  box-shadow: 0 10px 34px rgba(82,54,105,.10) !important;
+  backdrop-filter: blur(18px) saturate(1.08) !important;
+}
+
+body:has(.auth-ref-page) .site-header-inner {
+  color: #2A2034 !important;
+}
+
+body:has(.auth-ref-page) .site-logo,
+body:has(.auth-ref-page) .site-logo strong,
+body:has(.auth-ref-page) .site-nav a,
+body:has(.auth-ref-page) .site-nav-shop-trigger,
+body:has(.auth-ref-page) .profile-trigger strong,
+body:has(.auth-ref-page) .profile-trigger i,
+body:has(.auth-ref-page) .auth-actions a {
+  color: #2A2034 !important;
+}
+
+body:has(.auth-ref-page) .site-logo span {
+  color: rgba(42,32,52,.58) !important;
+}
+
+body:has(.auth-ref-page) .site-nav a:hover,
+body:has(.auth-ref-page) .site-nav a.active,
+body:has(.auth-ref-page) .site-nav-shop-trigger:hover,
+body:has(.auth-ref-page) .site-nav-shop.active .site-nav-shop-trigger {
+  color: #7D4DB2 !important;
+}
+
+body:has(.auth-ref-page) .site-nav a::after,
+body:has(.auth-ref-page) .site-nav-shop-trigger::after,
+body:has(.auth-ref-page) .site-nav a.active::after,
+body:has(.auth-ref-page) .site-nav-shop.active .site-nav-shop-trigger::after {
+  background: #B98EE6 !important;
+}
+
+body:has(.auth-ref-page) .circle-action,
+body:has(.auth-ref-page) .profile-trigger,
+body:has(.auth-ref-page) .auth-actions a {
+  color: #2A2034 !important;
+  background: rgba(255,255,255,.78) !important;
+  border-color: rgba(125,77,178,.20) !important;
+  box-shadow: 0 6px 18px rgba(86,48,120,.06) !important;
+}
+
+body:has(.auth-ref-page) .circle-action:hover,
+body:has(.auth-ref-page) .profile-trigger:hover,
+body:has(.auth-ref-page) .auth-actions a:hover {
+  background: #fff !important;
+  border-color: rgba(185,142,230,.60) !important;
+  color: #7D4DB2 !important;
+}
+
+body:has(.auth-ref-page) .auth-actions a:last-child {
+  color: #fff !important;
+  background: linear-gradient(135deg, #A66DDB 0%, #B98EE6 55%, #C9A5ED 100%) !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 24px rgba(125,77,178,.22) !important;
+}
+
+body:has(.auth-ref-page) .auth-actions a:last-child:hover {
+  color: #fff !important;
+  background: linear-gradient(135deg, #9257CC 0%, #A975DD 55%, #BC93E7 100%) !important;
+}
+
+body:has(.auth-ref-page) .search-icon-svg {
+  stroke: #2A2034 !important;
+}
+
+body:has(.auth-ref-page) .circle-action:hover .search-icon-svg {
+  stroke: #7D4DB2 !important;
+}
+
+body:has(.auth-ref-page) .circle-action em {
+  background: #B98EE6 !important;
+  color: #fff !important;
+}
+
+body:has(.auth-ref-page) .profile-dropdown {
+  background: rgba(255,255,255,.98) !important;
+  border-color: rgba(185,142,230,.24) !important;
+  box-shadow: 0 18px 45px rgba(66,39,88,.16) !important;
+}
+
+body:has(.auth-ref-page) .profile-dropdown::before {
+  background: #B98EE6 !important;
+}
+
+body:has(.auth-ref-page) .profile-dropdown a,
+body:has(.auth-ref-page) .profile-dropdown button {
+  color: #2A2034 !important;
+}
+
+body:has(.auth-ref-page) .profile-dropdown a:hover,
+body:has(.auth-ref-page) .profile-dropdown button:hover {
+  color: #7D4DB2 !important;
+  background: #F6F0FC !important;
+}
+
+@media (max-width: 1023px) {
+  body:has(.auth-ref-page) .site-header {
+    background: rgba(250,246,253,.98) !important;
+  }
+}

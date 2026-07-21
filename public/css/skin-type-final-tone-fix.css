@@ -1,0 +1,112 @@
+/* FINAL FIX — hanya section Shop by Skin Type.
+   Menyamakan tone card produk dengan card Sale dan menghapus sisa warna hijau. */
+
+/* Card produk: jangan gelap, gunakan lavender seperti card Sale */
+.skin-type-showcase .skin-type-product-card,
+.skin-type-showcase a.skin-type-product-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(185, 142, 230, .48) !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  box-shadow: 0 18px 42px rgba(78, 43, 111, .12) !important;
+}
+
+.skin-type-showcase .skin-type-product-card__image {
+  border-radius: 23px 23px 0 0 !important;
+  background: #f8f3fc !important;
+}
+
+.skin-type-showcase .skin-type-product-card__body {
+  min-height: 168px !important;
+  padding: 20px 22px 22px !important;
+  background: linear-gradient(145deg, #76509a 0%, #9468b9 100%) !important;
+  color: #ffffff !important;
+  border-top: 0 !important;
+}
+
+.skin-type-showcase .skin-type-product-card__body small,
+.skin-type-showcase .skin-type-product-card__body .category,
+.skin-type-showcase .skin-type-product-card__body [class*="category"] {
+  color: #eadcf8 !important;
+}
+
+.skin-type-showcase .skin-type-product-card__body h4,
+.skin-type-showcase .skin-type-product-card__body h3,
+.skin-type-showcase .skin-type-product-card__body .title,
+.skin-type-showcase .skin-type-product-card__body [class*="title"] {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.skin-type-showcase .skin-type-product-card__body strong,
+.skin-type-showcase .skin-type-product-card__body .price,
+.skin-type-showcase .skin-type-product-card__body [class*="price"] {
+  color: #f4eaff !important;
+  opacity: 1 !important;
+}
+
+.skin-type-showcase .skin-type-product-card:hover {
+  border-color: #b98ee6 !important;
+  box-shadow: 0 24px 52px rgba(125, 77, 178, .20) !important;
+}
+
+/* Badge Best Match */
+.skin-type-showcase .skin-type-product-card__image > span {
+  background: #b98ee6 !important;
+  color: #ffffff !important;
+  border-radius: 999px !important;
+}
+
+/* Semua teks/tag rekomendasi yang masih hijau */
+.skin-type-showcase .skin-type-panel__eyebrow,
+.skin-type-showcase .skin-type-panel__copy > p:first-child,
+.skin-type-showcase [class*="eyebrow"] {
+  color: #a773d8 !important;
+}
+
+.skin-type-showcase .skin-type-panel__tags span,
+.skin-type-showcase .skin-type-panel__tags a,
+.skin-type-showcase .skin-type-panel__copy .tag,
+.skin-type-showcase .skin-type-panel__copy .chip,
+.skin-type-showcase .skin-type-panel__copy [class*="tag"],
+.skin-type-showcase .skin-type-panel__copy [class*="chip"] {
+  background: #f5edfc !important;
+  color: #8b56bd !important;
+  border: 1px solid rgba(185, 142, 230, .55) !important;
+  border-radius: 999px !important;
+}
+
+.skin-type-showcase .skin-type-panel__tags span:hover,
+.skin-type-showcase .skin-type-panel__tags a:hover {
+  background: #eadcf8 !important;
+  color: #6f3fa0 !important;
+  border-color: #b98ee6 !important;
+}
+
+.skin-type-showcase .skin-type-panel__button {
+  background: #b98ee6 !important;
+  color: #ffffff !important;
+  border: 1px solid #b98ee6 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 14px 30px rgba(185, 142, 230, .24) !important;
+}
+
+.skin-type-showcase .skin-type-panel__button:hover {
+  background: #9f6fd0 !important;
+  border-color: #9f6fd0 !important;
+}
+
+/* Angka jumlah produk pada tab tidak hijau */
+.skin-type-showcase .skin-type-tab small {
+  color: #8c7e98 !important;
+}
+.skin-type-showcase .skin-type-tab.active small {
+  color: #6f3fa0 !important;
+}
+
+@media (max-width: 620px) {
+  .skin-type-showcase .skin-type-product-card__body {
+    min-height: 145px !important;
+    padding: 16px !important;
+  }
+}

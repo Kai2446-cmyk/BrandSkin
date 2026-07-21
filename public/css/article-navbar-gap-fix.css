@@ -1,0 +1,27 @@
+/* PATCH ARTICLE NAVBAR WHITE GAP FIX ONLY */
+/* Fokus: hilangkan background putih yang bocor sedikit di bawah navbar pada pages Articles. */
+
+.articles-page{
+    padding-top:0 !important;
+    margin-top:0 !important;
+    background:#ffffff;
+}
+
+.articles-page .articles-hero{
+    margin-top:0 !important;
+}
+
+/* Jaga agar hero langsung nempel ke bawah navbar tanpa garis putih. */
+body:has(.articles-page) .articles-page{
+    border-top:0 !important;
+}
+
+/* Kalau browser belum support :has, selector ini tetap aman karena hanya class articles. */
+.articles-hero{
+    border-top:0 !important;
+}
+
+/* Pastikan hero tidak turun sendiri oleh spacing bawaan. */
+.articles-page > section:first-child{
+    margin-top:0 !important;
+}

@@ -1,0 +1,59 @@
+/* PATCH ARTICLE HERO LASTS CENTER ONLY */
+/* Fokus: teks "LASTS FOR WEEKS" diposisikan tepat di tengah area foto/jidat.
+   Tidak mengubah database, layout lain, navbar, footer, produk, cart, wishlist, admin, atau promo. */
+
+.articles-hero-image{
+    position:relative !important;
+    overflow:hidden !important;
+}
+
+/* Posisi framing tetap rapi untuk area wajah/foto. */
+.articles-hero-image img{
+    object-position:center 42% !important;
+}
+
+/* Hilangkan efek strip/bayangan patch sebelumnya yang terlihat melintang di area mata. */
+.articles-hero-image::before{
+    content:none !important;
+    display:none !important;
+}
+
+/* Teks dipindahkan ke tengah foto, bukan kiri atas / bawah kanan. */
+.articles-hero-image::after{
+    content:'LASTS FOR WEEKS';
+    position:absolute;
+    left:50% !important;
+    right:auto !important;
+    top:33% !important;
+    bottom:auto !important;
+    z-index:3;
+    transform:translate(-50%, -50%) !important;
+    color:#ffffff;
+    font-size:clamp(20px, 2.45vw, 34px);
+    line-height:1;
+    font-weight:500;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    text-align:center;
+    text-shadow:0 10px 34px rgba(0,0,0,.30);
+    pointer-events:none;
+    white-space:nowrap;
+}
+
+/* Untuk layar lebih kecil, tetap tengah dan tidak keluar area. */
+@media(max-width:980px){
+    .articles-hero-image::after{
+        left:50% !important;
+        top:34% !important;
+        font-size:clamp(18px, 4vw, 28px);
+    }
+}
+
+@media(max-width:560px){
+    .articles-hero-image::after{
+        left:50% !important;
+        top:35% !important;
+        font-size:18px;
+        letter-spacing:.05em;
+    }
+}

@@ -1,0 +1,943 @@
+/* PATCH RESTORE OLD CART DESIGN ONLY */
+/* Fokus: kembalikan tampilan cart lama/rapi.
+   Mengunci image cart supaya tidak full layar.
+   Tidak mengubah halaman lain. */
+
+.cart-old-page{
+    min-height:100vh;
+    background:#ffffff !important;
+    color:#111111;
+    padding-top:96px;
+    font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+.cart-old-page *,
+.cart-old-page *:before,
+.cart-old-page *:after{
+    box-sizing:border-box;
+}
+
+.cart-old-wrap{
+    width:min(1180px, calc(100% - 56px));
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) 360px;
+    gap:58px;
+    padding:82px 0 92px;
+    align-items:start;
+}
+
+.cart-old-left{
+    min-width:0;
+}
+
+.cart-old-breadcrumb{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:46px;
+    color:#969696;
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+}
+
+.cart-old-breadcrumb a{
+    color:#111111;
+    text-decoration:none;
+}
+
+.cart-old-left > h1{
+    margin:0 0 42px;
+    color:#111111;
+    font-size:48px;
+    line-height:1;
+    font-weight:950;
+    letter-spacing:-.075em;
+    text-transform:uppercase;
+}
+
+.cart-old-list{
+    border-top:1px solid #e8e8e8;
+}
+
+.cart-old-item{
+    display:grid;
+    grid-template-columns:155px minmax(0, 1fr) 150px;
+    gap:28px;
+    align-items:start;
+    padding:34px 0;
+    border-bottom:1px solid #e8e8e8;
+}
+
+.cart-old-img{
+    display:block;
+    width:155px;
+    height:155px;
+    overflow:hidden;
+    background:#f6f6f6;
+}
+
+.cart-old-img img{
+    width:100% !important;
+    height:100% !important;
+    max-width:100% !important;
+    object-fit:cover !important;
+    display:block !important;
+}
+
+.cart-old-info{
+    min-width:0;
+    padding-top:6px;
+}
+
+.cart-old-name{
+    display:block;
+    max-width:440px;
+    color:#111111;
+    text-decoration:none;
+    font-size:18px;
+    line-height:1.22;
+    font-weight:950;
+    letter-spacing:-.035em;
+    text-transform:uppercase;
+}
+
+.cart-old-qty{
+    display:inline-grid;
+    grid-template-columns:34px 40px 34px;
+    margin-top:19px;
+    height:34px;
+    background:#111;
+}
+
+.cart-old-qty button{
+    border:0;
+    background:#111;
+    color:#fff;
+    font-size:17px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+.cart-old-qty input{
+    width:40px;
+    border:0;
+    background:#fff;
+    color:#111;
+    text-align:center;
+    font-size:14px;
+    font-weight:900;
+    outline:0;
+}
+
+.cart-old-actions{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    margin-top:18px;
+    flex-wrap:wrap;
+}
+
+.cart-old-actions button{
+    padding:0 0 4px;
+    border:0;
+    border-bottom:2px solid #ff3b97;
+    background:transparent;
+    color:#6f6f6f;
+    font-size:12px;
+    line-height:1;
+    font-weight:950;
+    letter-spacing:.10em;
+    text-transform:uppercase;
+    cursor:pointer;
+}
+
+.cart-old-actions button:last-child{
+    border-bottom-color:#8a8a8a;
+}
+
+.cart-old-price{
+    padding-top:8px;
+    color:#111111;
+    text-align:right;
+    font-size:18px;
+    font-weight:950;
+    white-space:nowrap;
+}
+
+.cart-old-empty{
+    padding:46px 0;
+    border-bottom:1px solid #e8e8e8;
+}
+
+.cart-old-empty h2{
+    margin:0 0 8px;
+    font-size:24px;
+    font-weight:950;
+    letter-spacing:-.04em;
+}
+
+.cart-old-empty p{
+    margin:0 0 20px;
+    color:#777;
+    font-size:14px;
+    font-weight:700;
+}
+
+.cart-old-empty a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    height:48px;
+    padding:0 26px;
+    background:#111;
+    color:#fff;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+}
+
+.cart-old-summary{
+    position:sticky;
+    top:126px;
+    background:#f5f5f5;
+    padding:56px 48px 48px;
+    min-height:520px;
+}
+
+.cart-old-summary h2{
+    margin:0 0 36px;
+    color:#111111;
+    font-size:42px;
+    line-height:.95;
+    font-weight:950;
+    letter-spacing:-.08em;
+    text-transform:uppercase;
+}
+
+.cart-old-promo{
+    display:grid;
+    grid-template-columns:1fr 96px;
+    height:62px;
+    margin-bottom:28px;
+    border:1px solid #111;
+    background:#fff;
+}
+
+.cart-old-promo input{
+    min-width:0;
+    border:0;
+    background:#fff;
+    color:#111;
+    text-align:center;
+    outline:0;
+    padding:0 14px;
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.10em;
+    text-transform:uppercase;
+}
+
+.cart-old-promo button{
+    border:0;
+    background:#111;
+    color:#fff;
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.10em;
+    cursor:pointer;
+}
+
+.cart-old-message{
+    padding:12px 14px;
+    margin-bottom:18px;
+    font-size:13px;
+    font-weight:800;
+}
+
+.cart-old-message.error{
+    background:#fff1f7;
+    color:#c3346d;
+    border:1px solid #ffd2e4;
+}
+
+.cart-old-message.success{
+    background:#edf8e9;
+    color:#315f25;
+    border:1px solid #d8edcf;
+}
+
+.cart-old-summary-line{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin:23px 0;
+    color:#6f6f6f;
+    font-size:16px;
+    font-weight:700;
+}
+
+.cart-old-summary-line strong{
+    color:#111;
+    font-size:17px;
+    font-weight:950;
+}
+
+.cart-old-summary-line.discount strong{
+    color:#ff3b97;
+}
+
+.cart-old-divider{
+    height:1px;
+    background:#dcdcdc;
+    margin:28px 0;
+}
+
+.cart-old-summary-line.total{
+    color:#111;
+    font-size:20px;
+    font-weight:950;
+}
+
+.cart-old-summary-line.total strong{
+    font-size:21px;
+}
+
+.cart-old-checkout{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    width:100%;
+    height:70px;
+    margin:22px 0 28px;
+    border:0;
+    background:#111;
+    color:#fff;
+    font-size:13px;
+    font-weight:950;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:.18s ease;
+    box-sizing:border-box;
+}
+
+.cart-old-checkout:visited,
+.cart-old-checkout:focus,
+.cart-old-checkout:active{
+    color:#fff;
+    text-decoration:none;
+}
+
+.cart-old-checkout:hover{
+    background:#4A7A3A;
+    transform:translateY(-2px);
+}
+
+.cart-old-payment{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+    color:#555;
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.04em;
+}
+
+.cart-old-remove-promo button{
+    border:0;
+    background:transparent;
+    color:#ff3b97;
+    font-size:12px;
+    font-weight:900;
+    cursor:pointer;
+    padding:0;
+}
+
+.cart-old-wishlist{
+    margin-top:82px;
+}
+
+.cart-old-wishlist h2{
+    margin:0 0 36px;
+    color:#111111;
+    font-size:42px;
+    line-height:1;
+    font-weight:950;
+    letter-spacing:-.075em;
+    text-transform:uppercase;
+}
+
+.cart-old-wishlist-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:46px 44px;
+}
+
+.cart-old-wishlist-card{
+    position:relative;
+    min-width:0;
+}
+
+.cart-old-wishlist-image{
+    position:relative;
+    width:100%;
+    aspect-ratio:1 / 1;
+    background:#f6f6f6;
+    overflow:hidden;
+    margin-bottom:28px;
+}
+
+.cart-old-wishlist-image img{
+    width:100% !important;
+    height:100% !important;
+    max-width:100% !important;
+    object-fit:cover !important;
+    display:block !important;
+}
+
+.cart-old-heart{
+    position:absolute;
+    right:14px;
+    top:14px;
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:999px;
+    background:#ff3b97;
+    color:#fff;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.cart-old-wishlist-name{
+    display:block;
+    min-height:50px;
+    color:#111;
+    text-decoration:none;
+    font-size:17px;
+    line-height:1.24;
+    font-weight:950;
+    letter-spacing:-.035em;
+    text-transform:uppercase;
+}
+
+.cart-old-wishlist-card strong{
+    display:block;
+    margin-top:12px;
+    color:#777;
+    font-size:14px;
+    font-weight:950;
+}
+
+.cart-old-add{
+    margin-top:13px;
+    padding:0 0 4px;
+    border:0;
+    border-bottom:2px solid #ff3b97;
+    background:transparent;
+    color:#111;
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.10em;
+    text-transform:uppercase;
+    cursor:pointer;
+}
+
+.cart-old-wishlist-empty{
+    padding:24px 0;
+    color:#777;
+    font-size:15px;
+    font-weight:700;
+}
+
+/* Penting: cegah CSS global bikin gambar cart jadi full layar */
+.cart-old-page img{
+    max-width:100% !important;
+}
+
+@media(max-width:1100px){
+    .cart-old-wrap{
+        grid-template-columns:1fr;
+    }
+
+    .cart-old-summary{
+        position:relative;
+        top:auto;
+        width:100%;
+    }
+}
+
+@media(max-width:760px){
+    .cart-old-page{
+        padding-top:98px;
+    }
+
+    .cart-old-wrap{
+        width:min(100% - 28px, 1180px);
+        padding-top:46px;
+    }
+
+    .cart-old-item{
+        grid-template-columns:108px 1fr;
+        gap:18px;
+    }
+
+    .cart-old-img{
+        width:108px;
+        height:108px;
+    }
+
+    .cart-old-price{
+        grid-column:2;
+        text-align:left;
+        padding-top:0;
+    }
+
+    .cart-old-wishlist-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:34px 22px;
+    }
+
+    .cart-old-summary{
+        padding:38px 24px;
+    }
+}
+
+
+/* FIX ONLY: custom remove confirmation modal, mengganti alert/confirm bawaan browser */
+.glow-cart-confirm-backdrop{
+  position:fixed;
+  inset:0;
+  z-index:999999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:rgba(5,12,4,.62);
+  backdrop-filter:blur(10px);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .18s ease, visibility .18s ease;
+}
+.glow-cart-confirm-backdrop.is-active{
+  opacity:1;
+  visibility:visible;
+}
+.glow-cart-confirm-card{
+  width:min(440px,100%);
+  position:relative;
+  border:1px solid rgba(101,162,64,.42);
+  background:linear-gradient(145deg,#10200C 0%,#17310F 55%,#0B1508 100%);
+  color:#fff;
+  box-shadow:0 28px 80px rgba(0,0,0,.36);
+  padding:30px;
+  transform:translateY(14px) scale(.98);
+  transition:transform .18s ease;
+}
+.glow-cart-confirm-backdrop.is-active .glow-cart-confirm-card{
+  transform:translateY(0) scale(1);
+}
+.glow-cart-confirm-close{
+  position:absolute;
+  top:14px;
+  right:14px;
+  width:34px;
+  height:34px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:#DFF4D5;
+  font-size:22px;
+  line-height:1;
+}
+.glow-cart-confirm-icon{
+  width:46px;
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:18px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#65A240,#9AD773);
+  color:#10220C;
+  font-weight:950;
+  font-size:22px;
+}
+.glow-cart-confirm-card h3{
+  margin:0 0 10px;
+  color:#fff;
+  font-size:26px;
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:-.04em;
+}
+.glow-cart-confirm-card p{
+  margin:0;
+  color:rgba(234,248,223,.72);
+  font-size:14px;
+  font-weight:700;
+  line-height:1.6;
+}
+.glow-cart-confirm-card p strong{
+  color:#DFF4D5;
+}
+.glow-cart-confirm-actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
+  margin-top:26px;
+}
+.glow-cart-confirm-actions button{
+  min-width:108px;
+  height:46px;
+  border:1px solid transparent;
+  padding:0 20px;
+  font-size:12px;
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.glow-cart-confirm-cancel{
+  background:rgba(255,255,255,.07);
+  border-color:rgba(255,255,255,.14) !important;
+  color:#EAF8DF;
+}
+.glow-cart-confirm-ok{
+  background:linear-gradient(135deg,#3D6328,#65A240);
+  color:#fff;
+}
+@media (max-width:640px){
+  .glow-cart-confirm-card{padding:24px;}
+  .glow-cart-confirm-actions{flex-direction:column-reverse;}
+  .glow-cart-confirm-actions button{width:100%;}
+}
+
+/* Voucher cards in shopping bag summary */
+.cart-old-summary .glowskin-voucher-box{ margin:0 0 24px; }
+.cart-old-summary .glowskin-voucher-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin-bottom:14px; }
+.cart-old-summary .glowskin-voucher-head h2{ margin:0; color:#111; font-size:24px; line-height:1; font-weight:950; letter-spacing:-.06em; text-transform:uppercase; }
+.cart-old-summary .glowskin-voucher-head span{ color:#4A7A3A; font-size:11px; font-weight:950; letter-spacing:.16em; text-transform:uppercase; }
+.cart-old-summary .glowskin-voucher-active{ display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px; margin-bottom:12px; border:1px solid rgba(74,122,58,.35); background:linear-gradient(135deg,rgba(74,122,58,.11),rgba(74,122,58,.03)); }
+.cart-old-summary .glowskin-voucher-active strong,
+.cart-old-summary .glowskin-voucher-card strong{ display:block; color:#23491f; font-size:15px; font-weight:950; letter-spacing:.05em; text-transform:uppercase; }
+.cart-old-summary .glowskin-voucher-active p,
+.cart-old-summary .glowskin-voucher-card p,
+.cart-old-summary .glowskin-voucher-empty p,
+.cart-old-summary .glowskin-voucher-group-title p{ margin:5px 0 0; color:#666; font-size:12px; line-height:1.45; font-weight:800; }
+.cart-old-summary .glowskin-voucher-active button,
+.cart-old-summary .glowskin-voucher-card button{ min-width:78px; height:42px; border:1px solid #4A7A3A; background:#4A7A3A; color:#fff; font-size:12px; font-weight:950; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; }
+.cart-old-summary .glowskin-voucher-active button{ background:#fff; color:#4A7A3A; }
+.cart-old-summary .glowskin-voucher-group{ margin-top:12px; padding:14px; border:1px solid rgba(74,122,58,.22); background:#f8fbf5; }
+.cart-old-summary .glowskin-voucher-group-title{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+.cart-old-summary .glowskin-voucher-group-title strong{ color:#356c2c; font-size:13px; font-weight:950; letter-spacing:.11em; text-transform:uppercase; }
+.cart-old-summary .glowskin-voucher-group-title span{ flex:0 0 auto; padding:8px 12px; border-radius:999px; background:#e7f2df; color:#4A7A3A; font-size:11px; font-weight:950; text-transform:uppercase; }
+.cart-old-summary .glowskin-voucher-list{ display:grid; gap:10px; }
+.cart-old-summary .glowskin-voucher-card{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:center; padding:14px; border:1px solid #dedede; background:#fff; }
+.cart-old-summary .glowskin-voucher-card small{ display:block; margin-top:8px; color:#4A7A3A; font-size:12px; font-weight:950; }
+.cart-old-summary .glowskin-voucher-card em{ display:block; margin-top:9px; color:#c8392d; font-size:12px; line-height:1.35; font-style:normal; font-weight:950; }
+.cart-old-summary .glowskin-voucher-card.is-disabled{ background:#f1f1f1; border-color:#d7d7d7; opacity:.82; }
+.cart-old-summary .glowskin-voucher-card.is-disabled strong,
+.cart-old-summary .glowskin-voucher-card.is-disabled p,
+.cart-old-summary .glowskin-voucher-card.is-disabled small{ color:#8a8a8a; }
+.cart-old-summary .glowskin-voucher-card button:disabled{ border-color:#cfcfcf; background:#d8d8d8; color:#777; cursor:not-allowed; }
+.cart-old-summary .glowskin-voucher-used{ min-width:78px; height:40px; display:inline-flex; align-items:center; justify-content:center; border:1px solid rgba(74,122,58,.35); background:#e7f2df; color:#4A7A3A; font-size:11px; font-weight:950; letter-spacing:.08em; text-transform:uppercase; }
+.cart-old-summary .glowskin-voucher-empty{ padding:14px; border:1px dashed #cfcfcf; background:#f7f7f7; }
+.cart-old-summary .glowskin-voucher-empty strong{ color:#111; font-size:13px; font-weight:950; text-transform:uppercase; }
+
+
+/* Voucher checkout/cart compact accordion groups */
+.glowskin-voucher-box{
+    margin:0 0 22px;
+    padding:0;
+}
+.glowskin-voucher-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:12px;
+    margin:0 0 12px;
+}
+.glowskin-voucher-head h2{
+    margin:0;
+    color:#111;
+    font-size:22px;
+    line-height:1;
+    font-weight:950;
+    letter-spacing:-.06em;
+    text-transform:uppercase;
+}
+.glowskin-voucher-head span{
+    color:#4A7A3A;
+    font-size:11px;
+    font-weight:950;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+}
+.glowskin-voucher-active{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:14px;
+    margin-bottom:10px;
+    border:1px solid rgba(74,122,58,.32);
+    background:linear-gradient(135deg, rgba(74,122,58,.10), rgba(74,122,58,.03));
+}
+.glowskin-voucher-active strong,
+.glowskin-voucher-card strong{
+    display:block;
+    color:#23491f;
+    font-size:15px;
+    font-weight:950;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+}
+.glowskin-voucher-active p,
+.glowskin-voucher-card p,
+.glowskin-voucher-empty p,
+.glowskin-voucher-group-title p{
+    margin:4px 0 0;
+    color:#666;
+    font-size:12px;
+    line-height:1.38;
+    font-weight:800;
+}
+.glowskin-voucher-active button,
+.glowskin-voucher-card button{
+    min-width:76px;
+    height:40px;
+    border:1px solid #4A7A3A;
+    background:#4A7A3A;
+    color:#fff;
+    font-size:11px;
+    font-weight:950;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    cursor:pointer;
+}
+.glowskin-voucher-active button{
+    background:#fff;
+    color:#4A7A3A;
+}
+.glowskin-voucher-groups{
+    display:grid;
+    gap:10px;
+}
+.glowskin-voucher-group{
+    border:1px solid rgba(74,122,58,.22);
+    background:#f8fbf5;
+    overflow:hidden;
+}
+.glowskin-voucher-group-title{
+    width:100%;
+    border:0;
+    padding:13px 14px;
+    background:transparent;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto auto;
+    align-items:center;
+    gap:10px;
+    text-align:left;
+    cursor:pointer;
+}
+.glowskin-voucher-group-title strong{
+    color:#356c2c;
+    font-size:13px;
+    font-weight:950;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+.glowskin-voucher-group-title span{
+    flex:0 0 auto;
+    padding:7px 10px;
+    border-radius:999px;
+    background:#e7f2df;
+    color:#4A7A3A;
+    font-size:10px;
+    font-weight:950;
+    text-transform:uppercase;
+    white-space:nowrap;
+}
+.glowskin-voucher-group-title b{
+    width:26px;
+    height:26px;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    color:#4A7A3A;
+    background:#e7f2df;
+    font-size:14px;
+    line-height:1;
+    transition:transform .18s ease;
+}
+.glowskin-voucher-group.is-open .glowskin-voucher-group-title b{
+    transform:rotate(180deg);
+}
+.glowskin-voucher-list{
+    display:none;
+    padding:0 14px 14px;
+    gap:8px;
+}
+.glowskin-voucher-group.is-open .glowskin-voucher-list{
+    display:grid;
+}
+.glowskin-voucher-subtitle{
+    margin:0 0 2px;
+    color:#4A7A3A;
+    font-size:10px;
+    font-weight:950;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+.glowskin-voucher-subtitle.is-locked{
+    margin-top:4px;
+    color:#9a9a9a;
+}
+.glowskin-voucher-card{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:10px;
+    align-items:center;
+    padding:12px;
+    border:1px solid #dedede;
+    background:#fff;
+}
+.glowskin-voucher-card small{
+    display:block;
+    margin-top:6px;
+    color:#4A7A3A;
+    font-size:11px;
+    line-height:1.35;
+    font-weight:950;
+}
+.glowskin-voucher-card em{
+    display:block;
+    margin-top:7px;
+    color:#d83a31;
+    font-size:11px;
+    line-height:1.35;
+    font-style:normal;
+    font-weight:950;
+}
+.glowskin-voucher-card.is-disabled{
+    order:50;
+    background:#f1f1f1;
+    border-color:#d8d8d8;
+}
+.glowskin-voucher-card.is-disabled strong,
+.glowskin-voucher-card.is-disabled p,
+.glowskin-voucher-card.is-disabled small{
+    color:#8b8b8b;
+}
+.glowskin-voucher-card button:disabled{
+    min-width:76px;
+    border-color:#cfcfcf;
+    background:#d8d8d8;
+    color:#777;
+    cursor:not-allowed;
+}
+.glowskin-voucher-used{
+    min-width:76px;
+    height:38px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(74,122,58,.35);
+    background:#e7f2df;
+    color:#4A7A3A;
+    font-size:10px;
+    font-weight:950;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+.glowskin-voucher-empty{
+    padding:14px;
+    border:1px dashed #cfcfcf;
+    background:#f7f7f7;
+}
+.glowskin-voucher-empty strong{
+    color:#111;
+    font-size:13px;
+    font-weight:950;
+    text-transform:uppercase;
+}
+@media (max-width: 900px){
+    .glowskin-voucher-card{ grid-template-columns:1fr; }
+    .glowskin-voucher-active{ align-items:flex-start; flex-direction:column; }
+    .glowskin-voucher-group-title{ grid-template-columns:minmax(0,1fr) auto; }
+    .glowskin-voucher-group-title b{ display:none; }
+}
+
+
+
+/* Voucher active label fix */
+.glowskin-voucher-active-wrap {
+    margin-bottom: 14px;
+}
+
+.glowskin-voucher-active-label {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(61, 99, 40, 0.1);
+    color: #3D6328;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.glowskin-voucher-active-wrap .glowskin-voucher-active {
+    margin-bottom: 0;
+}
+
+
+/* Voucher separator + closed by default fix */
+.glowskin-voucher-separator{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:16px 0 12px;
+    color:#4A7A3A;
+    font-size:10px;
+    font-weight:950;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+}
+.glowskin-voucher-separator::before,
+.glowskin-voucher-separator::after{
+    content:"";
+    height:1px;
+    flex:1;
+    background:rgba(74,122,58,.25);
+}
+.glowskin-voucher-separator span{
+    flex:0 0 auto;
+    padding:6px 10px;
+    border-radius:999px;
+    background:#eef6e8;
+    border:1px solid rgba(74,122,58,.18);
+}
+.glowskin-voucher-active-wrap{
+    padding-bottom:2px;
+}
+.glowskin-voucher-group:not(.is-open) .glowskin-voucher-list{
+    display:none !important;
+}
+.glowskin-voucher-group:not(.is-open) .glowskin-voucher-group-title b{
+    transform:rotate(0deg);
+}

@@ -1,0 +1,42 @@
+/* Targeted fix only: Sale heading/countdown and Shop by Skin Type tags. */
+:root {
+  --gs-lavender: #B98EE6;
+  --gs-lavender-dark: #6E3FA0;
+  --gs-lavender-soft: #F4ECFC;
+  --gs-lavender-border: #D9BDF2;
+}
+
+/* Sale: remove the remaining pale green text/border without touching layout. */
+html body .sale-home-section .sale-home-badge,
+html body .sale-home-section .sale-home-title-wrap .sale-home-badge {
+  border-color: var(--gs-lavender-border) !important;
+  background: rgba(255,255,255,.76) !important;
+}
+
+html body .sale-home-section .sale-home-badge span,
+html body .sale-home-section .sale-home-badge strong,
+html body .sale-home-section .sale-home-countdown,
+html body .sale-home-section .sale-home-countdown span,
+html body .sale-home-section .sale-home-countdown strong,
+html body .sale-home-section .sale-home-countdown small,
+html body .sale-home-section .sale-home-countdown b {
+  color: var(--gs-lavender-dark) !important;
+  -webkit-text-fill-color: var(--gs-lavender-dark) !important;
+}
+
+/* Shop by Skin Type: remove green category/tag styling only. */
+html body .skin-type-showcase .skin-type-panel__tags span,
+html body .skin-type-showcase .skin-type-panel__tags a {
+  color: var(--gs-lavender-dark) !important;
+  -webkit-text-fill-color: var(--gs-lavender-dark) !important;
+  border-color: var(--gs-lavender-border) !important;
+  background: var(--gs-lavender-soft) !important;
+}
+
+html body .skin-type-showcase .skin-type-panel__tags span:hover,
+html body .skin-type-showcase .skin-type-panel__tags a:hover {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border-color: var(--gs-lavender) !important;
+  background: var(--gs-lavender) !important;
+}

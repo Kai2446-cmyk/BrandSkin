@@ -1,0 +1,7 @@
+FILE: resources/views/layouts/admin.blade.php
+
+Tambahkan SATU baris berikut setelah CSS admin terakhir di dalam <head>:
+
+<link rel="stylesheet" href="{{ asset('css/admin-lavender-no-green-fix.css') }}?v=1">
+
+Jangan hapus pemanggilan CSS admin lain yang sudah ada.

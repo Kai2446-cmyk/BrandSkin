@@ -1,0 +1,145 @@
+/* GlowSkin blue + white visual theme
+   Scope: public website only (loaded by layouts/app.blade.php).
+   No database, route, controller, or feature changes. */
+
+:root{
+  --primary:#08b9cf;
+  --primary-dark:#087f99;
+  --primary-soft:#aee4ec;
+  --primary-pale:#eafafd;
+  --background:#f7fcfd;
+  --foreground:#14282d;
+}
+
+body{
+  background:#f7fcfd;
+  color:#14282d;
+}
+
+/* Replace recurring green visual accents with the new blue palette. */
+.green-gradient-btn{
+  background:linear-gradient(135deg,#05b9ce 0%,#36c7da 52%,#087f99 100%) !important;
+  box-shadow:0 14px 34px rgba(8,185,207,.22);
+}
+.green-gradient-btn:hover{
+  filter:brightness(1.045);
+  box-shadow:0 18px 42px rgba(8,185,207,.30);
+}
+
+.tab-underline-active:after,
+.nav-link-hover:after,
+.profile-dropdown:before{
+  background:var(--primary) !important;
+}
+
+/* Landing header: transparent over hero, then blue/white after scrolling. */
+body.has-landing-hero .site-header{
+  background:transparent !important;
+  border-bottom-color:transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+  transition:background .32s ease,border-color .32s ease,box-shadow .32s ease,backdrop-filter .32s ease !important;
+}
+body.has-landing-hero .hero-section{
+  margin-top:0 !important;
+  height:100vh !important;
+  max-height:none !important;
+  min-height:650px !important;
+}
+body.has-landing-hero .site-header.is-scrolled{
+  background:linear-gradient(90deg,rgba(236,251,253,.97),rgba(184,231,239,.96),rgba(239,251,253,.98)) !important;
+  border-bottom:1px solid rgba(8,127,153,.16) !important;
+  box-shadow:0 14px 38px rgba(16,92,108,.14) !important;
+  backdrop-filter:blur(18px) saturate(1.12) !important;
+}
+body.has-landing-hero .site-header.is-scrolled .site-logo,
+body.has-landing-hero .site-header.is-scrolled .site-logo strong,
+body.has-landing-hero .site-header.is-scrolled .site-nav a,
+body.has-landing-hero .site-header.is-scrolled .site-nav-shop-trigger,
+body.has-landing-hero .site-header.is-scrolled .profile-trigger strong,
+body.has-landing-hero .site-header.is-scrolled .profile-trigger i{
+  color:#12343d !important;
+}
+body.has-landing-hero .site-header.is-scrolled .site-logo span{
+  color:rgba(18,52,61,.58) !important;
+}
+body.has-landing-hero .site-header.is-scrolled .circle-action,
+body.has-landing-hero .site-header.is-scrolled .profile-trigger,
+body.has-landing-hero .site-header.is-scrolled .auth-actions a{
+  color:#12343d !important;
+  border-color:rgba(8,127,153,.20) !important;
+  background:rgba(255,255,255,.52) !important;
+}
+body.has-landing-hero .site-header.is-scrolled .search-icon-svg{
+  stroke:#12343d !important;
+}
+body.has-landing-hero .site-header.is-scrolled .site-nav a.active,
+body.has-landing-hero .site-header.is-scrolled .site-nav a:hover,
+body.has-landing-hero .site-header.is-scrolled .site-nav-shop.active .site-nav-shop-trigger,
+body.has-landing-hero .site-header.is-scrolled .site-nav-shop-trigger:hover{
+  color:#087f99 !important;
+}
+
+/* Public page surfaces: white and airy blue rather than green/dark green. */
+main.bg-\[var\(--background\)\]{background:#f7fcfd !important;}
+.sale-gradient-bg{
+  background:linear-gradient(135deg,#eafafd 0%,#cceff4 42%,#ffffff 100%) !important;
+}
+.footer-luxury{
+  background:linear-gradient(135deg,#092e37 0%,#0b4a58 48%,#082a33 100%) !important;
+  border-top-color:var(--primary) !important;
+}
+.footer-title{color:#78d8e5 !important;}
+.footer-link:hover{color:#7fe0eb !important;}
+.social-btn:hover{
+  background:rgba(8,185,207,.18) !important;
+  border-color:#49cedd !important;
+}
+
+/* Common cards, labels and interactive states. */
+.bg-\[var\(--primary\)\]{background-color:var(--primary) !important;}
+.text-\[var\(--primary\)\]{color:var(--primary) !important;}
+.border-\[var\(--primary\)\]{border-color:var(--primary) !important;}
+.hover\:border-\[var\(--primary\)\]:hover{border-color:var(--primary) !important;}
+
+/* Landing Beauty Highlight no longer black. */
+body.has-landing-hero section.bg-black{
+  background:
+    radial-gradient(circle at 10% 20%,rgba(255,255,255,.38),transparent 28%),
+    linear-gradient(135deg,#0aaec2 0%,#7dd7e2 48%,#dff7fa 100%) !important;
+}
+body.has-landing-hero section.bg-black .text-white{
+  color:#ffffff !important;
+}
+
+/* Skin-type section: blue aesthetic while preserving layout and behavior. */
+.skin-type-showcase{
+  background:
+    radial-gradient(circle at 78% 16%,rgba(255,255,255,.20),transparent 30%),
+    linear-gradient(135deg,#073d49 0%,#0c6f80 46%,#129fb2 100%) !important;
+}
+.skin-type-tab.active{
+  border-color:rgba(82,215,229,.72) !important;
+  background:rgba(11,127,145,.24) !important;
+}
+.skin-type-tab small,
+.skin-type-showcase__heading p,
+.skin-type-product-card__body small,
+.skin-type-product-card__body strong{
+  color:#70dce8 !important;
+}
+.skin-type-product-card__image span{
+  background:#08b9cf !important;
+}
+
+/* Search/focus and badge tones. */
+input:focus,select:focus,textarea:focus{
+  border-color:rgba(8,185,207,.72) !important;
+  box-shadow:0 0 0 3px rgba(8,185,207,.13) !important;
+}
+
+@media(max-width:1023px){
+  body.has-landing-hero .hero-section{
+    min-height:610px !important;
+  }
+}

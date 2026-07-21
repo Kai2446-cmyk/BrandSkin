@@ -1,0 +1,99 @@
+/* GlowSkin — override khusus halaman Articles + Skin Analyzer.
+   Hanya warna/tone visual; tidak mengubah layout, data, atau fungsi. */
+:root{
+  --gs-lavender:#B98EE6;
+  --gs-lavender-strong:#9A62D0;
+  --gs-lavender-deep:#6F3FA0;
+  --gs-lavender-soft:#F4ECFC;
+  --gs-lavender-pale:#FBF8FF;
+  --gs-ink:#2B2036;
+  --gs-muted:#80758D;
+  --gs-line:#E6D6F7;
+}
+
+/* ARTICLES LIST + DETAIL */
+.articles-page,
+.article-detail-page{background:#fff;color:var(--gs-ink)}
+.articles-page a:hover,
+.article-detail-page a:hover{color:var(--gs-lavender-strong)}
+.articles-category-strip a.active,
+.articles-category-strip a:hover,
+.articles-hero-kicker,
+.article-detail-topic,
+.article-detail-breadcrumbs a,
+.article-detail-toc a,
+.article-detail-shell a:not(.article-detail-share-link){color:var(--gs-lavender-strong)!important}
+.articles-category-strip a.active::after,
+.articles-hero-progress span{background:var(--gs-lavender)!important}
+.articles-hero-actions a:first-child,
+.articles-page button,
+.article-detail-page button,
+.article-detail-page .article-detail-cta,
+.article-detail-page .article-related-link{background:var(--gs-lavender)!important;border-color:var(--gs-lavender)!important;color:#fff!important}
+.articles-hero-actions a:first-child:hover,
+.articles-page button:hover,
+.article-detail-page button:hover{background:var(--gs-lavender-strong)!important}
+.articles-card,
+.article-card,
+.article-detail-toc,
+.article-related-card,
+.article-product-card{border-color:var(--gs-line)!important}
+.articles-card:hover,
+.article-card:hover{box-shadow:0 18px 48px rgba(154,98,208,.14)!important}
+.article-detail-page{
+  --article-olive-50:var(--gs-lavender-soft);
+  --article-olive-200:#DCC3F4;
+  --article-olive-500:var(--gs-lavender);
+  --article-olive-700:var(--gs-lavender-strong);
+  --article-olive-900:var(--gs-lavender-deep);
+  --article-accent:var(--gs-lavender);
+}
+
+/* SKIN ANALYZER PUBLIC PAGES */
+body:has(.skin-analyzer-page-data),
+body:has(.sa-frame){background:linear-gradient(180deg,#fff 0%,var(--gs-lavender-pale) 100%)!important}
+.sa-frame{
+  --sa-green:var(--gs-lavender)!important;
+  --sa-green-dark:var(--gs-lavender-strong)!important;
+  --sa-green-soft:var(--gs-lavender-soft)!important;
+  --primary:var(--gs-lavender)!important;
+  --primary-dark:var(--gs-lavender-strong)!important;
+  --accent:var(--gs-lavender)!important;
+}
+.sa-frame .card,
+.sa-frame .info-card,
+.sa-frame .dynamic-detail-card,
+.sa-frame .dos-card{border-color:var(--gs-line)!important;box-shadow:0 18px 50px rgba(111,63,160,.10)!important}
+.sa-frame .solid-btn,
+.sa-frame .disabled-cta,
+.sa-frame .primary-btn,
+.sa-frame .floating-bottom,
+.sa-frame .mode-tab.active,
+.sa-frame .score-card.active,
+.sa-frame .round-nav:hover,
+.sa-frame .nav-back:hover{background:var(--gs-lavender)!important;border-color:var(--gs-lavender)!important;color:#fff!important}
+.sa-frame .solid-btn:hover,
+.sa-frame .disabled-cta:hover,
+.sa-frame .primary-btn:hover{background:var(--gs-lavender-strong)!important}
+.sa-frame .home-title span,
+.sa-frame .home-title strong,
+.sa-frame h1,
+.sa-frame h2,
+.sa-frame .number-badge,
+.sa-frame .score-note,
+.sa-frame .tip,
+.sa-frame .mode-tab.active p{color:var(--gs-ink)!important}
+.sa-frame .icon-badge,
+.sa-frame .number-badge,
+.sa-frame .score-ring.good,
+.sa-frame .good-bg{background:var(--gs-lavender-soft)!important;color:var(--gs-lavender-strong)!important;border-color:#DCC3F4!important}
+.sa-frame input:focus,
+.sa-frame select:focus,
+.sa-frame textarea:focus{border-color:var(--gs-lavender)!important;box-shadow:0 0 0 4px rgba(185,142,230,.16)!important}
+.sa-frame a,
+.sa-frame .active:not(.score-card):not(.mode-tab){color:var(--gs-lavender-strong)}
+
+/* Remove remaining common green tokens only inside these pages */
+.articles-page [style*="#4A7A3A"],.article-detail-page [style*="#4A7A3A"],.sa-frame [style*="#4A7A3A"],
+.articles-page [style*="#65A240"],.article-detail-page [style*="#65A240"],.sa-frame [style*="#65A240"],
+.articles-page [style*="#3D6328"],.article-detail-page [style*="#3D6328"],.sa-frame [style*="#3D6328"]{color:var(--gs-lavender-strong)!important;border-color:var(--gs-lavender)!important}

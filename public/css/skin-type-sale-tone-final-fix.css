@@ -1,0 +1,59 @@
+/* PERBAIKAN TERBATAS LANDING PAGE
+   - Teks 50% OFF + countdown Sale tidak hijau.
+   - Tag Daily Care / Protection / tag skin type tidak hijau.
+   Tidak mengubah layout atau fungsi. */
+
+:root {
+  --gs-lavender: #B98EE6;
+  --gs-lavender-dark: #70409B;
+  --gs-lavender-deep: #4D2B66;
+  --gs-lavender-soft: #F5EDFC;
+}
+
+/* === SALE TITLE / 50% OFF === */
+html body .sale-home-section .sale-home-title-wrap .sale-home-badge,
+html body .sale-home-section .sale-home-badge {
+  background: #fff !important;
+  border-color: rgba(185,142,230,.85) !important;
+  color: var(--gs-lavender-deep) !important;
+  box-shadow: 0 10px 30px rgba(112,64,155,.12) !important;
+}
+
+html body .sale-home-section .sale-home-title-wrap .sale-home-badge span,
+html body .sale-home-section .sale-home-badge span,
+html body .sale-home-section .sale-home-badge strong {
+  color: var(--gs-lavender-deep) !important;
+  -webkit-text-fill-color: var(--gs-lavender-deep) !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+html body .sale-home-section .sale-home-countdown,
+html body .sale-home-section .sale-home-countdown span,
+html body .sale-home-section .sale-home-countdown strong,
+html body .sale-home-section .sale-home-countdown small {
+  color: var(--gs-lavender-dark) !important;
+  -webkit-text-fill-color: var(--gs-lavender-dark) !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+/* === SHOP BY SKIN TYPE TAGS === */
+html body .skin-type-showcase .skin-type-panel .skin-type-panel__copy .skin-type-panel__tags span,
+html body .skin-type-showcase .skin-type-panel__tags span {
+  color: var(--gs-lavender-dark) !important;
+  -webkit-text-fill-color: var(--gs-lavender-dark) !important;
+  background: var(--gs-lavender-soft) !important;
+  border-color: rgba(185,142,230,.9) !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+}
+
+html body .skin-type-showcase .skin-type-panel .skin-type-panel__copy .skin-type-panel__tags span:hover,
+html body .skin-type-showcase .skin-type-panel__tags span:hover {
+  color: var(--gs-lavender-deep) !important;
+  -webkit-text-fill-color: var(--gs-lavender-deep) !important;
+  background: #EADAF8 !important;
+  border-color: var(--gs-lavender) !important;
+}

@@ -1,0 +1,70 @@
+/* PATCH: Catalogue Sale + Product Grid Rapih */
+.catalogue-page .catalogue-grid{
+    align-items:start;
+}
+.catalogue-page .catalogue-card{
+    height:100%;
+}
+.catalogue-page .catalogue-image-wrap{
+    background:#f7f3ee;
+}
+.catalogue-page .catalogue-count{
+    font-weight:500;
+}
+.catalogue-page .catalogue-count strong{
+    font-size:16px;
+}
+.badge-best{
+    background:#ff3b97;
+}
+.badge-sale{
+    background:#c99a24;
+    color:#111;
+}
+.catalogue-card[data-sale-card="true"] .catalogue-image-wrap{
+    border:1px solid rgba(201,154,36,.22);
+}
+.catalogue-card[data-sale-card="true"] .catalogue-name{
+    min-height:46px;
+}
+.catalogue-sale-price{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:10px;
+}
+.catalogue-sale-price .old{
+    font-size:12px;
+    color:#999;
+    text-decoration:line-through;
+    font-weight:700;
+}
+.catalogue-sale-price .new{
+    font-size:15px;
+    color:#111;
+    font-weight:950;
+}
+.catalogue-sale-discount{
+    position:absolute;
+    left:0;
+    bottom:0;
+    z-index:3;
+    background:#111;
+    color:#fff;
+    height:28px;
+    padding:0 12px;
+    display:flex;
+    align-items:center;
+    font-size:10px;
+    font-weight:950;
+    letter-spacing:.08em;
+}
+@media(max-width:1180px){
+    .catalogue-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+@media(max-width:760px){
+    .catalogue-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:520px){
+    .catalogue-grid{grid-template-columns:1fr;}
+}

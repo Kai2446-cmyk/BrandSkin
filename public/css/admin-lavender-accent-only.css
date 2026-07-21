@@ -1,0 +1,46 @@
+/* Khusus aksen warna Admin Dashboard. Tidak mengubah struktur, ukuran, atau fungsi. */
+.admin-body {
+  --admin-lavender: #B98EE6;
+  --admin-lavender-strong: #9662C9;
+  --admin-lavender-soft: rgba(185,142,230,.14);
+  --admin-lavender-line: rgba(185,142,230,.30);
+}
+.admin-body .admin-nav a.active,
+.admin-body .admin-nav a:hover {
+  background: var(--admin-lavender-soft) !important;
+  border-color: var(--admin-lavender-line) !important;
+  color: #F2E8FC !important;
+}
+.admin-body .admin-nav a.active::before { background: var(--admin-lavender) !important; }
+.admin-body .admin-alert,
+.admin-body .admin-badge,
+.admin-body .report-pill,
+.admin-body .admin-status-active {
+  background: var(--admin-lavender-soft) !important;
+  border-color: var(--admin-lavender-line) !important;
+  color: #E9D8FA !important;
+}
+.admin-body button[type="submit"]:not(.admin-logout),
+.admin-body .admin-primary-btn,
+.admin-body .admin-add-btn,
+.admin-body .admin-save-btn,
+.admin-body .btn-primary {
+  background: linear-gradient(135deg, var(--admin-lavender), var(--admin-lavender-strong)) !important;
+  border-color: var(--admin-lavender) !important;
+  color: #fff !important;
+}
+.admin-body input:focus,
+.admin-body select:focus,
+.admin-body textarea:focus {
+  border-color: var(--admin-lavender) !important;
+  box-shadow: 0 0 0 4px rgba(185,142,230,.12) !important;
+}
+.admin-body input[type="checkbox"],
+.admin-body input[type="radio"] { accent-color: var(--admin-lavender) !important; }
+.admin-body .marketing-chart-bar,
+.admin-body .category-line i { background: linear-gradient(180deg, var(--admin-lavender), var(--admin-lavender-strong)) !important; }
+.admin-body .chart-line { stroke: var(--admin-lavender) !important; }
+.admin-body .chart-axis-line { stroke: rgba(185,142,230,.35) !important; }
+.admin-body .admin-panel,
+.admin-body .admin-card,
+.admin-body .admin-report-stat { border-color: rgba(185,142,230,.20) !important; }

@@ -1,0 +1,56 @@
+/* Landing hero: menjaga teks dinamis dari Admin tetap di dalam grid/padding website. */
+.hero-section .hero-content {
+  left: 50% !important;
+  right: auto !important;
+  width: min(100%, 1280px) !important;
+  max-width: 1280px !important;
+  padding-inline: clamp(24px, 4.5vw, 72px) !important;
+  transform: translateX(-50%) !important;
+}
+
+.hero-section .hero-copy {
+  width: min(100%, 780px) !important;
+  max-width: min(780px, 72vw) !important;
+  min-width: 0 !important;
+}
+
+.hero-section .hero-copy .text-hero-sm,
+.hero-section .hero-copy h1,
+.hero-section .hero-copy p {
+  max-width: 100% !important;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.hero-section .hero-copy h1 {
+  font-size: clamp(3rem, 6.4vw, 6.4rem) !important;
+  text-wrap: balance;
+}
+
+.hero-section .hero-copy p {
+  text-wrap: pretty;
+}
+
+@media (max-width: 1023px) {
+  .hero-section .hero-content {
+    width: 100% !important;
+    padding-inline: clamp(24px, 5vw, 48px) !important;
+  }
+  .hero-section .hero-copy {
+    max-width: min(720px, 88vw) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section .hero-content {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .hero-section .hero-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .hero-section .hero-copy h1 {
+    font-size: clamp(2.55rem, 12vw, 4.6rem) !important;
+  }
+}

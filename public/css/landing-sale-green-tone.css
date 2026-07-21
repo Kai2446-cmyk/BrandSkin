@@ -1,0 +1,313 @@
+/* PATCH LANDING SALE GREEN TONE ONLY */
+/* Fokus: ubah tone section promo/sale di landing pages dari coklat/emas
+   menjadi hijau #3D6328 - #65A240.
+   Tidak mengubah layout, ukuran, database, route, controller, atau fitur lain. */
+
+:root{
+    --glow-sale-green-dark:#3D6328;
+    --glow-sale-green-light:#65A240;
+    --glow-sale-green-soft:rgba(101,162,64,.18);
+    --glow-sale-green-border:rgba(101,162,64,.36);
+    --glow-sale-green-text:#DFF4D5;
+}
+
+/* Target section promo sale/discount di landing page */
+.home-sale-section,
+.landing-sale-section,
+.sale-highlight-section,
+.flash-sale-section,
+.discount-section,
+.promo-sale-section,
+section[id*="sale"],
+section[class*="sale"],
+section[class*="discount"],
+section[class*="promo"]{
+    background:
+        radial-gradient(circle at 18% 10%, rgba(101,162,64,.30), transparent 32%),
+        linear-gradient(135deg, #1d2f16 0%, #3D6328 44%, #65A240 135%) !important;
+}
+
+/* Header 50% OFF */
+.home-sale-section .sale-title,
+.home-sale-section .section-title,
+.landing-sale-section .sale-title,
+.landing-sale-section .section-title,
+.flash-sale-section .sale-title,
+.flash-sale-section .section-title,
+.discount-section .sale-title,
+.discount-section .section-title,
+.promo-sale-section .sale-title,
+.promo-sale-section .section-title,
+section[class*="sale"] .sale-title,
+section[class*="sale"] .section-title,
+section[class*="discount"] .sale-title,
+section[class*="discount"] .section-title{
+    color:#F4FFE8 !important;
+    border-color:var(--glow-sale-green-border) !important;
+    background:rgba(61,99,40,.50) !important;
+}
+
+/* Badge/kotak 50% OFF */
+.home-sale-section .badge,
+.home-sale-section .sale-badge,
+.home-sale-section .discount-badge,
+.landing-sale-section .badge,
+.landing-sale-section .sale-badge,
+.landing-sale-section .discount-badge,
+.flash-sale-section .badge,
+.flash-sale-section .sale-badge,
+.flash-sale-section .discount-badge,
+section[class*="sale"] .badge,
+section[class*="sale"] .sale-badge,
+section[class*="sale"] .discount-badge,
+section[class*="discount"] .badge,
+section[class*="discount"] .discount-badge{
+    background:linear-gradient(135deg, #3D6328, #65A240) !important;
+    color:#F8FFF3 !important;
+    border-color:rgba(255,255,255,.18) !important;
+}
+
+/* Link see all */
+.home-sale-section a,
+.landing-sale-section a,
+.flash-sale-section a,
+.discount-section a,
+.promo-sale-section a,
+section[class*="sale"] a,
+section[class*="discount"] a{
+    color:#DFF4D5 !important;
+}
+
+.home-sale-section a:hover,
+.landing-sale-section a:hover,
+.flash-sale-section a:hover,
+.discount-section a:hover,
+.promo-sale-section a:hover,
+section[class*="sale"] a:hover,
+section[class*="discount"] a:hover{
+    color:#ffffff !important;
+}
+
+/* Card produk di section sale */
+.home-sale-section .product-card,
+.home-sale-section .sale-product-card,
+.home-sale-section .catalogue-product-card,
+.landing-sale-section .product-card,
+.landing-sale-section .sale-product-card,
+.landing-sale-section .catalogue-product-card,
+.flash-sale-section .product-card,
+.flash-sale-section .sale-product-card,
+.discount-section .product-card,
+.discount-section .sale-product-card,
+section[class*="sale"] .product-card,
+section[class*="sale"] .sale-product-card,
+section[class*="sale"] .catalogue-product-card,
+section[class*="discount"] .product-card,
+section[class*="discount"] .catalogue-product-card{
+    background:rgba(16,36,12,.72) !important;
+    border-color:rgba(101,162,64,.34) !important;
+    box-shadow:0 18px 42px rgba(0,0,0,.22) !important;
+}
+
+/* Area info bawah card */
+.home-sale-section .product-info,
+.home-sale-section .card-body,
+.home-sale-section .sale-card-body,
+.landing-sale-section .product-info,
+.landing-sale-section .card-body,
+.landing-sale-section .sale-card-body,
+.flash-sale-section .product-info,
+.flash-sale-section .card-body,
+section[class*="sale"] .product-info,
+section[class*="sale"] .card-body,
+section[class*="sale"] .sale-card-body,
+section[class*="discount"] .product-info,
+section[class*="discount"] .card-body{
+    background:linear-gradient(180deg, rgba(29,47,22,.96), rgba(18,34,14,.98)) !important;
+}
+
+/* Kategori, judul, harga */
+.home-sale-section .product-category,
+.home-sale-section .category,
+.landing-sale-section .product-category,
+.landing-sale-section .category,
+.flash-sale-section .product-category,
+.flash-sale-section .category,
+section[class*="sale"] .product-category,
+section[class*="sale"] .category,
+section[class*="discount"] .product-category,
+section[class*="discount"] .category{
+    color:#9FE176 !important;
+}
+
+.home-sale-section .product-name,
+.home-sale-section h3,
+.landing-sale-section .product-name,
+.landing-sale-section h3,
+.flash-sale-section .product-name,
+.flash-sale-section h3,
+section[class*="sale"] .product-name,
+section[class*="sale"] h3,
+section[class*="discount"] .product-name,
+section[class*="discount"] h3{
+    color:#ffffff !important;
+}
+
+.home-sale-section .product-price,
+.home-sale-section .price,
+.landing-sale-section .product-price,
+.landing-sale-section .price,
+.flash-sale-section .product-price,
+.flash-sale-section .price,
+section[class*="sale"] .product-price,
+section[class*="sale"] .price,
+section[class*="discount"] .product-price,
+section[class*="discount"] .price{
+    color:#B6EF92 !important;
+}
+
+/* Harga coret */
+.home-sale-section del,
+.home-sale-section .old-price,
+.landing-sale-section del,
+.landing-sale-section .old-price,
+.flash-sale-section del,
+.flash-sale-section .old-price,
+section[class*="sale"] del,
+section[class*="sale"] .old-price,
+section[class*="discount"] del,
+section[class*="discount"] .old-price{
+    color:rgba(255,255,255,.42) !important;
+}
+
+/* Tombol add to bag */
+.home-sale-section button,
+.home-sale-section .add-to-bag,
+.home-sale-section .add-to-cart,
+.home-sale-section [data-cart-add],
+.landing-sale-section button,
+.landing-sale-section .add-to-bag,
+.landing-sale-section .add-to-cart,
+.landing-sale-section [data-cart-add],
+.flash-sale-section button,
+.flash-sale-section .add-to-bag,
+.flash-sale-section [data-cart-add],
+section[class*="sale"] button,
+section[class*="sale"] .add-to-bag,
+section[class*="sale"] .add-to-cart,
+section[class*="sale"] [data-cart-add],
+section[class*="discount"] button,
+section[class*="discount"] .add-to-bag,
+section[class*="discount"] [data-cart-add]{
+    background:rgba(61,99,40,.78) !important;
+    border-color:rgba(159,225,118,.34) !important;
+    color:#DFF4D5 !important;
+}
+
+.home-sale-section button:hover,
+.home-sale-section .add-to-bag:hover,
+.home-sale-section .add-to-cart:hover,
+.home-sale-section [data-cart-add]:hover,
+.landing-sale-section button:hover,
+.landing-sale-section .add-to-bag:hover,
+.landing-sale-section .add-to-cart:hover,
+.landing-sale-section [data-cart-add]:hover,
+section[class*="sale"] button:hover,
+section[class*="sale"] .add-to-bag:hover,
+section[class*="sale"] [data-cart-add]:hover,
+section[class*="discount"] button:hover,
+section[class*="discount"] .add-to-bag:hover{
+    background:linear-gradient(135deg, #3D6328, #65A240) !important;
+    color:#ffffff !important;
+    transform:translateY(-1px);
+}
+
+/* Discount label kecil -50% */
+.home-sale-section .discount-label,
+.home-sale-section .sale-percent,
+.home-sale-section .percent-badge,
+.landing-sale-section .discount-label,
+.landing-sale-section .sale-percent,
+.landing-sale-section .percent-badge,
+.flash-sale-section .discount-label,
+.flash-sale-section .sale-percent,
+section[class*="sale"] .discount-label,
+section[class*="sale"] .sale-percent,
+section[class*="sale"] .percent-badge,
+section[class*="discount"] .discount-label,
+section[class*="discount"] .percent-badge{
+    background:#65A240 !important;
+    color:#10220C !important;
+    font-weight:950 !important;
+}
+
+/* Slider arrow */
+.home-sale-section .swiper-button-next,
+.home-sale-section .swiper-button-prev,
+.home-sale-section .slider-arrow,
+.landing-sale-section .swiper-button-next,
+.landing-sale-section .swiper-button-prev,
+.landing-sale-section .slider-arrow,
+section[class*="sale"] .swiper-button-next,
+section[class*="sale"] .swiper-button-prev,
+section[class*="sale"] .slider-arrow{
+    background:rgba(18,34,14,.78) !important;
+    border-color:rgba(101,162,64,.45) !important;
+    color:#DFF4D5 !important;
+}
+
+/* Fallback kalau class section tidak ada:
+   hanya apply pada section yang mengandung tombol/teks sale via class produk umum */
+body .product-sale-strip,
+body .home-discount-products{
+    background:linear-gradient(135deg, #1d2f16, #3D6328 48%, #65A240 120%) !important;
+}
+
+
+/* Sale countdown — scoped only to landing Sale section */
+.sale-home-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.sale-home-countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1px solid rgba(214, 240, 199, .38);
+  background: rgba(9, 37, 14, .42);
+  color: #eefbe8;
+  backdrop-filter: blur(8px);
+}
+.sale-home-countdown > span {
+  min-width: 38px;
+  display: grid;
+  justify-items: center;
+  line-height: 1;
+}
+.sale-home-countdown strong {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+.sale-home-countdown small {
+  margin-top: 5px;
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  opacity: .75;
+}
+.sale-home-countdown > b {
+  margin-top: -11px;
+  font-size: 14px;
+  opacity: .72;
+}
+.sale-home-countdown.is-ended {
+  opacity: .65;
+}
+@media (max-width: 640px) {
+  .sale-home-countdown { width: 100%; justify-content: center; }
+}

@@ -1,0 +1,49 @@
+.profile-voucher-page{background:radial-gradient(circle at 82% 9%,rgba(213,184,242,.34),transparent 30%),linear-gradient(180deg,#faf7fe 0%,#f4ecfb 100%)}
+.profile-voucher-card{min-width:0}
+.voucher-page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;padding-bottom:28px;border-bottom:1px solid #eadcf7}
+.voucher-page-head>div:first-child>span{display:block;margin-bottom:10px;color:#8d57c2;font-size:12px;font-weight:900;letter-spacing:.22em;text-transform:uppercase}
+.voucher-page-head h1{margin:0;color:#2d2138;font-size:42px;line-height:1;font-weight:900;letter-spacing:-.045em;text-transform:uppercase}
+.voucher-page-head p{max-width:700px;margin:13px 0 0;color:#81748b;font-size:14px;line-height:1.7}
+.voucher-head-icon{display:grid;place-items:center;flex:0 0 68px;width:68px;height:68px;border:1px solid #dfc9f3;border-radius:22px;background:linear-gradient(145deg,#f8efff,#e9d7fa);box-shadow:0 14px 34px rgba(111,72,145,.14);color:#8750ba;font-size:28px;font-weight:950}
+.voucher-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0 32px}
+.voucher-overview article{padding:18px 19px;border:1px solid #e7d8f4;border-radius:18px;background:rgba(255,255,255,.82);box-shadow:0 10px 28px rgba(91,54,124,.07)}
+.voucher-overview span{display:block;color:#8b7d94;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.voucher-overview strong{display:block;margin:8px 0 5px;color:#70409d;font-size:24px;line-height:1;font-weight:950}
+.voucher-overview small{color:#998da1;font-size:11px;line-height:1.4}
+.voucher-type-group+.voucher-type-group{margin-top:34px;padding-top:30px;border-top:1px solid #eadff4}
+.voucher-group-heading{display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:14px;margin-bottom:16px}
+.voucher-group-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,#bd8fe6,#9461c4);box-shadow:0 11px 24px rgba(132,83,178,.2);color:#fff;font-size:17px;font-weight:950}
+.voucher-group-heading h2{margin:0;color:#31243d;font-size:20px;font-weight:900}
+.voucher-group-heading p{margin:4px 0 0;color:#8d8196;font-size:12px}
+.voucher-group-heading>span{padding:7px 11px;border:1px solid #e0ccf2;border-radius:999px;background:#f7f0fd;color:#8450b3;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.voucher-grid{display:grid;gap:14px}
+.voucher-ticket{display:grid;grid-template-columns:minmax(0,1fr) 190px;overflow:hidden;border:1px solid #e2d0f1;border-radius:22px;background:#fff;box-shadow:0 14px 35px rgba(79,47,104,.08);position:relative}
+.voucher-ticket::before,.voucher-ticket::after{content:"";position:absolute;right:177px;width:24px;height:24px;border-radius:50%;background:#f5eefb;z-index:2}
+.voucher-ticket::before{top:-13px}.voucher-ticket::after{bottom:-13px}
+.voucher-ticket-main{min-width:0;padding:21px 24px}
+.voucher-ticket-topline{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.voucher-ticket-topline>span{color:#9a8ca3;font-size:9px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.voucher-status{padding:6px 9px;border-radius:999px;font-size:9px;font-style:normal;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.voucher-status.usable{background:#eee1fa;color:#7642a6}
+.voucher-status.locked{background:#fff4dc;color:#a56d19}
+.voucher-status.unavailable{background:#f1eef3;color:#8d8592}
+.voucher-ticket h3{margin:12px 0 7px;color:#352443;font-size:25px;line-height:1.05;font-weight:950;letter-spacing:-.03em}
+.voucher-ticket p{margin:0;color:#83768c;font-size:12px;line-height:1.55}
+.voucher-requirements{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;color:#968a9e;font-size:10px}
+.voucher-requirements strong{color:#5e496d}
+.voucher-progress-note{margin-top:14px;padding:10px 12px;border:1px solid #f0d9a9;border-radius:12px;background:#fff9eb;color:#8d651f;font-size:10px;line-height:1.45}
+.voucher-progress-note.unavailable-note{border-color:#e3dce7;background:#f7f4f8;color:#887f8d}
+.voucher-code-panel{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px 17px;border-left:1px dashed #d9c2ec;background:linear-gradient(150deg,#f8f1fe,#efe2fa);text-align:center}
+.voucher-code-panel>span{color:#927aa7;font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.voucher-code-panel>strong{max-width:100%;overflow-wrap:anywhere;color:#5f3582;font-size:14px;font-weight:950;letter-spacing:.06em}
+.voucher-code-panel button{width:100%;min-height:38px;border:0;border-radius:12px;background:linear-gradient(135deg,#b889df,#925ec1);color:#fff;font-size:10px;font-weight:900;cursor:pointer;box-shadow:0 9px 20px rgba(124,76,165,.2)}
+.voucher-code-panel button:hover{transform:translateY(-1px)}
+.voucher-code-panel button.copied{background:#74459d}
+.voucher-code-panel button:disabled{background:#d4ccd8;color:#817884;box-shadow:none;cursor:not-allowed}
+.voucher-ticket.is-locked{border-color:#ead9b7}.voucher-ticket.is-locked .voucher-code-panel{background:linear-gradient(150deg,#fffaf0,#f8edda);border-left-color:#e6d2aa}.voucher-ticket.is-locked .voucher-code-panel>strong{color:#8d6729}
+.voucher-ticket.is-unavailable{filter:saturate(.45);opacity:.76}
+.voucher-empty-state{padding:55px 24px;border:1px dashed #d9c1ee;border-radius:22px;background:#fbf8fe;text-align:center}
+.voucher-empty-state>div{display:grid;place-items:center;width:56px;height:56px;margin:0 auto 13px;border-radius:18px;background:#eee0fa;color:#7f4cac;font-size:22px;font-weight:950}
+.voucher-empty-state h2{margin:0;color:#382943;font-size:22px}.voucher-empty-state p{margin:8px auto 0;max-width:450px;color:#887c90;font-size:12px;line-height:1.6}
+@media(max-width:900px){.voucher-overview{grid-template-columns:1fr}.voucher-ticket{grid-template-columns:1fr}.voucher-ticket::before,.voucher-ticket::after{display:none}.voucher-code-panel{border-left:0;border-top:1px dashed #d9c2ec}.voucher-page-head h1{font-size:34px}}
+@media(max-width:600px){.voucher-page-head{gap:14px}.voucher-head-icon{width:54px;height:54px;flex-basis:54px;border-radius:17px}.voucher-group-heading{grid-template-columns:42px minmax(0,1fr)}.voucher-group-heading>span{grid-column:2;justify-self:start}.voucher-ticket-main{padding:18px}.voucher-ticket-topline{align-items:flex-start;flex-direction:column}.voucher-requirements{flex-direction:column;gap:6px}}

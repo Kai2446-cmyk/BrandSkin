@@ -1,0 +1,189 @@
+/* PATCH ADMIN COLOR PICKER SWATCH ONLY */
+.admin-field select{
+    width:100% !important;
+    min-height:64px !important;
+    padding:0 46px 0 18px !important;
+    border-radius:18px !important;
+    border:1px solid rgba(255,255,255,.13) !important;
+    background-color:#242424 !important;
+    color:#ffffff !important;
+    font-size:18px !important;
+    font-weight:800 !important;
+    outline:none !important;
+    appearance:auto !important;
+    -webkit-appearance:auto !important;
+}
+.admin-field select:focus{
+    border-color:#4A7A3A !important;
+    box-shadow:0 0 0 3px rgba(74,122,58,.26) !important;
+}
+.admin-field select option{
+    background:#1b1b1b !important;
+    color:#ffffff !important;
+    font-size:15px !important;
+}
+.admin-form-preview span{
+    color:rgba(255,255,255,.58) !important;
+}
+
+.admin-color-toolbar{
+    display:flex;
+    align-items:stretch;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+}
+.admin-color-empty{
+    min-height:54px;
+    padding:0 20px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.14);
+    background:#202020;
+    color:#fff;
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:.02em;
+    transition:.2s ease;
+}
+.admin-color-empty:hover{
+    border-color:#4A7A3A;
+    background:rgba(74,122,58,.16);
+}
+.admin-custom-color{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex:1;
+    min-width:280px;
+}
+.admin-custom-color input{
+    height:54px !important;
+    border-radius:16px !important;
+    background:#242424 !important;
+    border:1px solid rgba(255,255,255,.13) !important;
+    color:#fff !important;
+    padding:0 16px !important;
+    font-size:16px !important;
+    font-weight:900 !important;
+    min-width:150px;
+}
+.admin-custom-color button{
+    height:54px;
+    border:0;
+    border-radius:16px;
+    background:#4A7A3A;
+    color:#fff;
+    padding:0 18px;
+    font-size:13px;
+    font-weight:950;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    transition:.2s ease;
+    white-space:nowrap;
+}
+.admin-custom-color button:hover{
+    transform:translateY(-1px);
+    filter:brightness(1.08);
+}
+
+.admin-color-swatch-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(46px, 1fr));
+    gap:12px;
+    padding:18px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+    background:#171717;
+}
+.admin-color-swatch{
+    position:relative;
+    width:46px;
+    height:46px;
+    border-radius:999px;
+    border:3px solid rgba(255,255,255,.16);
+    background:var(--swatch);
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.24);
+    transition:.18s ease;
+}
+.admin-color-swatch:hover{
+    transform:scale(1.08);
+    border-color:rgba(255,255,255,.62);
+}
+.admin-color-swatch.is-selected{
+    border-color:#4A7A3A;
+    box-shadow:0 0 0 4px rgba(74,122,58,.22), 0 10px 24px rgba(0,0,0,.34);
+}
+.admin-color-swatch.is-selected::after{
+    content:'✓';
+    position:absolute;
+    inset:7px;
+    border-radius:999px;
+    background:rgba(0,0,0,.42);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    font-weight:950;
+}
+.admin-selected-colors{
+    margin-top:18px;
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+    min-height:44px;
+}
+.admin-selected-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    min-height:42px;
+    padding:0 12px 0 8px;
+    border-radius:999px;
+    background:#222;
+    border:1px solid rgba(255,255,255,.12);
+    color:#fff;
+    font-size:13px;
+    font-weight:900;
+}
+.admin-selected-pill i{
+    width:28px;
+    height:28px;
+    border-radius:999px;
+    background:var(--pill);
+    border:1px solid rgba(255,255,255,.26);
+}
+.admin-selected-pill button{
+    width:22px;
+    height:22px;
+    border-radius:999px;
+    border:0;
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    font-weight:900;
+    line-height:1;
+}
+.admin-color-help,
+.admin-color-note{
+    margin:0;
+    color:rgba(255,255,255,.52);
+    font-size:13px;
+    font-weight:700;
+}
+.admin-color-note{
+    margin-top:12px;
+}
+@media(max-width:720px){
+    .admin-custom-color{
+        flex-direction:column;
+        align-items:stretch;
+        min-width:100%;
+    }
+    .admin-custom-color button,
+    .admin-custom-color input{
+        width:100%;
+    }
+}

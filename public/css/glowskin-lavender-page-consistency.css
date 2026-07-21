@@ -1,0 +1,95 @@
+:root{
+  --primary:#B98EE6 !important;
+  --primary-dark:#8D5BC2 !important;
+  --primary-soft:#EADCF8 !important;
+  --primary-pale:#F7F0FD !important;
+}
+
+/* Navbar semua halaman dibuat konsisten dengan tone landing page */
+body .site-header{
+  background:linear-gradient(90deg,rgba(255,255,255,.96),rgba(247,240,253,.97),rgba(234,220,248,.96)) !important;
+  border-bottom:1px solid rgba(185,142,230,.25) !important;
+  box-shadow:0 12px 34px rgba(104,66,145,.12) !important;
+}
+body .site-header .site-nav a,
+body .site-header .site-logo strong,
+body .site-header .profile-trigger strong{color:#2E2238 !important;}
+body .site-header .site-logo span,
+body .site-header .profile-trigger i{color:#756681 !important;}
+body .site-header .site-nav a:hover,
+body .site-header .site-nav a.active{color:#8D5BC2 !important;}
+body .site-header .site-nav a::after{background:#B98EE6 !important;}
+body .site-header .circle-action,
+body .site-header .profile-trigger{
+  background:rgba(255,255,255,.70) !important;
+  border-color:rgba(141,91,194,.20) !important;
+  color:#2E2238 !important;
+}
+body .site-header .circle-action:hover,
+body .site-header .profile-trigger:hover{
+  background:#F1E5FB !important;
+  border-color:#B98EE6 !important;
+}
+body .site-header .profile-avatar{background:linear-gradient(135deg,#B98EE6,#8D5BC2) !important;}
+body .site-header .profile-dropdown{
+  background:#fff !important;
+  border-color:rgba(185,142,230,.24) !important;
+  box-shadow:0 20px 50px rgba(82,45,118,.18) !important;
+}
+body .site-header .profile-dropdown a,
+body .site-header .profile-dropdown button{color:#2E2238 !important;}
+body .site-header .profile-dropdown a:hover,
+body .site-header .profile-dropdown button:hover{background:#F4EBFC !important;color:#8D5BC2 !important;}
+
+/* Landing page tetap transparan saat hero paling atas */
+body.home-page:not(.is-scrolled) .site-header,
+body[data-page="home"]:not(.is-scrolled) .site-header{
+  background:transparent !important;
+  border-bottom-color:transparent !important;
+  box-shadow:none !important;
+}
+
+/* Sale: hilangkan seluruh sisa warna hijau dan buat teks terbaca */
+.sale-home-section{
+  background:linear-gradient(135deg,#F9F4FE 0%,#EADCF8 48%,#D2B6EF 100%) !important;
+}
+.sale-home-badge{
+  background:rgba(255,255,255,.78) !important;
+  border:1px solid rgba(141,91,194,.28) !important;
+  color:#6E3FA0 !important;
+  border-radius:18px !important;
+  box-shadow:0 14px 32px rgba(111,63,160,.12) !important;
+}
+.sale-home-see,
+.sale-home-info p,
+.sale-home-info strong{color:#8D5BC2 !important;}
+.sale-home-card-box{
+  background:#2E1D3D !important;
+  border-color:rgba(185,142,230,.34) !important;
+  border-radius:24px !important;
+}
+.sale-home-discount{
+  background:linear-gradient(135deg,#C79BF0,#A875DA) !important;
+  color:#2D193C !important;
+  border-radius:0 0 14px 0 !important;
+}
+.sale-home-info button{
+  border-color:rgba(212,181,240,.50) !important;
+  background:linear-gradient(135deg,#B98EE6,#9665C9) !important;
+  color:#fff !important;
+  border-radius:14px !important;
+}
+.sale-home-arrow{
+  border-color:rgba(185,142,230,.35) !important;
+  background:rgba(65,34,91,.88) !important;
+  color:#fff !important;
+  border-radius:14px !important;
+}
+.sale-home-countdown strong,
+.sale-home-countdown small,
+.sale-home-countdown b{color:#6E3FA0 !important;}
+
+/* Admin setting persentase */
+.admin-sale-percent-input{display:flex;align-items:center;gap:12px;}
+.admin-sale-percent-input input{min-width:0;flex:1;}
+.admin-sale-percent-input strong{white-space:nowrap;color:#B98EE6;font-weight:900;}

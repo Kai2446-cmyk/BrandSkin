@@ -1,0 +1,274 @@
+/* PROFILE PAGES ONLY — navbar lavender/white + My Order layout repair
+   Scope is restricted to pages containing .profile-page. */
+
+/* Navbar khusus seluruh halaman profile */
+body:has(.profile-page) .site-header{
+    background:rgba(255,255,255,.96) !important;
+    border-bottom:1px solid #eadcf8 !important;
+    box-shadow:0 12px 34px rgba(91,54,124,.10) !important;
+    backdrop-filter:blur(18px) !important;
+    -webkit-backdrop-filter:blur(18px) !important;
+}
+body:has(.profile-page) .site-header-inner{background:transparent !important;}
+body:has(.profile-page) .site-nav > a,
+body:has(.profile-page) .site-nav-shop-trigger{
+    color:#2d2338 !important;
+}
+body:has(.profile-page) .site-nav > a:hover,
+body:has(.profile-page) .site-nav > a.active,
+body:has(.profile-page) .site-nav-shop:hover .site-nav-shop-trigger,
+body:has(.profile-page) .site-nav-shop.active .site-nav-shop-trigger{
+    color:#8752be !important;
+}
+body:has(.profile-page) .site-nav > a::after,
+body:has(.profile-page) .site-nav-shop::after{
+    background:#b98ee6 !important;
+}
+body:has(.profile-page) .circle-action,
+body:has(.profile-page) .profile-trigger,
+body:has(.profile-page) .auth-actions a{
+    background:#fff !important;
+    border-color:#e5d4f6 !important;
+    color:#2d2338 !important;
+}
+body:has(.profile-page) .circle-action:hover,
+body:has(.profile-page) .profile-trigger:hover,
+body:has(.profile-page) .auth-actions a:hover{
+    border-color:#b98ee6 !important;
+    background:#f8f1ff !important;
+    color:#8752be !important;
+}
+body:has(.profile-page) .profile-trigger strong{color:#2d2338 !important;}
+body:has(.profile-page) .profile-trigger i{color:#8752be !important;}
+body:has(.profile-page) .profile-dropdown{
+    background:#fff !important;
+    border:1px solid #e5d4f6 !important;
+    box-shadow:0 22px 55px rgba(91,54,124,.16) !important;
+}
+body:has(.profile-page) .profile-dropdown a,
+body:has(.profile-page) .profile-dropdown button{color:#2d2338 !important;}
+body:has(.profile-page) .profile-dropdown a:hover,
+body:has(.profile-page) .profile-dropdown button:hover{
+    color:#8752be !important;
+    background:#f3eafe !important;
+}
+body:has(.profile-page) .site-actions em{
+    background:#b98ee6 !important;
+    color:#fff !important;
+}
+
+/* Hilangkan sisa aksen hijau hanya di halaman profile */
+.profile-page a,
+.profile-page button,
+.profile-page summary,
+.profile-page .profile-head > div:first-child > span,
+.profile-page .profile-order-card .profile-order-top strong{
+    accent-color:#b98ee6;
+}
+.profile-page .profile-order-status.paid,
+.profile-page .profile-alert.success{
+    color:#7543a8 !important;
+    background:#f2e8fd !important;
+    border-color:#ddc5f4 !important;
+}
+
+/* My Order: daftar dibuat compact, rapi, tanpa gambar membesar */
+.profile-orders-page .profile-order-card{min-width:0;overflow:hidden;}
+.profile-orders-page .profile-orders-list{
+    display:grid;
+    gap:20px;
+}
+.profile-orders-page .profile-order-box{
+    overflow:hidden;
+    border:1px solid #e6d7f5;
+    border-radius:22px;
+    background:#fff;
+    box-shadow:0 16px 42px rgba(91,54,124,.08);
+}
+.profile-orders-page .profile-order-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:20px;
+    padding:20px 22px;
+    background:linear-gradient(135deg,#fcf9ff 0%,#f5edfd 100%);
+    border-bottom:1px solid #eadcf8;
+}
+.profile-orders-page .profile-order-top strong{
+    display:block;
+    color:#2d2338 !important;
+    font-size:15px;
+    line-height:1.35;
+    letter-spacing:.02em;
+}
+.profile-orders-page .profile-order-top p{
+    margin:5px 0 0;
+    color:#81758d;
+    font-size:12px;
+    line-height:1.55;
+}
+.profile-orders-page .profile-order-status{
+    flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    min-height:32px;
+    padding:7px 12px;
+    border-radius:999px;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.12em;
+    border:1px solid transparent;
+}
+.profile-orders-page .profile-order-status.pending{
+    color:#8452b5;
+    background:#f1e5fc;
+    border-color:#dcc2f3;
+}
+.profile-orders-page .profile-order-status.paid{
+    color:#694092 !important;
+    background:#eee0fb !important;
+    border-color:#d7b9ef !important;
+}
+.profile-orders-page .profile-order-status.failed{
+    color:#b54170;
+    background:#fff0f6;
+    border-color:#f7cadd;
+}
+.profile-orders-page .profile-order-items{
+    display:grid;
+    gap:0;
+    padding:0 22px;
+}
+.profile-orders-page .profile-order-item{
+    display:grid;
+    grid-template-columns:92px minmax(0,1fr) auto;
+    align-items:start;
+    gap:18px;
+    padding:20px 0;
+    border-bottom:1px solid #eee5f6;
+}
+.profile-orders-page .profile-order-item:last-child{border-bottom:0;}
+.profile-orders-page .profile-order-item > img{
+    display:block;
+    width:92px !important;
+    height:92px !important;
+    max-width:92px !important;
+    object-fit:cover;
+    border-radius:16px;
+    border:1px solid #e2d1f3;
+    background:#faf7fd;
+}
+.profile-orders-page .profile-order-item-main{min-width:0;}
+.profile-orders-page .profile-order-item-main h3{
+    margin:1px 0 7px;
+    color:#2d2338;
+    font-size:15px;
+    line-height:1.4;
+    font-weight:850;
+}
+.profile-orders-page .profile-order-item-main > p{
+    margin:0;
+    color:#85798f;
+    font-size:12px;
+    font-weight:650;
+}
+.profile-orders-page .profile-order-item > strong{
+    color:#7543a8;
+    font-size:14px;
+    white-space:nowrap;
+}
+.profile-orders-page .profile-review-details{
+    margin-top:14px;
+    border:1px solid #e2d1f3;
+    border-radius:14px;
+    background:#fcf9ff;
+    overflow:hidden;
+}
+.profile-orders-page .profile-review-details summary{
+    cursor:pointer;
+    padding:12px 14px;
+    color:#7543a8;
+    font-size:12px;
+    font-weight:850;
+    list-style:none;
+}
+.profile-orders-page .profile-review-details summary::-webkit-details-marker{display:none;}
+.profile-orders-page .profile-review-form{
+    display:grid;
+    gap:12px;
+    padding:0 14px 14px;
+}
+.profile-orders-page .profile-review-form label span{
+    display:block;
+    margin-bottom:5px;
+    color:#756a80;
+    font-size:11px;
+    font-weight:800;
+}
+.profile-orders-page .profile-review-form select,
+.profile-orders-page .profile-review-form textarea{
+    width:100%;
+    border:1px solid #ddc8f2;
+    border-radius:12px;
+    background:#fff;
+    color:#2d2338;
+    padding:10px 12px;
+    outline:none;
+}
+.profile-orders-page .profile-review-form select:focus,
+.profile-orders-page .profile-review-form textarea:focus{
+    border-color:#b98ee6;
+    box-shadow:0 0 0 3px rgba(185,142,230,.14);
+}
+.profile-orders-page .profile-review-form button{
+    justify-self:start;
+    border:0;
+    border-radius:12px;
+    background:linear-gradient(135deg,#b98ee6,#9b68cf) !important;
+    color:#fff !important;
+    padding:11px 16px;
+    font-size:11px;
+    font-weight:900;
+    cursor:pointer;
+}
+.profile-orders-page .profile-review-locked{
+    display:block;
+    margin-top:12px;
+    color:#8b7f95;
+    font-size:11px;
+}
+.profile-orders-page .profile-review-locked.failed{color:#b54170;}
+.profile-orders-page .profile-order-bottom{
+    display:flex;
+    justify-content:flex-end;
+    gap:32px;
+    padding:17px 22px;
+    background:#fcf9ff;
+    border-top:1px solid #eadcf8;
+}
+.profile-orders-page .profile-order-bottom div{display:grid;gap:4px;text-align:right;}
+.profile-orders-page .profile-order-bottom span{
+    color:#91869a;
+    font-size:10px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+}
+.profile-orders-page .profile-order-bottom strong{color:#2d2338;font-size:14px;}
+.profile-orders-page .profile-order-empty{
+    padding:42px 24px;
+    text-align:center;
+    border:1px dashed #d8c0ef;
+    border-radius:20px;
+    background:#fcf9ff;
+}
+.profile-orders-page .profile-order-empty strong{color:#2d2338;}
+.profile-orders-page .profile-order-empty p{color:#8b8094;margin:8px 0 0;font-size:13px;}
+
+@media(max-width:760px){
+    .profile-orders-page .profile-order-item{grid-template-columns:72px minmax(0,1fr);}
+    .profile-orders-page .profile-order-item > img{width:72px !important;height:72px !important;max-width:72px !important;}
+    .profile-orders-page .profile-order-item > strong{grid-column:2;}
+    .profile-orders-page .profile-order-top{flex-direction:column;}
+    .profile-orders-page .profile-order-bottom{justify-content:space-between;gap:16px;}
+}

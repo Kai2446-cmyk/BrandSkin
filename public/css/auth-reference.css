@@ -1,0 +1,441 @@
+/* PATCH AUTH LOGIN + REGISTER REFERENCE DESIGN ONLY */
+/* Fokus:
+   - Login/Register dibuat mirip banget dengan referensi kedua.
+   - Hapus logo tambahan di hero login/register.
+   - Tidak menampilkan akun admin dummy.
+   - Tidak mengubah database, route, navbar, footer, produk, artikel, cart, wishlist, profile, admin, atau promo.
+*/
+
+.auth-ref-page{
+    min-height:100vh;
+    background:#e7e7e7;
+    padding-top:96px;
+    font-family:'Plus Jakarta Sans',sans-serif;
+    color:#111;
+}
+
+/* biar global navbar tetap di atas, area auth mulai tepat setelah navbar */
+.auth-ref-split{
+    width:100%;
+    min-height:820px;
+    display:grid;
+    grid-template-columns:50% 50%;
+    background:#000;
+}
+
+.auth-ref-left{
+    position:relative;
+    min-height:820px;
+    overflow:hidden;
+    background:#080808;
+}
+
+.auth-ref-left:before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.02) 0%, rgba(0,0,0,.28) 58%, rgba(0,0,0,.92) 100%),
+        linear-gradient(90deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,.03) 58%, rgba(0,0,0,.30) 100%);
+    z-index:2;
+    pointer-events:none;
+}
+
+.auth-login-left{
+    background:
+        url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1100&q=90') center/cover no-repeat;
+}
+
+.auth-register-left{
+    background:
+        url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1100&q=90') center/cover no-repeat;
+}
+
+.auth-ref-left-copy{
+    position:absolute;
+    z-index:3;
+    left:56px;
+    bottom:96px;
+    max-width:650px;
+    color:#fff;
+}
+
+.auth-ref-left-copy span{
+    display:block;
+    margin-bottom:20px;
+    color:#fff;
+    font-size:34px;
+    line-height:1;
+    font-weight:950;
+    letter-spacing:-.06em;
+    text-transform:uppercase;
+}
+
+.auth-ref-left-copy h1{
+    margin:0;
+    color:#fff;
+    font-size:70px;
+    line-height:1.03;
+    font-weight:950;
+    letter-spacing:-.055em;
+    text-transform:uppercase;
+    text-shadow:0 18px 36px rgba(0,0,0,.34);
+}
+
+.auth-ref-right{
+    min-height:820px;
+    background:#fff;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:58px 68px 84px;
+    position:relative;
+}
+
+/* area putih kanan seperti referensi */
+.auth-ref-right:before{
+    content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:66px;
+    background:#ffffff;
+    z-index:0;
+}
+
+.auth-card{
+    position:relative;
+    z-index:1;
+    width:min(600px,100%);
+    background:#fff;
+    padding:0 0 0;
+}
+
+/* Tab LOGIN REGISTER */
+.auth-tabs{
+    width:100%;
+    height:48px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    margin:0 0 52px;
+    background:#e5e5e5;
+}
+
+.auth-tabs a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#9b9b9b;
+    background:#e5e5e5;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    transition:.18s ease;
+}
+
+.auth-tabs a.active{
+    background:#ff3b97;
+    color:#fff;
+    box-shadow:0 18px 34px rgba(255,59,151,.24);
+}
+
+.auth-alert{
+    padding:12px 14px;
+    margin:0 0 18px;
+    font-size:13px;
+    font-weight:800;
+}
+
+.auth-alert.error{
+    background:#fff1f7;
+    color:#c3346d;
+    border:1px solid #ffd2e4;
+}
+
+.auth-alert.success{
+    background:#edf8e9;
+    color:#315f25;
+    border:1px solid #d8edcf;
+}
+
+.auth-ref-form{
+    display:grid;
+    gap:24px;
+}
+
+.auth-ref-form label{
+    display:block;
+}
+
+.auth-ref-form label > span{
+    display:block;
+    color:#aaa;
+    font-size:14px;
+    font-weight:750;
+    margin-bottom:8px;
+}
+
+.auth-ref-form input[type="email"],
+.auth-ref-form input[type="text"],
+.auth-ref-form input[type="password"]{
+    width:100%;
+    height:36px;
+    border:0;
+    border-bottom:1px solid #d4d4d4;
+    background:#fff;
+    color:#111;
+    outline:none;
+    padding:0;
+    font-size:14px;
+    font-weight:700;
+    transition:.18s ease;
+}
+
+.auth-ref-form input:focus{
+    border-bottom-color:#ff3b97;
+    box-shadow:0 6px 0 -5px rgba(255,59,151,.50);
+}
+
+.auth-ref-form small{
+    display:block;
+    margin-top:8px;
+    color:#aaa;
+    font-size:12px;
+    font-weight:700;
+}
+
+.auth-password-line{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:16px;
+    align-items:center;
+    border-bottom:1px solid #d4d4d4;
+}
+
+.auth-password-line input{
+    border-bottom:0 !important;
+}
+
+.auth-password-line button{
+    border:0;
+    background:transparent;
+    color:#444;
+    font-size:11px;
+    font-weight:950;
+    letter-spacing:.12em;
+    cursor:pointer;
+    padding:0 0 8px;
+}
+
+.auth-ref-options{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin-top:2px;
+}
+
+.auth-ref-options label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#777;
+    font-size:14px;
+    font-weight:700;
+}
+
+.auth-ref-options input,
+.auth-agree input,
+.auth-news input{
+    width:18px;
+    height:18px;
+    accent-color:#ff3b97;
+}
+
+.auth-ref-options a{
+    color:#777;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:850;
+}
+
+.auth-main-btn{
+    width:100%;
+    height:48px;
+    border:0;
+    background:#d1d1d1;
+    color:#999;
+    font-size:12px;
+    font-weight:950;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:.18s ease;
+}
+
+.auth-main-btn:hover{
+    background:#111;
+    color:#fff;
+}
+
+.auth-register-btn{
+    margin-top:2px;
+}
+
+.auth-small-note{
+    margin:24px 0 0;
+    text-align:center;
+    color:#aaa;
+    font-size:12px;
+    font-weight:700;
+    line-height:1.6;
+}
+
+.auth-small-note a{
+    color:#111;
+    text-decoration:none;
+    border-bottom:2px solid #ff3b97;
+    font-weight:950;
+}
+
+/* Register specific */
+.auth-register-page .auth-ref-split{
+    min-height:876px;
+}
+
+.auth-register-page .auth-ref-left,
+.auth-register-page .auth-ref-right{
+    min-height:876px;
+}
+
+.auth-register-card{
+    padding-top:0;
+}
+
+.auth-agree{
+    display:grid !important;
+    grid-template-columns:20px 1fr;
+    gap:14px;
+    align-items:start;
+    color:#555;
+    font-size:13px;
+    line-height:1.55;
+    font-weight:700;
+}
+
+.auth-agree span{
+    margin:0 !important;
+    color:#555 !important;
+    font-size:13px !important;
+    font-weight:700 !important;
+}
+
+.auth-agree b{
+    color:#111;
+    font-weight:950;
+}
+
+.auth-news{
+    color:#555;
+    font-size:13px;
+    line-height:1.55;
+    font-weight:700;
+}
+
+.auth-news p{
+    margin:0 0 12px;
+}
+
+.auth-news label{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-right:16px;
+    color:#777;
+}
+
+/* Login tidak pakai logo tambahan di hero/card */
+.login-brand,
+.auth-ref-page .login-brand{
+    display:none !important;
+}
+
+/* Hilangkan semua box admin dummy kalau masih tersisa dari cache/view lama */
+.login-admin-dummy,
+.admin-dummy,
+.dummy-admin,
+[data-admin-dummy],
+[data-login-dummy],
+.login-demo-account,
+.demo-account-box,
+.login-page .dummy-box,
+.auth-ref-page .dummy-box{
+    display:none !important;
+}
+
+@media(max-width:1100px){
+    .auth-ref-split,
+    .auth-register-page .auth-ref-split{
+        grid-template-columns:1fr;
+    }
+
+    .auth-ref-left,
+    .auth-ref-right,
+    .auth-register-page .auth-ref-left,
+    .auth-register-page .auth-ref-right{
+        min-height:auto;
+    }
+
+    .auth-ref-left{
+        min-height:520px;
+    }
+
+    .auth-ref-right{
+        padding:44px 24px 78px;
+    }
+
+    .auth-ref-left-copy{
+        left:32px;
+        bottom:60px;
+        max-width:calc(100% - 64px);
+    }
+
+    .auth-ref-left-copy h1{
+        font-size:50px;
+    }
+
+    .auth-ref-left-copy span{
+        font-size:26px;
+    }
+}
+
+@media(max-width:560px){
+    .auth-ref-page{
+        padding-top:98px;
+    }
+
+    .auth-ref-left{
+        min-height:430px;
+    }
+
+    .auth-ref-left-copy h1{
+        font-size:38px;
+    }
+
+    .auth-ref-left-copy span{
+        font-size:22px;
+    }
+
+    .auth-tabs{
+        margin-bottom:34px;
+    }
+
+    .auth-ref-options{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:12px;
+    }
+}
